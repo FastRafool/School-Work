@@ -35,16 +35,7 @@ botocore.exceptions.ClientError: An error occurred (AccessDenied) when calling t
 
 
 
-{
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "Statement1",
-			"Effect": "Allow",
-			"Principal":arn:aws:iam::660015159163:user/Workshop",
-			  
-			"Action": "s3:GetObject",
-			"Resource": "arn:aws:s3:::project666/*"
-		}
-	]
-}
+/home/ec2-user/.local/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+/home/ec2-user/.local/lib/python3.7/site-packages/deap/base.py:185: RuntimeWarning: invalid value encountered in double_scalars
+  return tuple(map(truediv, self.wvalues, self.weights))
