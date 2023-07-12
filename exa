@@ -48,7 +48,7 @@ def calculate_caloric_needs():
 calculate_caloric_needs()
 
 # Load the dataset
-data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset3.csv')
+data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset.csv')
 
 # Constants
 DAILY_CALORIE_TARGET = 2500
