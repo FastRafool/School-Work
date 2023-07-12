@@ -18,3 +18,16 @@ sudo tar xzf Python-3.8.0.tgz
 cd Python-3.8.0
 sudo ./configure --enable-optimizations
 sudo make altinstall
+
+
+
+/home/ec2-user/.local/lib/python3.7/site-packages/boto3/compat.py:82: PythonDeprecationWarning: Boto3 will no longer support Python 3.7 starting December 13, 2023. To continue receiving service updates, bug fixes, and security updates please upgrade to Python 3.8 or later. More information can be found here: https://aws.amazon.com/blogs/developer/python-support-policy-updates-for-aws-sdks-and-tools/
+  warnings.warn(warning, PythonDeprecationWarning)
+Traceback (most recent call last):
+  File "/home/ec2-user/mealplan.py", line 59, in <module>
+    obj = s3.get_object(Bucket='project666', Key='ProjectDataset.csv')
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/botocore/client.py", line 534, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/ec2-user/.local/lib/python3.7/site-packages/botocore/client.py", line 976, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
