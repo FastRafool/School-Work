@@ -5,3 +5,7 @@ data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset3.csv')
 
 
 sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel
+
+
+cd /opt
+sudo wget https://www.python.org/ftp/python/3.8.0/Python-3.8.0.tgz
