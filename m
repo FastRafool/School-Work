@@ -3,6 +3,7 @@ import random
 import numpy as np
 import pandas as pd
 from deap import base, creator, tools, algorithms
+from io import StringIO
 import boto3
 
 
