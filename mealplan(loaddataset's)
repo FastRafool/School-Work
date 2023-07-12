@@ -39,3 +39,9 @@ botocore.exceptions.ClientError: An error occurred (AccessDenied) when calling t
   warnings.warn(warning, PythonDeprecationWarning)
 /home/ec2-user/.local/lib/python3.7/site-packages/deap/base.py:185: RuntimeWarning: invalid value encountered in double_scalars
   return tuple(map(truediv, self.wvalues, self.weights))
+
+
+
+
+echo "alias python=python3.8" >> ~/.bashrc
+source ~/.bashrc
