@@ -48,8 +48,7 @@ def calculate_caloric_needs():
 calculate_caloric_needs()
 
 # Initialize a session using your AWS credentials
-s3 = boto3.client('s3', aws_access_key_id='',
-                  aws_secret_access_key='', region_name='us-west-2')
+s3 = boto3.client('s3')
 
 # Specify the bucket name and the key of the file
 bucket_name = 'project666'
@@ -71,7 +70,7 @@ PROTEIN_TARGET = 150 * 7 # 1g per pound of body weight for a week
 FAT_TARGET = 60 * 7 # 0.4g per pound of body weight for a week
 
 # Define the problem type: Prioritizing protein intake and minimizing price
-creator.create("FitnessMax", base.Fitness, weights=(1e6, 100, 0.0, 0.0, 0.0, -1.0))
+creator.create("FitnessMax", base.Fitness, weights=(1e6, 100, 1e-6, 1e-6, 1e-6, -1.0))
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
 # Initialize a toolbox
