@@ -1,2 +1,7 @@
 # Load the dataset
 data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset3.csv')
+
+
+
+
+sudo yum -y install gcc openssl-devel bzip2-devel libffi-devel
