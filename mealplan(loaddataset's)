@@ -31,3 +31,19 @@ Traceback (most recent call last):
   File "/home/ec2-user/.local/lib/python3.7/site-packages/botocore/client.py", line 976, in _make_api_call
     raise error_class(parsed_response, operation_name)
 botocore.exceptions.ClientError: An error occurred (AccessDenied) when calling the GetObject operation: Access Denied
+
+
+
+
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::project666/ProjectDataset copy.csv"
+        }
+    ]
+}
