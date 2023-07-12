@@ -46,8 +46,8 @@ def calculate_caloric_needs():
 # Call the function
 calculate_caloric_needs()
 
-
-
+# Load the dataset
+data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset.csv')
 
 
 # Constants
