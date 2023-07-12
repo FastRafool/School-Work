@@ -1,2 +1,7 @@
 # Load the dataset
 data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset3.csv')
+
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'best_individuals' is not defined
