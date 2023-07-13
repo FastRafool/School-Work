@@ -126,22 +126,27 @@ data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDataset.csv')
     return results
 
 def calculate_caloric_needs_and_run_algorithm():
-    # Get input values from the entry fields
-    gender = gender_var.get()
-    height_in_feet = float(height_feet_entry.get())
-    height_in_inches = float(height_inches_entry.get())
-    weight_in_lbs = float(weight_entry.get())
-    age = float(age_entry.get())
-    activity_level = float(activity_level_entry.get())
+    try:
+        # Get input values from the entry fields
+        gender = gender_var.get()
+        height_in_feet = float(height_feet_entry.get())
+        height_in_inches = float(height_inches_entry.get())
+        weight_in_lbs = float(weight_entry.get())
+        age = float(age_entry.get())
+        activity_level = float(activity_level_entry.get())
 
-    # Call the function to calculate caloric needs
-    caloric_needs = calculate_caloric_needs(gender, height_in_feet, height_in_inches, weight_in_lbs, age, activity_level)
+        # Call the function to calculate caloric needs
+        caloric_needs = calculate_caloric_needs(gender, height_in_feet, height_in_inches, weight_in_lbs, age, activity_level)
 
-    # Call the function to run the NSGA-II algorithm and get the best individuals
-    best_individuals = run_nsga_ii(caloric_needs)
+        # Call the function to run the NSGA-II algorithm and get the best individuals
+        best_individuals = run_nsga_ii(caloric_needs)
 
-    # Display the results in a message box
-    messagebox.showinfo("Results", f"Your estimated daily caloric needs: {caloric_needs}\nBest individuals:\n" + "\n".join(best_individuals))
+        # Display the results in a message box
+        messagebox.showinfo("Results", f"Your estimated daily caloric needs: {caloric_needs}\nBest individuals:\n" + "\n".join(best_individuals))
+    except Exception as e:
+        messagebox.showinfo("Error", str(e))
+        raise
+
 
 # Create the main window
 root = tk.Tk()
