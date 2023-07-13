@@ -13,9 +13,9 @@ data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDataset.csv')
 
 # Constants
 DAILY_CALORIE_TARGET = 2500
-CALORIE_TARGET = DAILY_CALORIE_TARGET * 7 # for a week
-PROTEIN_TARGET = 150 * 7 # 1g per pound of body weight for a week
-FAT_TARGET = 60 * 7 # 0.4g per pound of body weight for a week
+CALORIE_TARGET = DAILY_CALORIE_TARGET * 7  # for a week
+PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
+FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
 
 # Define the problem type: Prioritizing protein intake and minimizing price
 creator.create("FitnessMax", base.Fitness, weights=(1e6, 100, 1e-6, 1e-6, 1e-6, -1.0))
@@ -85,14 +85,19 @@ def run_algorithm():
         result += f"Average daily protein: {total_protein / 7}\n"
         result += f"Average daily calories: {total_calories / 7}\n"
         result += f"Average daily fat: {total_fat / 7}\n"
-        result += f"Average daily sodium: {total_sodium / 7}\n" 
-        result += f"Average daily carbohydrates: {total_carbs / 7}\n"   
+        result += f"Average daily sodium: {total_sodium / 7}\n"
+        result += f"Average daily carbohydrates: {total_carbs / 7}\n"
         result += f"Total price: {total_price}\n"
         results.append(result)
 
-messagebox.showinfo("Results", "\n".join(results))
+    messagebox.showinfo("Results","\n".join(results))
 
+# Create the root window
 root = tk.Tk()
+
+# Create the button and bind the command
 button = tk.Button(root, text="Run algorithm", command=run_algorithm)
 button.pack()
+
+# Run the event loop
 root.mainloop()
