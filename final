@@ -90,14 +90,9 @@ def run_algorithm():
         result += f"Total price: {total_price}\n"
         results.append(result)
 
-    messagebox.showinfo("Results","\n".join(results))
+   messagebox.showinfo("Results", "\n".join(results))
 
-# Create the root window
 root = tk.Tk()
-
-# Create the button and bind the command
 button = tk.Button(root, text="Run algorithm", command=run_algorithm)
 button.pack()
-
-# Run the event loop
 root.mainloop()
