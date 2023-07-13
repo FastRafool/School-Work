@@ -90,7 +90,7 @@ def run_algorithm():
         result += f"Total price: {total_price}\n"
         results.append(result)
 
-   messagebox.showinfo("Results", "\n".join(results))
+messagebox.showinfo("Results", "\n".join(results))
 
 root = tk.Tk()
 button = tk.Button(root, text="Run algorithm", command=run_algorithm)
