@@ -6,6 +6,8 @@ from deap import base, creator, tools, algorithms
 from io import StringIO
 import boto3
 
+# Load the dataset
+data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDataset.csv')
 
 
 # Constants
