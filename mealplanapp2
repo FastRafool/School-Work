@@ -1,0 +1,100 @@
+import getpass
+import random
+import numpy as np
+import pandas as pd
+from deap import base, creator, tools, algorithms
+from io import StringIO
+import boto3
+import tkinter as tk
+from tkinter import messagebox
+
+# Load the dataset
+data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDataset.csv')
+
+# Constants
+DAILY_CALORIE_TARGET = 2500
+CALORIE_TARGET = DAILY_CALORIE_TARGET * 7  # for a week
+PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
+FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
+
+# Define the problem type: Prioritizing protein intake and minimizing price
+creator.create("FitnessMax", base.Fitness, weights=(1e6, 100, 1e-6, 1e-6, 1e-6, -1.0))
+creator.create("Individual", list, fitness=creator.FitnessMax)
+
+# Initialize a toolbox
+toolbox = base.Toolbox()
+
+# Define the decision variable: Index of food item in the dataset
+toolbox.register("index", random.randint, 0, len(data) - 1)
+
+# Define an individual (solution) as a list of food item indices
+toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=10)
+
+# Define the population as a list of individuals
+toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
+# Define the evaluation function
+def evaluate(individual):
+    total_calories = 0
+    total_protein = 0
+    total_fat = 0
+    total_carbs = 0
+    total_sodium = 0
+    total_price = 0
+    servings_dict = {}  # Dictionary to track daily servings for each food item
+    for index in individual:
+        servings = data.loc[index, "Total Serving"]
+        total_calories += data.loc[index, "Calories"] * servings
+        total_protein += data.loc[index, "Protein (g)"] * servings
+        total_fat += data.loc[index, "Total Fat (g)"] * servings
+        total_carbs += data.loc[index, "Total Carbohydrate (g)"] * servings
+        total_sodium += data.loc[index, "Sodium (mg)"] * servings
+        total_price += data.loc[index, "Price ($)"]
+        servings_dict[index] = servings / 7  # Calculate daily servings for each food item
+    return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict
+
+# Define the evaluation operator
+toolbox.register("evaluate", evaluate)
+
+# Define the selection operator
+toolbox.register("select", tools.selNSGA2)
+
+# Define the crossover operator
+toolbox.register("mate", tools.cxTwoPoint)
+
+# Define the mutation operator
+toolbox.register("mutate", tools.mutUniformInt, low=0, up=len(data) - 1, indpb=0.1)
+
+# Set the random seed for reproducibility
+random.seed(1)
+
+# Generate the initial population
+pop = toolbox.population(n=100)
+
+# Perform the NSGA-II algorithm for 2 generations
+algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=2, verbose=False)
+
+# Extract the best individuals (food combinations) from the final population
+best_individuals = tools.selBest(pop, k=5)
+
+def run_algorithm():
+    results = []
+    for i, individual in enumerate(best_individuals):
+        result = f"Meal plan {i+1}:\n"
+        total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, daily_servings = evaluate(individual)
+        for index in individual:
+            result += data.loc[index, "asin"] + f" - Daily servings: {daily_servings[index]:.2f}\n"
+        result += f"Average daily protein: {total_protein / 7}\n"
+        result += f"Average daily calories: {total_calories / 7}\n"
+        result += f"Average daily fat: {total_fat / 7}\n"
+        result += f"Average daily sodium: {total_sodium / 7}\n"
+        result += f"Average daily carbohydrates: {total_carbs / 7}\n"
+        result += f"Total price: {total_price}\n"
+        results.append(result)
+    messagebox.showinfo("Results", "\n".join(results))
+
+
+root = tk.Tk()
+button = tk.Button(root, text="Run algorithm", command=run_algorithm)
+button.pack()
+root.mainloop()
