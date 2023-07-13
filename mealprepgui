@@ -1,0 +1,199 @@
+import tkinter as tk
+from tkinter import messagebox
+import getpass
+import random
+import numpy as np
+import pandas as pd
+from deap import base, creator, tools, algorithms
+from io import StringIO
+import boto3
+
+def calculate_male_caloric_needs(height, weight, age, activity_multiplier):
+    men_multiplier = 5
+    weight_multiplier = 10
+    height_multiplier = 6.25
+    age_multiplier = 5
+    return (weight_multiplier * weight) + (height_multiplier * height) - (age_multiplier * age) + men_multiplier * activity_multiplier
+
+def calculate_female_caloric_needs(height, weight, age, activity_multiplier):
+    women_multiplier = -161
+    weight_multiplier = 10
+    height_multiplier = 6.25
+    age_multiplier = 5
+    return (weight_multiplier * weight) + (height_multiplier * height) - (age_multiplier * age) + women_multiplier * activity_multiplier
+
+def calculate_caloric_needs(gender, height_in_feet, height_in_inches, weight_in_lbs, age, activity_multiplier):
+    cm_per_foot = 30.48
+    cm_per_inch = 2.54
+    height = (height_in_feet * cm_per_foot) + (height_in_inches * cm_per_inch)
+    kg_per_lb = 0.45359237
+    weight = weight_in_lbs * kg_per_lb
+    
+    if gender.lower() == 'male':
+        caloric_needs = calculate_male_caloric_needs(height, weight, age, activity_multiplier)
+    elif gender.lower() == 'female':
+        caloric_needs = calculate_female_caloric_needs(height, weight, age, activity_multiplier)
+    else:
+        print("Invalid gender entered. Please enter either 'male' or 'female'.")
+        return
+    
+    return caloric_needs
+
+def run_nsga_ii(caloric_needs):
+    # Initialize a session using your AWS credentials
+    s3 = boto3.client('s3')
+
+    # Specify the bucket name and the key of the file
+    bucket_name = 'project666'
+    file_key = 'ProjectDataset.csv'
+
+    # Fetch the file from S3
+    obj = s3.get_object(Bucket='project666', Key='ProjectDataset.csv')
+
+    # Read the CSV file
+    data = pd.read_csv(StringIO(obj['Body'].read().decode('utf-8')))
+
+    # Constants
+    DAILY_CALORIE_TARGET = caloric_needs
+    CALORIE_TARGET = DAILY_CALORIE_TARGET * 7 # for a week
+    PROTEIN_TARGET = 150 * 7 # 1g per pound of body weight for a week
+    FAT_TARGET = 60 * 7 # 0.4g per pound of body weight for a week
+
+    # Define the problem type: Prioritizing protein intake and minimizing price
+    creator.create("FitnessMax", base.Fitness, weights=(1e6, 100, 1e-6, 1e-6, 1e-6, -1.0))
+    creator.create("Individual", list, fitness=creator.FitnessMax)
+
+    # Initialize a toolbox
+    toolbox = base.Toolbox()
+
+    # Define the decision variable: Index of food item in the dataset
+    toolbox.register("index", random.randint, 0, len(data) - 1)
+
+    # Define an individual (solution) as a list of food item indices
+    toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=10)
+
+    # Define the population as a list of individuals
+    toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
+    # Define the evaluation function
+    def evaluate(individual):
+        total_calories = 0
+        total_protein = 0
+        total_fat = 0
+        total_carbs = 0
+        total_sodium = 0
+        total_price = 0
+        for index in individual:
+            servings = data.loc[index, "Total Serving"]
+            total_calories += data.loc[index, "Calories"] * servings
+            total_protein += data.loc[index, "Protein (g)"] * servings
+            total_fat += data.loc[index, "Total Fat (g)"] * servings
+            total_carbs += data.loc[index, "Total Carbohydrate (g)"] * servings
+            total_sodium += data.loc[index, "Sodium (mg)"] * servings
+            total_price += data.loc[index, "Price ($)"]
+        return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price
+
+    # Define the evaluation operator
+    toolbox.register("evaluate", evaluate)
+
+    # Define the selection operator
+    toolbox.register("select", tools.selNSGA2)
+
+    # Define the crossover operator
+    toolbox.register("mate", tools.cxTwoPoint)
+
+    # Define the mutation operator
+    toolbox.register("mutate", tools.mutUniformInt, low=0, up=len(data) - 1, indpb=0.1)
+
+    # Set the random seed for reproducibility
+    random.seed(1)
+
+    # Generate the initial population
+    pop = toolbox.population(n=100)
+
+    # Perform the NSGA-II algorithm for 2 generations
+    algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=2, verbose=False)
+
+    # Extract the best individuals (food combinations) from the final population
+    best_individuals = tools.selBest(pop, k=5)
+
+    results = []
+    # Print the best individuals
+    for i, individual in enumerate(best_individuals):
+        result = f"Meal plan {i+1}:\n"
+        total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price = evaluate(individual)
+        for index in individual:
+            result += data.loc[index, "asin"] + "\n"
+        result += f"Average daily protein: {total_protein / 7}\n"
+        result += f"Average daily calories: {total_calories / 7}\n"
+        result += f"Average daily fat: {total_fat / 7}\n"
+        result += f"Average daily sodium: {total_sodium / 7}\n" 
+        result += f"Average daily carbohydrates: {total_carbs / 7}\n"   
+        result += f"Total price: {total_price}\n"
+        results.append(result)
+
+    return results
+
+def calculate_caloric_needs_and_run_algorithm():
+    # Get input values from the entry fields
+    gender = gender_var.get()
+    height_in_feet = float(height_feet_entry.get())
+    height_in_inches = float(height_inches_entry.get())
+    weight_in_lbs = float(weight_entry.get())
+    age = float(age_entry.get())
+    activity_level = float(activity_level_entry.get())
+
+    # Call the function to calculate caloric needs
+    caloric_needs = calculate_caloric_needs(gender, height_in_feet, height_in_inches, weight_in_lbs, age, activity_level)
+
+    # Call the function to run the NSGA-II algorithm and get the best individuals
+    best_individuals = run_nsga_ii(caloric_needs)
+
+    # Display the results in a message box
+    messagebox.showinfo("Results", f"Your estimated daily caloric needs: {caloric_needs}\nBest individuals:\n" + "\n".join(best_individuals))
+
+# Create the main window
+root = tk.Tk()
+
+# Create StringVar objects for the gender and activity level
+gender_var = tk.StringVar()
+activity_level_var = tk.StringVar()
+
+# Create and pack the widgets for the gender input
+gender_label = tk.Label(root, text="Gender:")
+gender_label.pack()
+gender_entry = tk.Entry(root, textvariable=gender_var)
+gender_entry.pack()
+
+# Repeat for the other input fields
+height_feet_label = tk.Label(root, text="Height (feet):")
+height_feet_label.pack()
+height_feet_entry = tk.Entry(root)
+height_feet_entry.pack()
+
+height_inches_label = tk.Label(root, text="Height (inches):")
+height_inches_label.pack()
+height_inches_entry = tk.Entry(root)
+height_inches_entry.pack()
+
+weight_label = tk.Label(root, text="Weight (lbs):")
+weight_label.pack()
+weight_entry = tk.Entry(root)
+weight_entry.pack()
+
+age_label = tk.Label(root, text="Age (years):")
+age_label.pack()
+age_entry = tk.Entry(root)
+age_entry.pack()
+
+activity_level_label = tk.Label(root, text="Activity level:")
+activity_level_label.pack()
+activity_level_entry = tk.Entry(root, textvariable=activity_level_var)
+activity_level_entry.pack()
+
+# Create and pack the submit button
+submit_button = tk.Button(root, text="Submit", command=calculate_caloric_needs_and_run_algorithm)
+submit_button.pack()
+
+# Start the main loop
+root.mainloop()
