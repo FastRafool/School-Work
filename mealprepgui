@@ -40,18 +40,9 @@ def calculate_caloric_needs(gender, height_in_feet, height_in_inches, weight_in_
     return caloric_needs
 
 def run_nsga_ii(caloric_needs):
-    # Initialize a session using your AWS credentials
-    s3 = boto3.client('s3')
-
-    # Specify the bucket name and the key of the file
-    bucket_name = 'project666'
-    file_key = 'ProjectDataset.csv'
-
-    # Fetch the file from S3
-    obj = s3.get_object(Bucket='project666', Key='ProjectDataset.csv')
-
-    # Read the CSV file
-    data = pd.read_csv(StringIO(obj['Body'].read().decode('utf-8')))
+    
+# Load the dataset
+data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDataset.csv')
 
     # Constants
     DAILY_CALORIE_TARGET = caloric_needs
