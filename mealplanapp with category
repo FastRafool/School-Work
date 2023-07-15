@@ -16,7 +16,7 @@ DAILY_CALORIE_TARGET = 2500
 CALORIE_TARGET = DAILY_CALORIE_TARGET * 7  # for a week
 PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
 FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
-NUM_CATEGORIES = 7  # number of distinct food categories
+NUM_CATEGORIES = 6  # number of distinct food categories
 
 # Define the problem type: Prioritizing protein intake and minimizing price
 creator.create("FitnessMax", base.Fitness, weights=(1e6, 100, 1e-6, 1e-6, 1e-6, -1.0))
