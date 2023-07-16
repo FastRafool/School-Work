@@ -58,7 +58,7 @@ def evaluate(individual):
         calorie_shortfall = CALORIE_TARGET - total_calories
         # Subtract a penalty proportional to the shortfall from the total protein
         total_protein -= calorie_shortfall * 0.1  # Adjust the penalty factor as needed
-    return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict
+    return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price
 
 # Define the evaluation operator
 toolbox.register("evaluate", evaluate)
