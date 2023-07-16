@@ -28,7 +28,7 @@ toolbox = base.Toolbox()
 toolbox.register("index", random.randint, 0, len(data) - 1)
 
 # Define an individual (solution) as a list of food item indices
-toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=15)
+toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=20)
 
 # Define the population as a list of individuals
 toolbox.register("population", tools.initRepeat, list, toolbox.individual)
