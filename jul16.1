@@ -51,6 +51,13 @@ def evaluate(individual):
         total_sodium += data.loc[index, "Sodium (mg)"] * servings
         total_price += data.loc[index, "Price ($)"]
         servings_dict[index] = servings / 7  # Calculate daily servings for each food item
+
+# Check if the total calorie count is below the target
+    if total_calories < CALORIE_TARGET:
+        # Calculate the shortfall
+        calorie_shortfall = CALORIE_TARGET - total_calories
+        # Subtract a penalty proportional to the shortfall from the total protein
+        total_protein -= calorie_shortfall * 0.1  # Adjust the penalty factor as needed
     return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict
 
 # Define the evaluation operator
