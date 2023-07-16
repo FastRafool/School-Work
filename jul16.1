@@ -88,7 +88,7 @@ def run_algorithm():
     results = []
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
-        total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict = evaluate(individual)
+        total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price = evaluate(individual)
         for index in individual:
             # Use slashes to separate the values and format servings to 2 decimal places
             result += f"{data.loc[index, 'asin']} / Daily servings: {servings_dict[index]:.2f}\n"
