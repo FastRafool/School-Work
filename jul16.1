@@ -72,7 +72,7 @@ random.seed(1)
 pop = toolbox.population(n=100)
 
 # Perform the NSGA-II algorithm for 2 generations
-algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=2, verbose=False)
+algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=500, verbose=False)
 
 # Extract the best individuals (food combinations) from the final population
 best_individuals = tools.selBest(pop, k=5)
