@@ -18,7 +18,7 @@ PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
 FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
 
 # Define the problem type: Prioritizing protein intake and minimizing price
-creator.create("FitnessMax", base.Fitness, weights=(1000, 1e6, -1.0, -1.0, -1.0, -1.0))
+creator.create("FitnessMax", base.Fitness, weights=(1, 1, -1.0, -1.0, -1.0, -1.0))
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
 # Initialize a toolbox
@@ -72,7 +72,7 @@ random.seed(1)
 pop = toolbox.population(n=30000)
 
 # Perform the NSGA-II algorithm for 50000 generations
-algorithms.eaSimple(pop, toolbox, cxpb=0.7, mutpb=0.4, ngen=500000, verbose=False)
+algorithms.eaSimple(pop, toolbox, cxpb=0.6, mutpb=0.2, ngen=1000000, verbose=False)
 
 # Extract the best individuals (food combinations) from the final population
 best_individuals = tools.selBest(pop, k=5)
