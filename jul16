@@ -91,7 +91,23 @@ def run_algorithm():
         result += f"Average daily carbohydrates: {total_carbs / 7}\n"
         result += f"Total price: {total_price}\n"
         results.append(result)
-    messagebox.showinfo("Results", "\n".join(results))
+    
+    # Create a new window
+    result_window = tk.Toplevel(root)
+    result_window.title("Results")
+    
+    # Add a scrollbar
+    scrollbar = tk.Scrollbar(result_window)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    
+    # Add a Text widget with a scrollbar
+    text = tk.Text(result_window, wrap=tk.WORD, yscrollcommand=scrollbar.set)
+    text.insert(tk.END, "\n".join(results))
+    text.pack()
+    
+    # Configure the scrollbar
+    scrollbar.config(command=text.yview)
+
 
 root = tk.Tk()
 button = tk.Button(root, text="Run algorithm", command=run_algorithm)
