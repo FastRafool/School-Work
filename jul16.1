@@ -84,7 +84,7 @@ def run_algorithm():
         total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict = evaluate(individual)
         for index in individual:
             # Use slashes to separate the values
-            result += f"{data.loc[index, 'asin']}/{data.loc[index, 'Category']}/Daily servings: {servings_dict[index]}\n"
+            result += f"{data.loc[index, 'asin']}/Daily servings: {servings_dict[index]}\n"
         result += f"Average daily protein: {total_protein / 7}\n"
         result += f"Average daily calories: {total_calories / 7}\n"
         result += f"Average daily fat: {total_fat / 7}\n"
