@@ -69,7 +69,7 @@ toolbox.register("mutate", tools.mutUniformInt, low=0, up=len(data) - 1, indpb=0
 random.seed(1)
 
 # Generate the initial population
-pop = toolbox.population(n=200)
+pop = toolbox.population(n=20000)
 
 # Perform the NSGA-II algorithm for 50000 generations
 algorithms.eaSimple(pop, toolbox, cxpb=0.8, mutpb=0.5, ngen=500000, verbose=False)
