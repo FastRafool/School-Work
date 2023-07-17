@@ -46,7 +46,7 @@ button.pack()
 data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDatasetFinal.csv')
 
 # Define the problem type: Prioritizing protein intake and minimizing price
-creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0, 0))
+creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, 0))
 creator.create("Individual", list, fitness=creator.FitnessMax)
 
 # Initialize a toolbox
@@ -106,7 +106,6 @@ def run_algorithm():
     # Extract the best individuals (food combinations) from the final population
     best_individuals = tools.selBest(pop, k=10)
 
-    from collections import Counter
     results = []
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
