@@ -125,6 +125,13 @@ def ask_calorie_target():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
+# Define an individual (solution) as a list of food item indices
+toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
+
+# Define the population as a list of individuals
+toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
+
 # Add a Button that calls the 'ask_calorie_target' function when clicked
 button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
 button.pack()
