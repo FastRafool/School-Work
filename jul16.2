@@ -42,6 +42,18 @@ CALORIE_TARGET = DAILY_CALORIE_TARGET * 7  # for a week
 PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
 FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
 
+# Define your function
+def determine_individual_size(calorie_target):
+    if 2100 <= calorie_target <= 2500:
+        return 21
+    else:
+        # You can define other conditions here
+        return None  # Or a default value
+
+individual_size = determine_individual_size(calorie_input)
+
+print(individual_size)
+
 # Define the problem type: Prioritizing protein intake and minimizing price
 creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0))
 creator.create("Individual", list, fitness=creator.FitnessMax)
