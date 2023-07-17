@@ -9,6 +9,27 @@ import tkinter as tk
 from tkinter import messagebox
 from collections import Counter
 
+# Create a Tkinter root window
+root = tk.Tk()
+
+# Add a Label with a brief explanation of the program
+explanation = tk.Label(root, text="This program generates a meal plan for a week based on your calorie target.")
+explanation.pack()
+
+# Ask the user for a calorie target
+def ask_calorie_target():
+    try:
+        calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
+        # Now 'calorie_target' holds the number entered by the user, which you can use to set the calorie target
+        global DAILY_CALORIE_TARGET  # We need to declare the variable as global so we can modify it
+        DAILY_CALORIE_TARGET = calorie_target
+        messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
+    except Exception as e:
+        messagebox.showerror("Error", str(e))
+
+# Add a Button that calls the 'ask_calorie_target' function when clicked
+button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
+button.pack()
 
 # Load the dataset
 data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDatasetFinal.csv')
