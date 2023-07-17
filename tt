@@ -25,23 +25,6 @@ def determine_individual_size(calorie_target):
         # You can define other conditions here
         return None  # Or a default value
 
-# Ask the user for a calorie target
-def ask_calorie_target():
-    try:
-        calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
-        global DAILY_CALORIE_TARGET  # We need to declare the variable as global so we can modify it
-        DAILY_CALORIE_TARGET = calorie_target
-        global INDIVIDUAL_SIZE  # We also need to determine the individual size here
-        INDIVIDUAL_SIZE = determine_individual_size(DAILY_CALORIE_TARGET)
-        messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
-        run_algorithm()  # Call the algorithm function here
-    except Exception as e:
-        messagebox.showerror("Error", str(e))
-
-# Add a Button that calls the 'ask_calorie_target' function when clicked
-button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
-button.pack()
-
 # Load the dataset
 data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDatasetFinal.csv')
 
@@ -54,6 +37,22 @@ toolbox = base.Toolbox()
 
 # Define the decision variable: Index of food item in the dataset
 toolbox.register("index", random.randint, 0, len(data) - 1)
+
+# Ask the user for a calorie target
+def ask_calorie_target():
+    try:
+        calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
+        global DAILY_CALORIE_TARGET  # We need to declare the variable as global so we can modify it
+        DAILY_CALORIE_TARGET = calorie_target
+        global INDIVIDUAL_SIZE  # We also need to determine the individual size here
+        INDIVIDUAL_SIZE = determine_individual_size(DAILY_CALORIE_TARGET)
+        messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
+    except Exception as e:
+        messagebox.showerror("Error", str(e))
+
+# Add a Button that calls the 'ask_calorie_target' function when clicked
+button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
+button.pack()
 
 def run_algorithm():
     # Define an individual (solution) as a list of food item indices
@@ -80,7 +79,7 @@ def run_algorithm():
             total_sodium += data.loc[index, "Sodium (mg)"] * servings
             total_price += data.loc[index, "Price ($)"]
             servings_dict[index] = servings / 7  # Calculate daily servings for each food item
-        return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, serving_dict
+        return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict
 
     # Define the evaluation operator
     toolbox.register("evaluate", evaluate)
@@ -106,7 +105,6 @@ def run_algorithm():
     # Extract the best individuals (food combinations) from the final population
     best_individuals = tools.selBest(pop, k=10)
 
-    from collections import Counter
     results = []
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
@@ -142,8 +140,5 @@ def run_algorithm():
     
     # Configure the scrollbar
     scrollbar.config(command=text.yview)
-
-button = tk.Button(root, text="Run algorithm", command=run_algorithm)
-button.pack()
 
 root.mainloop()
