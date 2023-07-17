@@ -80,7 +80,7 @@ def run_algorithm():
             total_sodium += data.loc[index, "Sodium (mg)"] * servings
             total_price += data.loc[index, "Price ($)"]
             servings_dict[index] = servings / 7  # Calculate daily servings for each food item
-        return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price
+        return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, serving_dict
 
     # Define the evaluation operator
     toolbox.register("evaluate", evaluate)
