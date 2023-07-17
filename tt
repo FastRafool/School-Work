@@ -110,7 +110,13 @@ def run_algorithm():
         result += f"Total price: {total_price:.2f}\n"
         results.append(result)
 
-# Ask the user for a calorie target
+def setup_toolbox():
+    # Define an individual (solution) as a list of food item indices
+    toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
+
+    # Define the population as a list of individuals
+    toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+
 def ask_calorie_target():
     try:
         calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
@@ -119,17 +125,14 @@ def ask_calorie_target():
         global INDIVIDUAL_SIZE  # We also need to determine the individual size here
         INDIVIDUAL_SIZE = determine_individual_size(DAILY_CALORIE_TARGET)
         messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
+        # Setup toolbox after individual size has been determined
+        setup_toolbox()
         # Add a Button that calls the 'run_algorithm' function when clicked, but only after the calorie target is set
         button = tk.Button(root, text="Run algorithm", command=run_algorithm)
         button.pack()
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-# Define an individual (solution) as a list of food item indices
-toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
-
-# Define the population as a list of individuals
-toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
 
 # Add a Button that calls the 'ask_calorie_target' function when clicked
