@@ -42,19 +42,8 @@ def ask_calorie_target():
 button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
 button.pack()
 
-# Initialize a session using your AWS credentials
-s3 = boto3.client('s3', aws_access_key_id='',
-                  aws_secret_access_key='', region_name='us-west-2')
-
-# Specify the bucket name and the key of the file
-bucket_name = 'project666'
-file_key = 'ProjectDataset.csv'
-
-# Fetch the file from S3
-obj = s3.get_object(Bucket='project666', Key='ProjectDataset.csv')
-
-# Read the CSV file
-data = pd.read_csv(StringIO(obj['Body'].read().decode('utf-8')))
+# Load the dataset
+data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDatasetFinal.csv')
 
 # Define the problem type: Prioritizing protein intake and minimizing price
 creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0))
