@@ -27,8 +27,8 @@ PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
 FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
 
 # Define the problem type: Prioritizing protein intake and minimizing price
-creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0, 1.0))
-creator.create("Individual", list, fitness=creator.FitnessMax)
+creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0))
+creator.create("Individual", list, fitness=creator.FitnessMax, serving_dict=None)
 
 # Initialize a toolbox
 toolbox = base.Toolbox()
@@ -60,7 +60,8 @@ def evaluate(individual):
         total_sodium += data.loc[index, "Sodium (mg)"] * servings
         total_price += data.loc[index, "Price ($)"]
         servings_dict[index] = servings / 7  # Calculate daily servings for each food item
-    return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict
+individual.servings_dict = servings_dict  # Store servings_dict in the individual
+    return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price
 
 # Define the evaluation operator
 toolbox.register("evaluate", evaluate)
@@ -93,7 +94,7 @@ def run_algorithm():
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
         total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict = evaluate(individual)
-        
+        servings_dict = individual.servings_dict
         # Count the occurrences of each asin in the individual
         asin_counts = Counter(individual)
         
