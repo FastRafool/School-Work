@@ -9,7 +9,7 @@ import tkinter as tk
 from tkinter import messagebox
 
 # Load the dataset
-data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDatasetFinal.csv')
+data = pd.read_csv('https://project444.s3.amazonaws.com/ProjectDataset.csv')
 
 # Constants
 DAILY_CALORIE_TARGET = 2500
