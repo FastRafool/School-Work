@@ -78,10 +78,10 @@ toolbox.register("mutate", tools.mutUniformInt, low=0, up=len(data) - 1, indpb=0
 random.seed(1)
 
 # Generate the initial population
-pop = toolbox.population(n=1000)
+pop = toolbox.population(n=100)
 
 # Perform the NSGA-II algorithm for a number of generations
-algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=5000, verbose=False)
+algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=500, verbose=False)
 
 # Extract the best individuals (food combinations) from the final population
 best_individuals = tools.selBest(pop, k=10)
