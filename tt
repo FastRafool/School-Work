@@ -141,4 +141,8 @@ def run_algorithm():
     # Configure the scrollbar
     scrollbar.config(command=text.yview)
 
+# Add a Button that calls the 'run_algorithm' function when clicked
+button = tk.Button(root, text="Run algorithm", command=run_algorithm)
+button.pack()
+
 root.mainloop()
