@@ -33,6 +33,8 @@ def ask_calorie_target():
 button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
 button.pack()
 
+# Load the dataset
+data = pd.read_csv('https://project444.s3.amazonaws.com/ProjectDataset.csv')
 
 
 # Constants
