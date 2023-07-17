@@ -17,12 +17,22 @@ root = tk.Tk()
 explanation = tk.Label(root, text="This program generates a meal plan for a week based on your calorie target.")
 explanation.pack()
 
+# Define your function
+def determine_individual_size(calorie_target):
+    if 2100 <= calorie_target <= 2500:
+        return 21
+    else:
+        # You can define other conditions here
+        return None  # Or a default value
+
 # Ask the user for a calorie target
 def ask_calorie_target():
     try:
         calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
         global DAILY_CALORIE_TARGET  # We need to declare the variable as global so we can modify it
         DAILY_CALORIE_TARGET = calorie_target
+        global INDIVIDUAL_SIZE  # We also need to determine the individual size here
+        INDIVIDUAL_SIZE = determine_individual_size(DAILY_CALORIE_TARGET)
         messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
         run_algorithm()  # Call the algorithm function here
     except Exception as e:
@@ -32,50 +42,33 @@ def ask_calorie_target():
 button = tk.Button(root, text="Set calorie target", command=ask_calorie_target)
 button.pack()
 
+# Initialize a session using your AWS credentials
+s3 = boto3.client('s3', aws_access_key_id='',
+                  aws_secret_access_key='', region_name='us-west-2')
+
+# Specify the bucket name and the key of the file
+bucket_name = 'project666'
+file_key = 'ProjectDataset.csv'
+
+# Fetch the file from S3
+obj = s3.get_object(Bucket='project666', Key='ProjectDataset.csv')
+
+# Read the CSV file
+data = pd.read_csv(StringIO(obj['Body'].read().decode('utf-8')))
+
+# Define the problem type: Prioritizing protein intake and minimizing price
+creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0))
+creator.create("Individual", list, fitness=creator.FitnessMax)
+
+# Initialize a toolbox
+toolbox = base.Toolbox()
+
+# Define the decision variable: Index of food item in the dataset
+toolbox.register("index", random.randint, 0, len(data) - 1)
+
 def run_algorithm():
-    # Initialize a session using your AWS credentials
-    s3 = boto3.client('s3', aws_access_key_id='',
-                      aws_secret_access_key='', region_name='us-west-2')
-
-    # Specify the bucket name and the key of the file
-    bucket_name = 'project666'
-    file_key = 'ProjectDataset.csv'
-
-    # Fetch the file from S3
-    obj = s3.get_object(Bucket='project666', Key='ProjectDataset.csv')
-
-    # Read the CSV file
-    data = pd.read_csv(StringIO(obj['Body'].read().decode('utf-8')))
-
-    # Constants
-    CALORIE_TARGET = DAILY_CALORIE_TARGET * 7  # for a week
-    PROTEIN_TARGET = 150 * 7  # 1g per pound of body weight for a week
-    FAT_TARGET = 60 * 7  # 0.4g per pound of body weight for a week
-
-    # Define your function
-    def determine_individual_size(calorie_target):
-        if 2100 <= calorie_target <= 2500:
-            return 21
-        else:
-            # You can define other conditions here
-            return None  # Or a default value
-
-    individual_size = determine_individual_size(DAILY_CALORIE_TARGET)
-
-    print(individual_size)
-
-    # Define the problem type: Prioritizing protein intake and minimizing price
-    creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0))
-    creator.create("Individual", list, fitness=creator.FitnessMax)
-
-    # Initialize a toolbox
-    toolbox = base.Toolbox()
-
-    # Define the decision variable: Index of food item in the dataset
-    toolbox.register("index", random.randint, 0, len(data) - 1)
-
     # Define an individual (solution) as a list of food item indices
-    toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=individual_size)
+    toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
 
     # Define the population as a list of individuals
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
@@ -129,14 +122,14 @@ def run_algorithm():
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
         total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict = evaluate(individual)
-
+        
         # Count the occurrences of each asin in the individual
         asin_counts = Counter(individual)
-
+        
         for asin, count in asin_counts.items():
             # Use slashes to separate the values and format servings to 2 decimal places
             result += f"{data.loc[asin, 'asin']} x{count} / Daily servings: {servings_dict[asin]*count:.2f}\n"
-
+        
         result += f"Average daily protein: {total_protein / 7:.2f}\n"
         result += f"Average daily calories: {total_calories / 7:.2f}\n"
         result += f"Average daily fat: {total_fat / 7:.2f}\n"
@@ -144,23 +137,21 @@ def run_algorithm():
         result += f"Average daily carbohydrates: {total_carbs / 7:.2f}\n"
         result += f"Total price: {total_price:.2f}\n"
         results.append(result)
-
+    
     # Create a new window
     result_window = tk.Toplevel(root)
     result_window.title("Results")
-
+    
     # Add a scrollbar
     scrollbar = tk.Scrollbar(result_window)
     scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
+    
     # Add a Text widget with a scrollbar
     text = tk.Text(result_window, wrap=tk.WORD, yscrollcommand=scrollbar.set)
     text.insert(tk.END, "\n".join(results))
     text.pack()
-
+    
     # Configure the scrollbar
     scrollbar.config(command=text.yview)
 
-button = tk.Button(root, text="Run algorithm", command=run_algorithm)
-button.pack()
 root.mainloop()
