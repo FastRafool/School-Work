@@ -7,6 +7,8 @@ from io import StringIO
 import boto3
 import tkinter as tk
 from tkinter import messagebox
+from collections import Counter
+
 
 # Load the dataset
 data = pd.read_csv('/Users/oduduotu/Downloads/ProjectDatasetFinal.csv')
@@ -77,14 +79,21 @@ algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=50000, verbose=False
 # Extract the best individuals (food combinations) from the final population
 best_individuals = tools.selBest(pop, k=10)
 
+from collections import Counter
+
 def run_algorithm():
     results = []
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
         total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price, servings_dict = evaluate(individual)
-        for index in individual:
+        
+        # Count the occurrences of each asin in the individual
+        asin_counts = Counter(individual)
+        
+        for asin, count in asin_counts.items():
             # Use slashes to separate the values and format servings to 2 decimal places
-            result += f"{data.loc[index, 'asin']} / Daily servings: {servings_dict[index]:.2f}\n"
+            result += f"{data.loc[asin, 'asin']} x{count} / Daily servings: {servings_dict[asin]*count:.2f}\n"
+        
         result += f"Average daily protein: {total_protein / 7:.2f}\n"
         result += f"Average daily calories: {total_calories / 7:.2f}\n"
         result += f"Average daily fat: {total_fat / 7:.2f}\n"
@@ -108,6 +117,7 @@ def run_algorithm():
     
     # Configure the scrollbar
     scrollbar.config(command=text.yview)
+
 
 
 
