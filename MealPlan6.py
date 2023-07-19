@@ -190,7 +190,7 @@ button2 = tk.Button(root, text="Set mealplan count", command=ask_mealplan_count)
 button2.pack()
 button = tk.Button(root, text="Set calorie target and run algorithm", command=ask_calorie_target)
 button.pack()
-button3 = tk.Button(root, text="Set item count and run algorithm", command=ask_item_count)
+button3 = tk.Button(root, text="Set item count, Calorie target and run algorithm", command=ask_item_count)
 button3.pack()
 
 root.mainloop()
