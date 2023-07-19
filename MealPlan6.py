@@ -46,12 +46,13 @@ INDIVIDUAL_SIZE = 20
 # Ask the user for a calorie target
 def ask_calorie_target():
     try:
+        item_count = simpledialog.askinteger("Input", "How many items do you want in your meal plan?", parent=root, minvalue=1, maxvalue=21)
         calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
+        global INDIVIDUAL_SIZE  # We need to declare the variable as global so we can modify it
+        INDIVIDUAL_SIZE = item_count
         global DAILY_CALORIE_TARGET  # We need to declare the variable as global so we can modify it
         DAILY_CALORIE_TARGET = calorie_target
-        global INDIVIDUAL_SIZE  # We also need to determine the individual size here
-        INDIVIDUAL_SIZE = determine_individual_size(DAILY_CALORIE_TARGET)
-        messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
+        messagebox.showinfo("Info", f"Meal plan will include {item_count} items and target calorie is set to {calorie_target} per day.")
         
         # Register individual and population with the determined size
         toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
