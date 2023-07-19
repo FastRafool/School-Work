@@ -47,7 +47,7 @@ INDIVIDUAL_SIZE = 20
 def ask_calorie_target():
     try:
        
-        # Also ask for the daily calorie target here
+        # Ask for the daily calorie target here
         calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
         global DAILY_CALORIE_TARGET
         DAILY_CALORIE_TARGET = calorie_target
