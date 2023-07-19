@@ -20,7 +20,7 @@ explanation.pack()
 data = pd.read_csv('https://project444.s3.amazonaws.com/ProjectDataset.csv')
 
 # Define the problem type: Prioritizing protein intake and minimizing price
-creator.create("FitnessMax", base.Fitness, weights=(1, 100, -1.0, -1.0, -1.0, -1.0))
+creator.create("FitnessMax", base.Fitness, weights=(1, 1, 100, -1.0, -1.0, -1.0, -1.0))
 creator.create("Individual", list, fitness=creator.FitnessMax, serving_dict=None)
 
 # Initialize a toolbox
@@ -80,7 +80,14 @@ def evaluate(individual):
         total_price += data.loc[index, "Price ($)"]
         servings_dict[index] = servings / 7  # Calculate daily servings for each food item
     individual.servings_dict = servings_dict  # Store servings_dict in the individual
-    return total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price
+
+ # Compute the difference between the total calories and the target
+    calorie_difference = abs(total_calories - DAILY_CALORIE_TARGET)
+    
+    # Return the objectives. Note that NSGA-II is a maximization algorithm, so for calorie_difference
+    # we return the negative value to make the algorithm try to minimize it.
+
+    return total_protein, -calorie_differnce, total_calories, total_fat, total_carbs, total_sodium, total_price
 
 # Define the evaluation operator
 toolbox.register("evaluate", evaluate)
