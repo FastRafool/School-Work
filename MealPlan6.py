@@ -65,13 +65,19 @@ def ask_calorie_target():
     except Exception as e:
         messagebox.showerror("Error", str(e))
 
-# Ask the user for the number of items in the meal plan
+# Ask the user for the number of items in the meal plan and for the calorie target
 def ask_item_count():
     try:
         item_count = simpledialog.askinteger("Input", "How many items do you want in your meal plan?", parent=root, minvalue=1, maxvalue=21)
         global INDIVIDUAL_SIZE  # We need to declare the variable as global so we can modify it
         INDIVIDUAL_SIZE = item_count
         messagebox.showinfo("Info", f"Meal plan will include {item_count} items.")
+
+        # Also ask for the daily calorie target here
+        calorie_target = simpledialog.askinteger("Input", "How many calories do you want to consume per day?", parent=root, minvalue=1, maxvalue=5000)
+        global DAILY_CALORIE_TARGET
+        DAILY_CALORIE_TARGET = calorie_target
+        messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
         
         # Register individual and population with the determined size
         toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
@@ -80,6 +86,7 @@ def ask_item_count():
         run_algorithm()  # Call the algorithm function here
     except Exception as e:
         messagebox.showerror("Error", str(e))
+
 
 # Define the evaluation function
 def evaluate(individual):
