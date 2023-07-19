@@ -82,12 +82,12 @@ def evaluate(individual):
     individual.servings_dict = servings_dict  # Store servings_dict in the individual
 
  # Compute the difference between the total calories and the target
-    calorie_difference = abs(total_calories - DAILY_CALORIE_TARGET)
+    calorie_difference = abs(total_calories - DAILY_CALORIE_TARGET * 7)
     
     # Return the objectives. Note that NSGA-II is a maximization algorithm, so for calorie_difference
     # we return the negative value to make the algorithm try to minimize it.
 
-    return total_protein, -calorie_differnce, total_calories, total_fat, total_carbs, total_sodium, total_price
+    return total_protein, -calorie_difference, total_calories, total_fat, total_carbs, total_sodium, total_price
 
 # Define the evaluation operator
 toolbox.register("evaluate", evaluate)
