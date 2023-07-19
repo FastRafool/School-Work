@@ -126,7 +126,7 @@ def run_algorithm():
     results = []
     for i, individual in enumerate(best_individuals):
         result = f"Meal plan {i+1}:\n"
-        total_protein, total_calories, total_fat, total_carbs, total_sodium, total_price = evaluate(individual)
+        total_protein, calorie_difference, total_calories, total_fat, total_carbs, total_sodium, total_price = evaluate(individual)
         servings_dict = individual.servings_dict
         # Count the occurrences of each asin in the individual
         asin_counts = Counter(individual)
