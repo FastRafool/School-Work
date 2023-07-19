@@ -54,7 +54,6 @@ def ask_calorie_target():
         messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
         global INDIVIDUAL_SIZE  # We also need to determine the individual size here
         INDIVIDUAL_SIZE = determine_individual_size(DAILY_CALORIE_TARGET)
-        messagebox.showinfo("Info", f"Calorie target set to {calorie_target} per day.")
 
         # Register individual and population with the determined size
         toolbox.register("individual", tools.initRepeat, creator.Individual, toolbox.index, n=INDIVIDUAL_SIZE)
