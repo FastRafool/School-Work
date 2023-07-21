@@ -18,8 +18,8 @@ def write_to_s3(bucket, key, data):
     s3.put_object(Bucket=bucket, Key=key, Body=csv_buffer.getvalue())
 
 # Read data from S3
-bucket = 'source-bucket'
-key = 'source-key'
+bucket = 'project4444'
+key = 'Results.txt'
 data = read_from_s3(bucket, key)
 
 # Parse and convert data to DataFrame
@@ -37,6 +37,6 @@ for line in data:
 df = pd.DataFrame(meal_plans)
 
 # Write DataFrame to S3
-bucket = 'destination-bucket'
+bucket = 'project4444'
 key = 'destination-key.csv'
 write_to_s3(bucket, key, df)
