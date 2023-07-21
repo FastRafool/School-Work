@@ -1,2 +1,0 @@
-# Load the dataset
-data = pd.read_csv('/Users/odudu/Downloads/ProjectDataset3.csv')
