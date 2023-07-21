@@ -1,0 +1,42 @@
+import sys
+import boto3
+import pandas as pd
+from io import StringIO
+
+s3 = boto3.client('s3')
+
+# Function to read data from S3
+def read_from_s3(bucket, key):
+    obj = s3.get_object(Bucket=bucket, Key=key)
+    data = obj['Body'].read().decode('utf-8')
+    return data
+
+# Function to write data to S3
+def write_to_s3(bucket, key, data):
+    csv_buffer = StringIO()
+    data.to_csv(csv_buffer)
+    s3.put_object(Bucket=bucket, Key=key, Body=csv_buffer.getvalue())
+
+# Read data from S3
+bucket = 'source-bucket'
+key = 'source-key'
+data = read_from_s3(bucket, key)
+
+# Parse and convert data to DataFrame
+# Note: You will need to modify this section to fit the format of your data
+data = data.split('\n')
+meal_plans = []
+for line in data:
+    if line.startswith('Meal plan'):
+        meal_plan = {'Meal Plan': line.split(':')[1].strip()}
+    elif line.startswith('Average') or line.startswith('Total'):
+        key, value = line.split(':')
+        meal_plan[key] = value.strip()
+    elif line == '':
+        meal_plans.append(meal_plan)
+df = pd.DataFrame(meal_plans)
+
+# Write DataFrame to S3
+bucket = 'destination-bucket'
+key = 'destination-key.csv'
+write_to_s3(bucket, key, df)
