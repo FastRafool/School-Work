@@ -1,0 +1,5 @@
+S3 Managed Keys (SSE-S3): Each object is encrypted with a unique key. As an additional safeguard, it encrypts the key itself with a master key that it rotates regularly.
+
+AWS Key Management Service (SSE-KMS): This provides you with an audit trail of key usage and lets you establish and enforce key access and usage policies.
+
+Customer-Provided Keys (SSE-C): You manage the encryption keys and Amazon S3 manages the encryption, as it writes to disks, and decryption, when you access your objects.
