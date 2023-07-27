@@ -13,3 +13,6 @@ for line in data:
         meal_plans.append(meal_plan)
 df = pd.DataFrame(meal_plans)
 # ...
+
+
+data.to_csv(csv_buffer, index=False) # add 'index=False' here to prevent DataFrame's index being written to the CSV
