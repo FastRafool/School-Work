@@ -140,10 +140,10 @@ def ask_mealplan_count():
 
 def run_algorithm():
     # Generate the initial population
-    pop = toolbox.population(n=200)
+    pop = toolbox.population(n=500)
 
     # Perform the NSGA-II algorithm for a number of generations
-    algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=1000, verbose=False)
+    algorithms.eaSimple(pop, toolbox, cxpb=0.5, mutpb=0.2, ngen=2000, verbose=False)
 
     # Extract the best individuals (food combinations) from the final population
     best_individuals = tools.selBest(pop, k=MEALPLAN_COUNT)
