@@ -4,7 +4,7 @@ from io import StringIO
 
 s3 = boto3.client('s3')
 bucket = 'project4444'
-key = 'results.txt'
+key = 'results/results.txt'
 
 def read_from_s3():
     obj = s3.get_object(Bucket=bucket, Key=key)
