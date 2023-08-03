@@ -49,6 +49,6 @@ df_summary = pd.DataFrame(summary_records)
 summary_output_key = 'GLUE/grade12calc/grade12calc.csv'
 write_to_s3(summary_output_key, df_summary)
 
-df_details = pd.DataFrame(details_records, columns=['Meal Plan', 'ASIN', 'Quantity', 'Daily Servings', 'Category'])
+df_details = pd.DataFrame(details_records, columns=['Meal Plan', 'ASIN', 'Quantity', 'Daily Servings', 'Food Name'])
 details_output_key = 'GLUE/grade12asin/grade12asin.csv'
 write_to_s3(details_output_key, df_details)
