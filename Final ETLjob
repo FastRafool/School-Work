@@ -5,7 +5,7 @@ from io import StringIO
 
 s3 = boto3.client('s3')
 bucket = 'project4444'
-key = 'results/results.txt'
+key = 'results/grade12.txt'
 
 def read_from_s3():
     obj = s3.get_object(Bucket=bucket, Key=key)
@@ -46,9 +46,9 @@ for meal_plan_number, meal_plan_data in enumerate(meal_plans_data, start=1):
             details_records.append([meal_plan_number, asin, quantity, daily_servings, category])
 
 df_summary = pd.DataFrame(summary_records)
-summary_output_key = 'meal_plan_summary.csv'
+summary_output_key = 'GLUE/grade12calc/grade12calc.csv'
 write_to_s3(summary_output_key, df_summary)
 
 df_details = pd.DataFrame(details_records, columns=['Meal Plan', 'ASIN', 'Quantity', 'Daily Servings', 'Category'])
-details_output_key = 'meal_plan_details.csv'
+details_output_key = 'GLUE/grade12asin/grade12asin.csv'
 write_to_s3(details_output_key, df_details)
