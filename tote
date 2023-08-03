@@ -5,7 +5,7 @@ from io import StringIO
 
 s3 = boto3.client('s3')
 bucket = 'project4444'
-key = 'results.txt'
+key = 'results/results.txt'
 
 def read_from_s3():
     obj = s3.get_object(Bucket=bucket, Key=key)
@@ -37,10 +37,13 @@ for meal_plan_number, meal_plan_data in enumerate(meal_plans_data, start=1):
     # Details records
     for line in meal_plan_lines[:-6]:
         if re.match(r'^[A-Z0-9]+\s+x\d', line): # Match lines containing ASIN and quantity
-            asin, quantity, daily_servings, category = line.split(' / ')
-            quantity = quantity.split('x')[-1].strip()
-            daily_servings = daily_servings.split(':')[-1].strip()
-            details_records.append([meal_plan_number, asin, quantity, daily_servings, category.strip()])
+            parts = line.split(' / ')
+            asin_quantity = parts[0].split(' x')
+            asin = asin_quantity[0].strip()
+            quantity = asin_quantity[1].strip()
+            daily_servings = parts[1].split(':')[-1].strip()
+            category = parts[2].strip()
+            details_records.append([meal_plan_number, asin, quantity, daily_servings, category])
 
 df_summary = pd.DataFrame(summary_records)
 summary_output_key = 'meal_plan_summary.csv'
