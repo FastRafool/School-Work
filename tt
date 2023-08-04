@@ -1,4 +1,4 @@
-SELECT `Food Name`, SUM(Quantity) AS Total_Quantity
+SELECT "Food Name", SUM("Quantity") AS Total_Quantity
 FROM your_table_name
-GROUP BY `Food Name`
+GROUP BY "Food Name"
 ORDER BY Total_Quantity DESC;
