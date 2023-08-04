@@ -21,3 +21,10 @@ JOIN (
   GROUP BY mp."Meal Plan"
 ) AS calculated_cost
 ON mps."Meal Plan" = calculated_cost."Meal Plan";
+
+
+SELECT mp."Meal Plan", fi.Category, SUM(mp.Quantity) AS Total_Quantity
+FROM grade9asin AS mp
+JOIN maindataset AS fi
+ON mp.ASIN = fi.asin
+GROUP BY mp."Meal Plan", fi.Category;
