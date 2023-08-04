@@ -8,3 +8,16 @@ JOIN (
   GROUP BY mp."Meal Plan"
 ) AS calculated_cost
 ON mps."Meal Plan" = calculated_cost."Meal Plan";
+
+
+
+SELECT mps."Meal Plan", mps."Average daily calories", calculated_cost.Total_Cost
+FROM grade9calc AS mps
+JOIN (
+  SELECT mp."Meal Plan", SUM(fi."Price ($)" * mp.Quantity) AS Total_Cost
+  FROM grade9asin AS mp
+  JOIN maindataset AS fi
+  ON mp.ASIN = fi.asin
+  GROUP BY mp."Meal Plan"
+) AS calculated_cost
+ON mps."Meal Plan" = calculated_cost."Meal Plan";
