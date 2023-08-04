@@ -1,9 +1,9 @@
 SELECT mps."Meal Plan", mps."Average daily calories", calculated_cost.Total_Cost
-FROM "Meal Plan Summary Table" AS mps
+FROM "grade9asin" AS mps
 JOIN (
   SELECT mp."Meal Plan", SUM(fi."Price ($)" * mp.Quantity) AS Total_Cost
-  FROM "Meal Plan Details Table" AS mp
-  JOIN "Food Information Table" AS fi
+  FROM "grade9calc" AS mp
+  JOIN "maindataset" AS fi
   ON mp.ASIN = fi.asin
   GROUP BY mp."Meal Plan"
 ) AS calculated_cost
