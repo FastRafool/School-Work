@@ -28,3 +28,11 @@ FROM grade9asin AS mp
 JOIN maindataset AS fi
 ON mp.ASIN = fi.asin
 GROUP BY mp."Meal Plan", fi.Category;
+
+
+SELECT mp."Meal Plan", SUM(fi."Price ($)" * mp.Quantity) AS Total_Cost
+FROM grade9asin AS mp
+JOIN maindataset AS fi
+ON mp.ASIN = fi.asin
+GROUP BY mp."Meal Plan";
+
