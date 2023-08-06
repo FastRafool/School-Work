@@ -1,0 +1,4 @@
+Duration for which Python Shell job ETL runs: 1 minutes = 0.02 hours
+Pricing calculations
+0.0625 DPUs x 0.02 hours x 0.44 USD per DPU-Hour = 0.00 USD (Python shell ETL job cost)
+ETL jobs cost (monthly): 0.00 USD
