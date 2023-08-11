@@ -1,0 +1,2275 @@
+Meal plan 1:
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B07GLT4Z49 x3 / Daily servings: 4.29 / Walnuts
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 149.34
+Average daily calories: 2812.86
+Average daily fat (g): 180.25
+Average daily sodium (mg): 2141.03
+Average daily carbohydrates (g): 159.90
+Total weekly cost ($): 127.66
+
+Meal plan 2:
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B000V79VSO x2 / Daily servings: 4.00 / Honey Almond Butter
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+Average daily protein (g): 190.63
+Average daily calories: 2778.21
+Average daily fat (g): 151.53
+Average daily sodium (mg): 3059.60
+Average daily carbohydrates (g): 172.14
+Total weekly cost ($): 187.03
+
+Meal plan 3:
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B08G9XYDNS x2 / Daily servings: 9.14 / Heavy Cream
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074H64BHH x2 / Daily servings: 2.29 / Casarecce
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+Average daily protein (g): 127.54
+Average daily calories: 2759.29
+Average daily fat (g): 163.41
+Average daily sodium (mg): 2013.03
+Average daily carbohydrates (g): 218.71
+Total weekly cost ($): 117.64
+
+Meal plan 4:
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B088STMCYJ x3 / Daily servings: 6.43 / Protein Powder
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+Average daily protein (g): 220.56
+Average daily calories: 2851.43
+Average daily fat (g): 96.79
+Average daily sodium (mg): 3201.43
+Average daily carbohydrates (g): 301.50
+Total weekly cost ($): 179.17
+
+Meal plan 5:
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B088STMCYJ x3 / Daily servings: 6.43 / Protein Powder
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+Average daily protein (g): 252.14
+Average daily calories: 2730.00
+Average daily fat (g): 104.64
+Average daily sodium (mg): 3235.71
+Average daily carbohydrates (g): 212.64
+Total weekly cost ($): 203.44
+
+Meal plan 6:
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B088STMCYJ x3 / Daily servings: 6.43 / Protein Powder
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B074H6QSW3 x2 / Daily servings: 3.14 / Bran Flakes
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+Average daily protein (g): 220.86
+Average daily calories: 2727.86
+Average daily fat (g): 101.21
+Average daily sodium (mg): 3410.00
+Average daily carbohydrates (g): 267.99
+Total weekly cost ($): 193.03
+
+Meal plan 7:
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B088STMCYJ x5 / Daily servings: 10.71 / Protein Powder
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+Average daily protein (g): 264.86
+Average daily calories: 2918.57
+Average daily fat (g): 115.36
+Average daily sodium (mg): 3812.14
+Average daily carbohydrates (g): 233.21
+Total weekly cost ($): 211.84
+
+Meal plan 8:
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B07VKJ7TW9 x2 / Daily servings: 2.86 / Sliced Cheese
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B000V79VSO x2 / Daily servings: 4.00 / Honey Almond Butter
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+Average daily protein (g): 158.93
+Average daily calories: 2648.57
+Average daily fat (g): 162.36
+Average daily sodium (mg): 2760.36
+Average daily carbohydrates (g): 144.11
+Total weekly cost ($): 147.39
+
+Meal plan 9:
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+Average daily protein (g): 197.71
+Average daily calories: 2647.86
+Average daily fat (g): 137.50
+Average daily sodium (mg): 3017.86
+Average daily carbohydrates (g): 161.55
+Total weekly cost ($): 166.56
+
+Meal plan 10:
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B000V79VSO x2 / Daily servings: 4.00 / Honey Almond Butter
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B07FXJMZJQ x2 / Daily servings: 2.57 / Peanuts
+B074H7NP9Q x2 / Daily servings: 1.71 / Boiled Eggs
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+Average daily protein (g): 176.93
+Average daily calories: 3047.86
+Average daily fat (g): 157.64
+Average daily sodium (mg): 3065.00
+Average daily carbohydrates (g): 258.50
+Total weekly cost ($): 142.78
+
+Meal plan 11:
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07FXJMZJQ x2 / Daily servings: 2.57 / Peanuts
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B07GLT4Z49 x3 / Daily servings: 4.29 / Walnuts
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+Average daily protein (g): 170.42
+Average daily calories: 3048.57
+Average daily fat (g): 164.93
+Average daily sodium (mg): 2186.43
+Average daily carbohydrates (g): 240.99
+Total weekly cost ($): 143.83
+
+Meal plan 12:
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B000V79VSO x2 / Daily servings: 4.00 / Honey Almond Butter
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+Average daily protein (g): 152.85
+Average daily calories: 2551.07
+Average daily fat (g): 123.21
+Average daily sodium (mg): 2649.64
+Average daily carbohydrates (g): 216.43
+Total weekly cost ($): 158.93
+
+Meal plan 13:
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B074H64BHH x2 / Daily servings: 2.29 / Casarecce
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+Average daily protein (g): 167.21
+Average daily calories: 2535.71
+Average daily fat (g): 105.71
+Average daily sodium (mg): 3526.79
+Average daily carbohydrates (g): 255.11
+Total weekly cost ($): 143.43
+
+Meal plan 14:
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+Average daily protein (g): 133.79
+Average daily calories: 2458.57
+Average daily fat (g): 127.93
+Average daily sodium (mg): 2017.86
+Average daily carbohydrates (g): 232.20
+Total weekly cost ($): 126.03
+
+Meal plan 15:
+B074H54XM2 x2 / Daily servings: 1.00 / Cannellini Beans
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B07FW76LSM x2 / Daily servings: 5.14 / Bread
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+Average daily protein (g): 130.26
+Average daily calories: 2427.43
+Average daily fat (g): 100.24
+Average daily sodium (mg): 2901.46
+Average daily carbohydrates (g): 266.27
+Total weekly cost ($): 127.96
+
+Meal plan 16:
+B000V79VSO x3 / Daily servings: 6.00 / Honey Almond Butter
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B08G9XYDNS x2 / Daily servings: 9.14 / Heavy Cream
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07N9DBRLG x2 / Daily servings: 2.29 / Cookie
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+Average daily protein (g): 116.21
+Average daily calories: 3174.29
+Average daily fat (g): 200.50
+Average daily sodium (mg): 2633.21
+Average daily carbohydrates (g): 261.29
+Total weekly cost ($): 139.42
+
+Meal plan 17:
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B08G9XYDNS x2 / Daily servings: 9.14 / Heavy Cream
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B082PL63S4 x2 / Daily servings: 0.71 / Passion Fruit
+B00CIZCSIM x2 / Daily servings: 3.43 / Brown Eggs  
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+Average daily protein (g): 124.00
+Average daily calories: 2366.43
+Average daily fat (g): 124.57
+Average daily sodium (mg): 2185.00
+Average daily carbohydrates (g): 222.74
+Total weekly cost ($): 107.75
+
+Meal plan 18:
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B07Q9GCMKW x2 / Daily servings: 0.86 / Vegetable (Protein) 
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+Average daily protein (g): 156.11
+Average daily calories: 2362.14
+Average daily fat (g): 114.63
+Average daily sodium (mg): 3160.89
+Average daily carbohydrates (g): 188.43
+Total weekly cost ($): 150.46
+
+Meal plan 19:
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H5QQWX x3 / Daily servings: 0.86 / Raspberries
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B006T88ZOK x2 / Daily servings: 1.43 / Chicken Nuggets 
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+Average daily protein (g): 159.86
+Average daily calories: 2352.14
+Average daily fat (g): 116.71
+Average daily sodium (mg): 3010.71
+Average daily carbohydrates (g): 184.64
+Total weekly cost ($): 154.14
+
+Meal plan 20:
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B09YS4S3VW x2 / Daily servings: 0.86 / Quiche Broccoli
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B006T88ZOK x2 / Daily servings: 1.43 / Chicken Nuggets 
+B074H64BHH x2 / Daily servings: 2.29 / Casarecce
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+Average daily protein (g): 167.14
+Average daily calories: 2350.71
+Average daily fat (g): 66.50
+Average daily sodium (mg): 2933.21
+Average daily carbohydrates (g): 276.06
+Total weekly cost ($): 151.04
+
+Meal plan 21:
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09SC4JQ1L x2 / Daily servings: 0.86 / Quiche Lorraine
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+Average daily protein (g): 126.97
+Average daily calories: 2341.43
+Average daily fat (g): 128.56
+Average daily sodium (mg): 2425.89
+Average daily carbohydrates (g): 180.29
+Total weekly cost ($): 119.01
+
+Meal plan 22:
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B000VHF5J8 x2 / Daily servings: 0.29 / Protein Bar
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B088STMCYJ x3 / Daily servings: 6.43 / Protein Powder
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+Average daily protein (g): 190.26
+Average daily calories: 2333.93
+Average daily fat (g): 98.61
+Average daily sodium (mg): 3140.31
+Average daily carbohydrates (g): 179.14
+Total weekly cost ($): 176.10
+
+Meal plan 23:
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074VF1FC6 x2 / Daily servings: 2.00 / Meatballs
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+Average daily protein (g): 152.61
+Average daily calories: 2333.57
+Average daily fat (g): 85.98
+Average daily sodium (mg): 3089.10
+Average daily carbohydrates (g): 248.98
+Total weekly cost ($): 137.11
+
+Meal plan 24:
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B074VF1FC6 x2 / Daily servings: 2.00 / Meatballs
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B00CIZCSIM x2 / Daily servings: 3.43 / Brown Eggs  
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+Average daily protein (g): 159.19
+Average daily calories: 2332.86
+Average daily fat (g): 137.41
+Average daily sodium (mg): 3198.74
+Average daily carbohydrates (g): 117.97
+Total weekly cost ($): 156.46
+
+Meal plan 25:
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B07VKJ7TW9 x2 / Daily servings: 2.86 / Sliced Cheese
+B0884P2JXP x2 / Daily servings: 0.86 / Tomato Soup
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+Average daily protein (g): 164.13
+Average daily calories: 2325.71
+Average daily fat (g): 100.36
+Average daily sodium (mg): 3115.00
+Average daily carbohydrates (g): 195.61
+Total weekly cost ($): 153.76
+
+Meal plan 26:
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07GLT4Z49 x2 / Daily servings: 2.86 / Walnuts
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B079JT8ZZF x2 / Daily servings: 3.14 / Broccoli Florets 
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+Average daily protein (g): 115.49
+Average daily calories: 2316.79
+Average daily fat (g): 122.57
+Average daily sodium (mg): 2781.43
+Average daily carbohydrates (g): 206.84
+Total weekly cost ($): 136.28
+
+Meal plan 27:
+B079JT8ZZF x2 / Daily servings: 3.14 / Broccoli Florets 
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+Average daily protein (g): 145.83
+Average daily calories: 2287.43
+Average daily fat (g): 84.53
+Average daily sodium (mg): 2114.31
+Average daily carbohydrates (g): 251.71
+Total weekly cost ($): 143.06
+
+Meal plan 28:
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B082PL63S4 x2 / Daily servings: 0.71 / Passion Fruit
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+Average daily protein (g): 126.00
+Average daily calories: 2283.57
+Average daily fat (g): 107.50
+Average daily sodium (mg): 2399.64
+Average daily carbohydrates (g): 214.43
+Total weekly cost ($): 122.04
+
+Meal plan 29:
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074VF1FC6 x2 / Daily servings: 2.00 / Meatballs
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B07V262C64 x2 / Daily servings: 1.71 / Cereal Bar
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+Average daily protein (g): 117.64
+Average daily calories: 2283.57
+Average daily fat (g): 108.79
+Average daily sodium (mg): 3210.36
+Average daily carbohydrates (g): 213.00
+Total weekly cost ($): 127.03
+
+Meal plan 30:
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B000V79VSO x2 / Daily servings: 4.00 / Honey Almond Butter
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 137.79
+Average daily calories: 2278.93
+Average daily fat (g): 124.57
+Average daily sodium (mg): 2419.64
+Average daily carbohydrates (g): 159.47
+Total weekly cost ($): 128.83
+
+Meal plan 31:
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07VKY77DR x2 / Daily servings: 2.29 / Bran Cereal
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H737VK x1 / Daily servings: 0.50 / Peach
+Average daily protein (g): 156.85
+Average daily calories: 2265.00
+Average daily fat (g): 69.86
+Average daily sodium (mg): 2796.43
+Average daily carbohydrates (g): 280.64
+Total weekly cost ($): 146.22
+
+Meal plan 32:
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B07FXJMZJQ x3 / Daily servings: 3.86 / Peanuts
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 148.14
+Average daily calories: 2257.14
+Average daily fat (g): 102.43
+Average daily sodium (mg): 2526.43
+Average daily carbohydrates (g): 216.86
+Total weekly cost ($): 136.64
+
+Meal plan 33:
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B074H64BHH x2 / Daily servings: 2.29 / Casarecce
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+Average daily protein (g): 120.28
+Average daily calories: 2227.14
+Average daily fat (g): 104.57
+Average daily sodium (mg): 2170.00
+Average daily carbohydrates (g): 216.34
+Total weekly cost ($): 121.33
+
+Meal plan 34:
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B07V262C64 x2 / Daily servings: 1.71 / Cereal Bar
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+Average daily protein (g): 123.36
+Average daily calories: 2182.86
+Average daily fat (g): 95.14
+Average daily sodium (mg): 2642.14
+Average daily carbohydrates (g): 212.43
+Total weekly cost ($): 131.16
+
+Meal plan 35:
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B09YS4S3VW x2 / Daily servings: 0.86 / Quiche Broccoli
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B09FQRMJHH x2 / Daily servings: 0.29 / Shrimp
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 118.76
+Average daily calories: 2177.86
+Average daily fat (g): 129.27
+Average daily sodium (mg): 2987.31
+Average daily carbohydrates (g): 149.40
+Total weekly cost ($): 134.73
+
+Meal plan 36:
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+Average daily protein (g): 121.91
+Average daily calories: 2171.00
+Average daily fat (g): 100.60
+Average daily sodium (mg): 2627.89
+Average daily carbohydrates (g): 209.20
+Total weekly cost ($): 126.63
+
+Meal plan 37:
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074Y2PYPC x3 / Daily servings: 1.50 / Corn
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07VKJ7TW9 x2 / Daily servings: 2.86 / Sliced Cheese
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+Average daily protein (g): 124.43
+Average daily calories: 2155.00
+Average daily fat (g): 112.29
+Average daily sodium (mg): 2440.00
+Average daily carbohydrates (g): 176.33
+Total weekly cost ($): 108.94
+
+Meal plan 38:
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07V262C64 x3 / Daily servings: 2.57 / Cereal Bar
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+Average daily protein (g): 137.55
+Average daily calories: 2151.43
+Average daily fat (g): 98.89
+Average daily sodium (mg): 2573.89
+Average daily carbohydrates (g): 187.49
+Total weekly cost ($): 132.46
+
+Meal plan 39:
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H6QSW3 x2 / Daily servings: 3.14 / Bran Flakes
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+Average daily protein (g): 131.71
+Average daily calories: 2146.43
+Average daily fat (g): 72.93
+Average daily sodium (mg): 2643.21
+Average daily carbohydrates (g): 263.07
+Total weekly cost ($): 135.91
+
+Meal plan 40:
+B07FXJMZJQ x2 / Daily servings: 2.57 / Peanuts
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B07Q9GCMKW x2 / Daily servings: 0.86 / Vegetable (Protein) 
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+Average daily protein (g): 137.40
+Average daily calories: 2135.71
+Average daily fat (g): 107.77
+Average daily sodium (mg): 2573.74
+Average daily carbohydrates (g): 171.00
+Total weekly cost ($): 126.81
+
+Meal plan 41:
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07VKY77DR x2 / Daily servings: 2.29 / Bran Cereal
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B07FXJMZJQ x2 / Daily servings: 2.57 / Peanuts
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+Average daily protein (g): 114.75
+Average daily calories: 2118.86
+Average daily fat (g): 87.17
+Average daily sodium (mg): 2315.74
+Average daily carbohydrates (g): 245.98
+Total weekly cost ($): 108.43
+
+Meal plan 42:
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B074H6M4M4 x2 / Daily servings: 2.29 / Almond Milk
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074H54XM2 x2 / Daily servings: 1.00 / Cannellini Beans
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B074H737VK x1 / Daily servings: 0.50 / Peach
+Average daily protein (g): 141.64
+Average daily calories: 2115.71
+Average daily fat (g): 70.36
+Average daily sodium (mg): 2940.71
+Average daily carbohydrates (g): 264.36
+Total weekly cost ($): 115.13
+
+Meal plan 43:
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B09SC4JQ1L x2 / Daily servings: 0.86 / Quiche Lorraine
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B09FQRMJHP x3 / Daily servings: 0.43 / Tso Chicken
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B07N9DBRLG x2 / Daily servings: 2.29 / Cookie
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+Average daily protein (g): 143.28
+Average daily calories: 2111.07
+Average daily fat (g): 72.43
+Average daily sodium (mg): 3171.79
+Average daily carbohydrates (g): 228.70
+Total weekly cost ($): 171.07
+
+Meal plan 44:
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+Average daily protein (g): 115.20
+Average daily calories: 2100.36
+Average daily fat (g): 98.11
+Average daily sodium (mg): 3054.24
+Average daily carbohydrates (g): 191.79
+Total weekly cost ($): 133.05
+
+Meal plan 45:
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+Average daily protein (g): 131.50
+Average daily calories: 2096.43
+Average daily fat (g): 86.93
+Average daily sodium (mg): 2048.57
+Average daily carbohydrates (g): 221.00
+Total weekly cost ($): 129.47
+
+Meal plan 46:
+B08852TNND x3 / Daily servings: 1.29 / Pea Soup
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074Y2PYPC x2 / Daily servings: 1.00 / Corn
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07FW76LSM x2 / Daily servings: 5.14 / Bread
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+Average daily protein (g): 115.19
+Average daily calories: 2071.71
+Average daily fat (g): 69.96
+Average daily sodium (mg): 2967.53
+Average daily carbohydrates (g): 264.71
+Total weekly cost ($): 122.23
+
+Meal plan 47:
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+Average daily protein (g): 119.79
+Average daily calories: 2034.29
+Average daily fat (g): 100.29
+Average daily sodium (mg): 2496.43
+Average daily carbohydrates (g): 189.91
+Total weekly cost ($): 135.64
+
+Meal plan 48:
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B00CIZCSIM x2 / Daily servings: 3.43 / Brown Eggs  
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+Average daily protein (g): 112.07
+Average daily calories: 2034.29
+Average daily fat (g): 104.71
+Average daily sodium (mg): 2043.57
+Average daily carbohydrates (g): 167.09
+Total weekly cost ($): 95.96
+
+Meal plan 49:
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B00LMC502S x3 / Daily servings: 1.71 / Yogurt
+B074H5Y3M8 x2 / Daily servings: 1.43 / Root Vegetables
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+Average daily protein (g): 122.57
+Average daily calories: 2018.21
+Average daily fat (g): 77.71
+Average daily sodium (mg): 2082.86
+Average daily carbohydrates (g): 221.71
+Total weekly cost ($): 119.98
+
+Meal plan 50:
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07VKJ7TW9 x2 / Daily servings: 2.86 / Sliced Cheese
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B074H737VK x1 / Daily servings: 0.50 / Peach
+Average daily protein (g): 126.57
+Average daily calories: 2017.86
+Average daily fat (g): 100.14
+Average daily sodium (mg): 2685.36
+Average daily carbohydrates (g): 174.19
+Total weekly cost ($): 126.43
+
+Meal plan 51:
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074VF1FC6 x2 / Daily servings: 2.00 / Meatballs
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H5Y3M8 x2 / Daily servings: 1.43 / Root Vegetables
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 114.98
+Average daily calories: 2016.43
+Average daily fat (g): 105.53
+Average daily sodium (mg): 3040.31
+Average daily carbohydrates (g): 175.61
+Total weekly cost ($): 107.14
+
+Meal plan 52:
+B074H7NP9Q x2 / Daily servings: 1.71 / Boiled Eggs
+B09SC4JQ1L x2 / Daily servings: 0.86 / Quiche Lorraine
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H64BHH x2 / Daily servings: 2.29 / Casarecce
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+Average daily protein (g): 135.57
+Average daily calories: 2012.50
+Average daily fat (g): 65.21
+Average daily sodium (mg): 2313.57
+Average daily carbohydrates (g): 225.84
+Total weekly cost ($): 133.67
+
+Meal plan 53:
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H6M4M4 x2 / Daily servings: 2.29 / Almond Milk
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B082PL63S4 x2 / Daily servings: 0.71 / Passion Fruit
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+Average daily protein (g): 157.27
+Average daily calories: 2005.71
+Average daily fat (g): 91.61
+Average daily sodium (mg): 2349.60
+Average daily carbohydrates (g): 140.91
+Total weekly cost ($): 158.31
+
+Meal plan 54:
+B079JT8ZZF x2 / Daily servings: 3.14 / Broccoli Florets 
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B000RGZNIG x2 / Daily servings: 1.71 / Pineapple
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+Average daily protein (g): 114.74
+Average daily calories: 1983.43
+Average daily fat (g): 78.27
+Average daily sodium (mg): 2794.34
+Average daily carbohydrates (g): 215.70
+Total weekly cost ($): 134.33
+
+Meal plan 55:
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07FYYKKQK x2 / Daily servings: 0.29 / Banana
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07VKJ7TW9 x2 / Daily servings: 2.86 / Sliced Cheese
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+Average daily protein (g): 117.36
+Average daily calories: 1977.86
+Average daily fat (g): 104.40
+Average daily sodium (mg): 2202.49
+Average daily carbohydrates (g): 154.90
+Total weekly cost ($): 134.56
+
+Meal plan 56:
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B077RYGD4L x2 / Daily servings: 1.29 / Yogurt
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B09FQRMJHP x2 / Daily servings: 0.29 / Tso Chicken
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5LWCJ x2 / Daily servings: 1.71 / Mango 
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+Average daily protein (g): 139.69
+Average daily calories: 1968.86
+Average daily fat (g): 79.31
+Average daily sodium (mg): 2622.53
+Average daily carbohydrates (g): 188.84
+Total weekly cost ($): 155.22
+
+Meal plan 57:
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+Average daily protein (g): 154.20
+Average daily calories: 1964.29
+Average daily fat (g): 80.68
+Average daily sodium (mg): 1829.60
+Average daily carbohydrates (g): 165.50
+Total weekly cost ($): 148.56
+
+Meal plan 58:
+B07Q9FQML9 x2 / Daily servings: 0.86 / Cauliflower 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+Average daily protein (g): 124.21
+Average daily calories: 1958.57
+Average daily fat (g): 76.36
+Average daily sodium (mg): 2431.07
+Average daily carbohydrates (g): 225.41
+Total weekly cost ($): 108.43
+
+Meal plan 59:
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07Q9GCMKW x2 / Daily servings: 0.86 / Vegetable (Protein) 
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+Average daily protein (g): 119.95
+Average daily calories: 1956.71
+Average daily fat (g): 59.44
+Average daily sodium (mg): 3133.06
+Average daily carbohydrates (g): 261.50
+Total weekly cost ($): 139.53
+
+Meal plan 60:
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+Average daily protein (g): 143.61
+Average daily calories: 1955.29
+Average daily fat (g): 78.81
+Average daily sodium (mg): 2233.96
+Average daily carbohydrates (g): 191.64
+Total weekly cost ($): 160.26
+
+Meal plan 61:
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B09SC4JQ1L x2 / Daily servings: 0.86 / Quiche Lorraine
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H5Y3M8 x2 / Daily servings: 1.43 / Root Vegetables
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+Average daily protein (g): 112.00
+Average daily calories: 1949.29
+Average daily fat (g): 73.14
+Average daily sodium (mg): 2634.29
+Average daily carbohydrates (g): 219.61
+Total weekly cost ($): 115.82
+
+Meal plan 62:
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B000RGZNIG x2 / Daily servings: 1.71 / Pineapple
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H737VK x2 / Daily servings: 1.00 / Peach
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07V262C64 x2 / Daily servings: 1.71 / Cereal Bar
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+Average daily protein (g): 113.03
+Average daily calories: 1944.50
+Average daily fat (g): 72.49
+Average daily sodium (mg): 1857.91
+Average daily carbohydrates (g): 228.71
+Total weekly cost ($): 119.37
+
+Meal plan 63:
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B000VHF5J8 x2 / Daily servings: 0.29 / Protein Bar
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07KMYWCPP x2 / Daily servings: 1.14 / Cottage Cheese
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+Average daily protein (g): 112.04
+Average daily calories: 1944.29
+Average daily fat (g): 74.48
+Average daily sodium (mg): 2071.96
+Average daily carbohydrates (g): 225.64
+Total weekly cost ($): 109.25
+
+Meal plan 64:
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+Average daily protein (g): 120.90
+Average daily calories: 1913.21
+Average daily fat (g): 62.27
+Average daily sodium (mg): 2269.10
+Average daily carbohydrates (g): 243.14
+Total weekly cost ($): 118.07
+
+Meal plan 65:
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B077RYGD4L x2 / Daily servings: 1.29 / Yogurt
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H737VK x2 / Daily servings: 1.00 / Peach
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B08G9XYDNS x2 / Daily servings: 9.14 / Heavy Cream
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+Average daily protein (g): 112.27
+Average daily calories: 1910.00
+Average daily fat (g): 102.25
+Average daily sodium (mg): 1957.46
+Average daily carbohydrates (g): 168.48
+Total weekly cost ($): 132.50
+
+Meal plan 66:
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+Average daily protein (g): 123.56
+Average daily calories: 1902.14
+Average daily fat (g): 58.57
+Average daily sodium (mg): 2720.00
+Average daily carbohydrates (g): 222.21
+Total weekly cost ($): 108.74
+
+Meal plan 67:
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B0BBP7663X x2 / Daily servings: 1.14 / Beef Burgers
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B0779HTYC9 x2 / Daily servings: 0.29 / Salami
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+Average daily protein (g): 132.50
+Average daily calories: 1896.43
+Average daily fat (g): 92.71
+Average daily sodium (mg): 2017.14
+Average daily carbohydrates (g): 133.34
+Total weekly cost ($): 130.31
+
+Meal plan 68:
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B09FQRMJHP x2 / Daily servings: 0.29 / Tso Chicken
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B08G9XYDNS x1 / Daily servings: 4.57 / Heavy Cream
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B074H5Y3M8 x2 / Daily servings: 1.43 / Root Vegetables
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+Average daily protein (g): 124.14
+Average daily calories: 1892.14
+Average daily fat (g): 82.71
+Average daily sodium (mg): 2789.29
+Average daily carbohydrates (g): 186.77
+Total weekly cost ($): 149.53
+
+Meal plan 69:
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B082PL63S4 x2 / Daily servings: 0.71 / Passion Fruit
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B07FW76LSM x2 / Daily servings: 5.14 / Bread
+B077RYGD4L x2 / Daily servings: 1.29 / Yogurt
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+Average daily protein (g): 119.57
+Average daily calories: 1886.43
+Average daily fat (g): 67.79
+Average daily sodium (mg): 2570.71
+Average daily carbohydrates (g): 212.50
+Total weekly cost ($): 125.27
+
+Meal plan 70:
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B074H737VK x3 / Daily servings: 1.50 / Peach
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07V262C64 x2 / Daily servings: 1.71 / Cereal Bar
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+Average daily protein (g): 137.53
+Average daily calories: 1875.00
+Average daily fat (g): 55.98
+Average daily sodium (mg): 2417.31
+Average daily carbohydrates (g): 214.79
+Total weekly cost ($): 113.93
+
+Meal plan 71:
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+Average daily protein (g): 147.98
+Average daily calories: 1852.43
+Average daily fat (g): 77.81
+Average daily sodium (mg): 1603.96
+Average daily carbohydrates (g): 146.57
+Total weekly cost ($): 126.63
+
+Meal plan 72:
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B000VHF5J8 x2 / Daily servings: 0.29 / Protein Bar
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07Q9FQML9 x3 / Daily servings: 1.29 / Cauliflower 
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+Average daily protein (g): 144.47
+Average daily calories: 1844.29
+Average daily fat (g): 94.20
+Average daily sodium (mg): 1981.24
+Average daily carbohydrates (g): 109.79
+Total weekly cost ($): 155.86
+
+Meal plan 73:
+B0779HTYC9 x2 / Daily servings: 0.29 / Salami
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+Average daily protein (g): 166.86
+Average daily calories: 1842.86
+Average daily fat (g): 62.29
+Average daily sodium (mg): 2869.29
+Average daily carbohydrates (g): 173.83
+Total weekly cost ($): 147.63
+
+Meal plan 74:
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B0779HTYC9 x3 / Daily servings: 0.43 / Salami
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+Average daily protein (g): 123.57
+Average daily calories: 1832.86
+Average daily fat (g): 77.36
+Average daily sodium (mg): 2046.43
+Average daily carbohydrates (g): 177.54
+Total weekly cost ($): 123.13
+
+Meal plan 75:
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B074H54XM2 x2 / Daily servings: 1.00 / Cannellini Beans
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 140.76
+Average daily calories: 1804.93
+Average daily fat (g): 56.17
+Average daily sodium (mg): 2180.03
+Average daily carbohydrates (g): 212.77
+Total weekly cost ($): 132.65
+
+Meal plan 76:
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B00CIZCSIM x3 / Daily servings: 5.14 / Brown Eggs  
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+Average daily protein (g): 120.92
+Average daily calories: 1792.50
+Average daily fat (g): 85.57
+Average daily sodium (mg): 2302.86
+Average daily carbohydrates (g): 143.66
+Total weekly cost ($): 131.18
+
+Meal plan 77:
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B00LMC502S x2 / Daily servings: 1.14 / Yogurt
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07V262C64 x2 / Daily servings: 1.71 / Cereal Bar
+B07FW76LSM x1 / Daily servings: 2.57 / Bread
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H5Y3M8 x2 / Daily servings: 1.43 / Root Vegetables
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+Average daily protein (g): 128.86
+Average daily calories: 1782.14
+Average daily fat (g): 58.14
+Average daily sodium (mg): 2242.50
+Average daily carbohydrates (g): 200.91
+Total weekly cost ($): 105.71
+
+Meal plan 78:
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07Q9GCMKW x2 / Daily servings: 0.86 / Vegetable (Protein) 
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+Average daily protein (g): 140.34
+Average daily calories: 1762.86
+Average daily fat (g): 66.32
+Average daily sodium (mg): 2116.74
+Average daily carbohydrates (g): 168.57
+Total weekly cost ($): 140.61
+
+Meal plan 79:
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B000RGZMTQ x2 / Daily servings: 0.57 / Apple
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B06XZMT4PG x2 / Daily servings: 0.29 / Peanut Butter Bar
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B07GLT4Z49 x1 / Daily servings: 1.43 / Walnuts
+Average daily protein (g): 113.87
+Average daily calories: 1760.71
+Average daily fat (g): 100.05
+Average daily sodium (mg): 1756.51
+Average daily carbohydrates (g): 107.98
+Total weekly cost ($): 108.93
+
+Meal plan 80:
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B00CIZCSIM x2 / Daily servings: 3.43 / Brown Eggs  
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H7NP9Q x2 / Daily servings: 1.71 / Boiled Eggs
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+Average daily protein (g): 153.67
+Average daily calories: 1757.50
+Average daily fat (g): 84.52
+Average daily sodium (mg): 2096.20
+Average daily carbohydrates (g): 103.68
+Total weekly cost ($): 141.57
+
+Meal plan 81:
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07NRC7THL x3 / Daily servings: 1.07 / Chicken Breast 
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07FW76LSM x2 / Daily servings: 5.14 / Bread
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+Average daily protein (g): 112.12
+Average daily calories: 1755.64
+Average daily fat (g): 71.53
+Average daily sodium (mg): 2312.17
+Average daily carbohydrates (g): 165.57
+Total weekly cost ($): 137.17
+
+Meal plan 82:
+B074H7KL3S x3 / Daily servings: 2.14 / Vegetables Mixed 
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H5SRLB x2 / Daily servings: 3.43 / Brown Eggs  
+B074H54XM2 x2 / Daily servings: 1.00 / Cannellini Beans
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+Average daily protein (g): 129.92
+Average daily calories: 1712.86
+Average daily fat (g): 73.43
+Average daily sodium (mg): 2292.14
+Average daily carbohydrates (g): 131.57
+Total weekly cost ($): 127.13
+
+Meal plan 83:
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+Average daily protein (g): 115.95
+Average daily calories: 1695.36
+Average daily fat (g): 67.16
+Average daily sodium (mg): 2336.56
+Average daily carbohydrates (g): 164.04
+Total weekly cost ($): 103.15
+
+Meal plan 84:
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H5LWCJ x2 / Daily servings: 1.71 / Mango 
+B00CIZCSIM x2 / Daily servings: 3.43 / Brown Eggs  
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+Average daily protein (g): 137.83
+Average daily calories: 1689.93
+Average daily fat (g): 39.96
+Average daily sodium (mg): 1970.39
+Average daily carbohydrates (g): 223.09
+Total weekly cost ($): 125.57
+
+Meal plan 85:
+B079JT8ZZF x3 / Daily servings: 4.71 / Broccoli Florets 
+B074H54NKR x2 / Daily servings: 1.71 / Mango Slices
+B088STMCYJ x2 / Daily servings: 4.29 / Protein Powder
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+Average daily protein (g): 127.74
+Average daily calories: 1689.29
+Average daily fat (g): 54.63
+Average daily sodium (mg): 2146.60
+Average daily carbohydrates (g): 184.36
+Total weekly cost ($): 140.71
+
+Meal plan 86:
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+Average daily protein (g): 123.56
+Average daily calories: 1686.07
+Average daily fat (g): 67.57
+Average daily sodium (mg): 2220.71
+Average daily carbohydrates (g): 150.36
+Total weekly cost ($): 150.75
+
+Meal plan 87:
+B074VF1FC6 x1 / Daily servings: 1.00 / Meatballs
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07Q9FQML9 x2 / Daily servings: 0.86 / Cauliflower 
+B08852TNND x2 / Daily servings: 0.86 / Pea Soup
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+Average daily protein (g): 127.98
+Average daily calories: 1683.14
+Average daily fat (g): 54.67
+Average daily sodium (mg): 2855.03
+Average daily carbohydrates (g): 177.14
+Total weekly cost ($): 144.13
+
+Meal plan 88:
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H54NKR x2 / Daily servings: 1.71 / Mango Slices
+B074H5M1PM x2 / Daily servings: 2.86 / Egg White
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H64BHH x2 / Daily servings: 2.29 / Casarecce
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+Average daily protein (g): 145.55
+Average daily calories: 1668.57
+Average daily fat (g): 30.21
+Average daily sodium (mg): 1826.07
+Average daily carbohydrates (g): 201.29
+Total weekly cost ($): 144.81
+
+Meal plan 89:
+B07FXJMZJQ x2 / Daily servings: 2.57 / Peanuts
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B07Q9GCMKW x2 / Daily servings: 0.86 / Vegetable (Protein) 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+Average daily protein (g): 118.97
+Average daily calories: 1646.43
+Average daily fat (g): 67.27
+Average daily sodium (mg): 1739.46
+Average daily carbohydrates (g): 155.07
+Total weekly cost ($): 104.84
+
+Meal plan 90:
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B079JT8ZZF x2 / Daily servings: 3.14 / Broccoli Florets 
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H5M1PM x2 / Daily servings: 2.86 / Egg White
+B07KMYWCPP x2 / Daily servings: 1.14 / Cottage Cheese
+B07VKY77DR x1 / Daily servings: 1.14 / Bran Cereal
+Average daily protein (g): 168.36
+Average daily calories: 1615.71
+Average daily fat (g): 53.93
+Average daily sodium (mg): 2303.57
+Average daily carbohydrates (g): 125.14
+Total weekly cost ($): 157.83
+
+Meal plan 91:
+B074H5LWCJ x2 / Daily servings: 1.71 / Mango 
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07KMYWCPP x1 / Daily servings: 0.57 / Cottage Cheese
+B07N9DBRLG x1 / Daily servings: 1.14 / Cookie
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+Average daily protein (g): 114.11
+Average daily calories: 1594.64
+Average daily fat (g): 38.34
+Average daily sodium (mg): 2160.89
+Average daily carbohydrates (g): 209.27
+Total weekly cost ($): 130.57
+
+Meal plan 92:
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074H6M4M4 x2 / Daily servings: 2.29 / Almond Milk
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07NRC969Z x3 / Daily servings: 3.43 / Cod Fillet 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B000V79VSO x1 / Daily servings: 2.00 / Honey Almond Butter
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+Average daily protein (g): 121.04
+Average daily calories: 1588.21
+Average daily fat (g): 85.34
+Average daily sodium (mg): 1585.89
+Average daily carbohydrates (g): 83.18
+Total weekly cost ($): 138.48
+
+Meal plan 93:
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B074H7KL3S x1 / Daily servings: 0.71 / Vegetables Mixed 
+B000RGZNIG x1 / Daily servings: 0.86 / Pineapple
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B074H5M1PM x2 / Daily servings: 2.86 / Egg White
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B074H6QSW3 x1 / Daily servings: 1.57 / Bran Flakes
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B0779HTYC9 x1 / Daily servings: 0.14 / Salami
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+Average daily protein (g): 114.31
+Average daily calories: 1588.14
+Average daily fat (g): 35.51
+Average daily sodium (mg): 1728.77
+Average daily carbohydrates (g): 219.57
+Total weekly cost ($): 113.41
+
+Meal plan 94:
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B0779HTYC9 x2 / Daily servings: 0.29 / Salami
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B07FXJMZJQ x2 / Daily servings: 2.57 / Peanuts
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+Average daily protein (g): 112.42
+Average daily calories: 1541.43
+Average daily fat (g): 71.50
+Average daily sodium (mg): 1770.71
+Average daily carbohydrates (g): 123.21
+Total weekly cost ($): 137.13
+
+Meal plan 95:
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B074H54NKR x1 / Daily servings: 0.86 / Mango Slices
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07FXJMZJQ x1 / Daily servings: 1.29 / Peanuts
+B07KMYWCPP x3 / Daily servings: 1.71 / Cottage Cheese
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+Average daily protein (g): 136.47
+Average daily calories: 1533.57
+Average daily fat (g): 54.68
+Average daily sodium (mg): 1867.46
+Average daily carbohydrates (g): 137.84
+Total weekly cost ($): 130.41
+
+Meal plan 96:
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B074H5SRLB x3 / Daily servings: 5.14 / Brown Eggs  
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B074H64BHH x1 / Daily servings: 1.14 / Casarecce
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07NRC969Z x2 / Daily servings: 2.29 / Cod Fillet 
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074H737VK x1 / Daily servings: 0.50 / Peach
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B074H54XM2 x1 / Daily servings: 0.50 / Cannellini Beans
+B07Q9GCMKW x1 / Daily servings: 0.43 / Vegetable (Protein) 
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H5QQWX x1 / Daily servings: 0.29 / Raspberries
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+Average daily protein (g): 127.36
+Average daily calories: 1493.93
+Average daily fat (g): 56.71
+Average daily sodium (mg): 1678.21
+Average daily carbohydrates (g): 122.04
+Total weekly cost ($): 125.97
+
+Meal plan 97:
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B07V262C64 x3 / Daily servings: 2.57 / Cereal Bar
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07VKJ7TW9 x1 / Daily servings: 1.43 / Sliced Cheese
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B0884P2JXP x1 / Daily servings: 0.43 / Tomato Soup
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B09FQRMJHP x1 / Daily servings: 0.14 / Tso Chicken
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+Average daily protein (g): 128.40
+Average daily calories: 1461.07
+Average daily fat (g): 44.34
+Average daily sodium (mg): 2245.17
+Average daily carbohydrates (g): 139.84
+Total weekly cost ($): 133.27
+
+Meal plan 98:
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B00LMC502S x2 / Daily servings: 1.14 / Yogurt
+B074H737VK x2 / Daily servings: 1.00 / Peach
+B0BBP7663X x1 / Daily servings: 0.57 / Beef Burgers
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B07XQC3B64 x1 / Daily servings: 0.14 / Chicken
+B07V262C64 x1 / Daily servings: 0.86 / Cereal Bar
+B000VHF5J8 x1 / Daily servings: 0.14 / Protein Bar
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B07FYYKKQK x1 / Daily servings: 0.14 / Banana
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B00CIZCSIM x1 / Daily servings: 1.71 / Brown Eggs  
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+Average daily protein (g): 117.90
+Average daily calories: 1439.29
+Average daily fat (g): 51.13
+Average daily sodium (mg): 1717.31
+Average daily carbohydrates (g): 131.41
+Total weekly cost ($): 121.04
+
+Meal plan 99:
+B07NRC969Z x3 / Daily servings: 3.43 / Cod Fillet 
+B09YS4S3VW x1 / Daily servings: 0.43 / Quiche Broccoli
+B074H5SRLB x1 / Daily servings: 1.71 / Brown Eggs  
+B08852TNND x1 / Daily servings: 0.43 / Pea Soup
+B006T88ZOK x1 / Daily servings: 0.71 / Chicken Nuggets 
+B09FQRMJHH x1 / Daily servings: 0.14 / Shrimp
+B07Q9FQML9 x1 / Daily servings: 0.43 / Cauliflower 
+B074H5Y3M8 x1 / Daily servings: 0.71 / Root Vegetables
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B08GMXG1MM x1 / Daily servings: 0.29 / Pot Pie
+B06XZMT4PG x1 / Daily servings: 0.14 / Peanut Butter Bar
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B07XJZ63RB x1 / Daily servings: 0.14 / Turkey
+B074H5LWCJ x1 / Daily servings: 0.86 / Mango 
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+Average daily protein (g): 118.20
+Average daily calories: 1334.29
+Average daily fat (g): 44.75
+Average daily sodium (mg): 1694.24
+Average daily carbohydrates (g): 119.57
+Total weekly cost ($): 158.93
+
+Meal plan 100:
+B079JT8ZZF x1 / Daily servings: 1.57 / Broccoli Florets 
+B07NRC7THL x1 / Daily servings: 0.36 / Chicken Breast 
+B074H7NP9Q x1 / Daily servings: 0.86 / Boiled Eggs
+B074VCN7HW x1 / Daily servings: 0.50 / Canned Pumpkin
+B074H5Y3M8 x2 / Daily servings: 1.43 / Root Vegetables
+B088STMCYJ x1 / Daily servings: 2.14 / Protein Powder
+B09SC4JQ1L x1 / Daily servings: 0.43 / Quiche Lorraine
+B000RGZMTQ x1 / Daily servings: 0.29 / Apple
+B074H5M1PM x1 / Daily servings: 1.43 / Egg White
+B082PL63S4 x1 / Daily servings: 0.36 / Passion Fruit
+B077RYGD4L x1 / Daily servings: 0.64 / Yogurt
+B07NRC969Z x1 / Daily servings: 1.14 / Cod Fillet 
+B074H6M4M4 x1 / Daily servings: 1.14 / Almond Milk
+B00LMC502S x1 / Daily servings: 0.57 / Yogurt
+B074H4SK16 x1 / Daily servings: 0.71 / Coconut Milk
+B074Y2PYPC x1 / Daily servings: 0.50 / Corn
+Average daily protein (g): 111.91
+Average daily calories: 1284.64
+Average daily fat (g): 45.89
+Average daily sodium (mg): 1534.96
+Average daily carbohydrates (g): 109.29
+Total weekly cost ($): 121.65
