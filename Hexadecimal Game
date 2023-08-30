@@ -1,0 +1,300 @@
+#include <iostream>
+using namespace std;
+/* rand example: guess the number */
+#include <sstream>
+#include <stdio.h>  /* printf, scanf, puts, NULL */
+#include <stdlib.h> /* srand, rand */
+#include <string>
+#include <time.h> /* time */
+#include <fstream>
+void hex_string(char str[]);
+
+int randNumGen();
+
+void timer();
+
+int main() {
+    int n = 1, length, totalscore = 0;
+    int round = 0; // keep track of rounds
+    int response;
+    unsigned int d;
+    int chance = 0;
+    char yn;
+    const int SIZE = 3;
+    std::string namesArray[SIZE];
+    int scoresArray[SIZE];
+    int count = 0;
+    std::string name;
+    std::cout << "Enter your name:";
+    std::cin >> name;
+cout << "\nLEADERBOARD\n" << endl;
+    fstream myFile;
+    myFile.open("highscores.txt", ios::in);
+    if (myFile.is_open())
+    {
+        string line;
+        while(getline(myFile, line))
+        {
+            cout << line << endl;
+        }
+        
+        myFile.close();
+    }
+    // setting up the hex number
+    char hex[2];
+
+
+    hex_string(hex);
+
+    cout << "\n\n\nConvert this hexadecimal number into decimal" << endl;
+    cout << hex << endl;
+
+    std::istringstream iss(hex);
+    iss >> std::hex >> d;
+
+    // cout << d << std::endl; // DONT FORGET TO DELETE THIS POST TESTING
+    cout << endl
+        << "Enter the decimal value and if the value is correct earn 100 "
+        "points. This will repeat until you quit. "
+        "If you wish to quit, please type a number less then 0."
+        << endl;
+	cout << "Enter number here: ";
+
+    cin >> response; // first response in case they wish to quit
+    cout << endl;
+    //timer();
+
+    while ( response > 0) {
+        // while loop for 10 rounds or they quit
+
+        //round++; // increment round
+
+        if (response == d) { // the response and situation if they get it right
+
+            cout << "Correct + 100!!!" << endl << endl;
+            totalscore = totalscore + 100;
+
+        }
+        else if (response < 0) { // they want to quit
+
+            while (chance < 1) {
+
+                cout << "Are you sure you would like to quit?" << endl;
+
+                cout << "y/n?" << endl;
+
+                cin >> yn;
+
+                if (yn == 'y' or yn == 'Y') { // if they wish to quit
+
+                    cout << "Thank you for trying our game at least!" << endl;
+
+                    cout << "Your score was: " << totalscore;
+
+                    return 0;
+
+                }
+                else if (yn == 'n' or
+                    yn == 'N') { // if they change their mind and continue
+
+                    cout << "Ok, we will continue the game then." << endl;
+
+                    cout << "no points this round." << endl << endl;
+
+                    chance = 2;
+
+                }
+                else { // if they don't answer either
+
+                    cout << "That is not a valid response." << endl;
+
+                }
+
+            }
+
+            chance = 0;
+
+        }
+        else { // response/situation if they get it wrong
+
+            cout << "Incorrect" << endl;
+
+            cout << "Would you like to try again for half points?" << endl;
+
+            cout << "Enter y/n" << endl;
+
+            cin >> yn;
+
+            if (yn == 'y' or yn == 'Y') { // if they choose to go again
+
+                cout << "Would you like a hint for -25 points?" << endl;
+							cout << "Enter y/n: ";
+
+                cin >> yn;
+
+                cout << endl;
+
+                if (yn == 'y' or yn == 'Y') {
+
+                    if (response < d) {
+
+                        cout << "Your answer was smaller than the correct answer." << endl;
+
+                    }
+                    else {
+
+                        cout << "Your answer was greater than the correct answer." << endl;
+
+                    }
+
+                    cout << endl;
+                    totalscore -= 25;
+
+                }
+
+                cout << "Here is you're one other chance: ";
+
+                cin >> response;
+
+                if (response == d) { // half points for getting it correct
+                    cout << "Correct! +50 points!" << endl << endl;
+
+                    totalscore += 50;
+
+                }
+                else {
+
+                    cout << "Incorrect." << endl;
+
+                }
+
+            }
+            else { // if they don't and take the loss
+
+                cout << "0 points this round." << endl;
+
+            }
+
+        }
+
+        hex_string(hex);
+
+        cout << "Your next number is: ";
+
+        cout << hex << endl;
+			 cout<< "Please decimal number here: ";
+
+        std::istringstream iss(hex);
+        iss >> std::hex >> d;
+
+
+        cin >> response; // next round answer
+        cout << endl;
+        // cout << round << endl; // check the round count
+        if (round >= 12) {
+            break;
+        }
+    }
+
+    cout << "BONUS ROUND!!!" << endl;
+
+    cout << "This is a one time chance for anyone playing this game to get everything or nothing." << endl;
+
+    cout << "If you so choose, you can risk everything you made so far for the full number of points, or call it quits right now and take home what you have." << endl;
+
+    cout << "You only get one shot though, so be careful on your decision because there's no takebacks." << endl;
+
+    cout << "Are you in?" << endl;
+
+    cout << endl;
+
+    cout << "press Y or y for yes, N or n for no, and press enter." << endl;
+
+    cin >> yn;
+    cout << endl;
+
+    if (yn == 'y' || yn == 'Y') {
+
+        cout << "Here it goes then." << endl;
+
+        char hex[2];
+
+        //  srand(time(0));
+
+        hex_string(hex);
+
+        cout << "Convert this hexadecimal number into decimal" << endl;
+
+        cout << hex << endl;
+
+        std::istringstream iss(hex);
+
+        iss >> std::hex >> d;
+
+        cin >> response;
+
+        cout << endl;
+
+        if (response == d) {
+
+            cout << "CORRECT, you just got 1200 points, the max score!" << endl;
+
+            cout << "Congratulations!!" << endl;
+
+            return 0;
+
+        }
+        else {
+
+            cout << "I'm sorry, but that is not the correct answer." << endl;
+
+            cout << "Your final score was 0." << endl;
+
+            return 0;
+
+        }
+
+    }
+    else {
+
+        cout << "No harm, no foul in not taking the risk." << endl;
+
+    }
+
+    cout << "Your final score was: " << totalscore << "." << endl;
+
+myFile.open("highscores.txt", ios::app); //append
+    if (myFile.is_open())
+    {    
+        myFile << name + ", ";
+        myFile << totalscore << endl;
+        myFile.close();
+    }
+  
+  
+    return 0;
+
+}
+
+void hex_string(char str[]) {
+
+    char hex_ch[] = { '0', '1', '2', '3', '4', '5', '6', '7',
+                     '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
+
+    str[0] = hex_ch[randNumGen() % 16];
+
+    str[1] = hex_ch[randNumGen() % 16];
+	  str[2] = '\0';
+}
+
+int randNumGen()
+{
+    int ran;
+    int	highRange = 16;
+    int	lowRange = 0;
+    //srand(time(0)); // this would only be necessary if TRUE randomness that utilizes time is wanted - other wise we will ask the user to generate a number to help the system to be random
+    ran = (rand() % (highRange+ 1));
+    return ran;
+}
+// This function generates a random number within a specified range.
+// It receives two whole numbers : the first one is the upper boundary and
