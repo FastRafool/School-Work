@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const vite_1 = require("vite");
+const plugin_react_1 = require("@vitejs/plugin-react");
+// https://vitejs.dev/config/
+exports.default = (0, vite_1.defineConfig)({
+    plugins: [(0, plugin_react_1.default)()],
+    server: {
+        port: 3000,
+    },
+});
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoidml0ZS5jb25maWcuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ2aXRlLmNvbmZpZy50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLCtCQUFvQztBQUNwQyx1REFBeUM7QUFFekMsNkJBQTZCO0FBQzdCLGtCQUFlLElBQUEsbUJBQVksRUFBQztJQUMxQixPQUFPLEVBQUUsQ0FBQyxJQUFBLHNCQUFLLEdBQUUsQ0FBQztJQUNsQixNQUFNLEVBQUU7UUFDTixJQUFJLEVBQUUsSUFBSTtLQUNYO0NBQ0YsQ0FBQyxDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSBcInZpdGVcIjtcbmltcG9ydCByZWFjdCBmcm9tIFwiQHZpdGVqcy9wbHVnaW4tcmVhY3RcIjtcblxuLy8gaHR0cHM6Ly92aXRlanMuZGV2L2NvbmZpZy9cbmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7XG4gIHBsdWdpbnM6IFtyZWFjdCgpXSxcbiAgc2VydmVyOiB7XG4gICAgcG9ydDogMzAwMCxcbiAgfSxcbn0pO1xuIl19
