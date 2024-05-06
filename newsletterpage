@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
     AppLayout,
     Button,
     Container,
-    Dropdown,
     Header,
     Input,
+    Select,
+    SelectProps,
     SpaceBetween,
-    DropdownProps,
 } from "@cloudscape-design/components";
 
 function NewsletterPage() {
-    const [selectedOptions, setSelectedOptions] = useState<DropdownProps.Option[]>([]);
+    const [selectedOptions, setSelectedOptions] = useState<SelectProps.Option[]>([]);
     const [email, setEmail] = useState("");
 
-    const dropdownOptions: DropdownProps.Options = [
+    const dropdownOptions: SelectProps.Options = [
         {
             label: "Group label",
             options: [
@@ -45,7 +45,7 @@ function NewsletterPage() {
                                 onChange={(event) => setEmail(event.detail.value)}
                             />
                             <Button variant="primary">SUBSCRIBE</Button>
-                            <Dropdown
+                            <Select
                                 placeholder="Choose options"
                                 selectedOptions={selectedOptions}
                                 onChange={(event) => setSelectedOptions(event.detail.selectedOptions)}
