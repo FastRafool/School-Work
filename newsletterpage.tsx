@@ -11,7 +11,7 @@ import {
 } from "@cloudscape-design/components";
 
 function NewsletterPage() {
-    const [selectedOptions, setSelectedOptions] = useState<SelectProps.Option[]>([]);
+    const [selectedOption, setSelectedOption] = useState<SelectProps.Option | null>(null);
     const [email, setEmail] = useState("");
 
     const dropdownOptions: SelectProps.Options = [
@@ -47,8 +47,8 @@ function NewsletterPage() {
                             <Button variant="primary">SUBSCRIBE</Button>
                             <Select
                                 placeholder="Choose options"
-                                selectedOptions={selectedOptions}
-                                onChange={(event) => setSelectedOptions(event.detail.selectedOptions)}
+                                selectedOption={selectedOption}
+                                onChange={(event) => setSelectedOption(event.detail.selectedOption)}
                                 options={dropdownOptions}
                             />
                         </SpaceBetween>
