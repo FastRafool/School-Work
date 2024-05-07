@@ -1,32 +1,9 @@
-src/pages/section2/newsletter/NewsletterPage.tsx:12:1 - error TS6133: 'useOnFollow' is declared but its value is never read.
+Bundling asset InfrastructureStack/UserInterfaceDeployment/Asset1/Stage...
+src/pages/section2/newsletter/NewsletterPage.tsx:80:77 - error TS2345: Argument of type 'readonly OptionDefinition[]' is not assignable to parameter of type 'SetStateAction<OptionDefinition[]>'.
+  The type 'readonly OptionDefinition[]' is 'readonly' and cannot be assigned to the mutable type 'OptionDefinition[]'.
 
-12 import { useOnFollow } from "../../common/hooks/use-on-follow";
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-src/pages/section2/newsletter/NewsletterPage.tsx:12:29 - error TS2307: Cannot find module '../../common/hooks/use-on-follow' or its corresponding type declarations.
-
-12 import { useOnFollow } from "../../common/hooks/use-on-follow";
-                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-src/pages/section2/newsletter/NewsletterPage.tsx:13:1 - error TS6133: 'BaseAppLayout' is declared but its value is never read.
-
-13 import BaseAppLayout from "../../components/base-app-layout";
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-src/pages/section2/newsletter/NewsletterPage.tsx:13:27 - error TS2307: Cannot find module '../../components/base-app-layout' or its corresponding type declarations.
-
-13 import BaseAppLayout from "../../components/base-app-layout";
-                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-src/pages/section2/newsletter/NewsletterPage.tsx:14:1 - error TS6133: 'DashboardHeader' is declared but its value is never read.
-
-14 import DashboardHeader from "./dashboard-header";
-   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-src/pages/section2/newsletter/NewsletterPage.tsx:14:29 - error TS2307: Cannot find module './dashboard-header' or its corresponding type declarations.
-
-14 import DashboardHeader from "./dashboard-header";
-                               ~~~~~~~~~~~~~~~~~~~~
+80                                     onChange={(event) => setSelectedOptions(event.detail.selectedOptions)}
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-Found 6 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:12
+Found 1 error in src/pages/section2/newsletter/NewsletterPage.tsx:80
