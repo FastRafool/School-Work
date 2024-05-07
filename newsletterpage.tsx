@@ -9,6 +9,8 @@ import {
     SelectProps,
     SpaceBetween,
 } from "@cloudscape-design/components";
+import GlobalHeader from "../../components/global-header";
+import NavigationPanel from "../../components/navigation-panel";
 
 function NewsletterPage() {
     const [selectedOption, setSelectedOption] = useState<SelectProps.Option | null>(null);
@@ -27,7 +29,8 @@ function NewsletterPage() {
 
     return (
         <AppLayout
-            navigationHide={true}
+            header={<GlobalHeader />}
+            navigation={<NavigationPanel />}
             content={
                 <SpaceBetween size="l">
                     <Header
