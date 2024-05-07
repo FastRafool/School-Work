@@ -1,10 +1,4 @@
-import {
-    HashRouter,
-    BrowserRouter,
-    Routes,
-    Route,
-    Outlet,
-} from "react-router-dom";
+import { HashRouter, BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { USE_BROWSER_ROUTER } from "./common/constants";
 import GlobalHeader from "./components/global-header";
 import DashboardPage from "./pages/dashboard/dashboard-page";
@@ -32,7 +26,7 @@ export default function App() {
                             <Route path="items/:itemId" element={<ViewItemPage />} />
                         </Route>
                         <Route path="/section2" element={<Outlet />}>
-                            <Route path="" element={<NewsletterPage />} />
+                            <Route path="item1" element={<NewsletterPage />} />
                         </Route>
                         <Route path="*" element={<NotFound />} />
                     </Routes>
