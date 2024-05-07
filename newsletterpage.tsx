@@ -9,6 +9,8 @@ import {
     SpaceBetween,
     BreadcrumbGroup,
     ContentLayout,
+    TextContent,
+    Box,
 } from "@cloudscape-design/components";
 import BaseAppLayout from "../../../components/base-app-layout";
 import { useOnFollow } from "../../../common/hooks/use-on-follow";
@@ -65,15 +67,13 @@ function NewsletterPage() {
                         >
                             GET OUR NEWSLETTER!
                         </Header>
+                        <TextContent>
+                            <Box margin={{ bottom: 'xs' }}>
+                                <strong>Frequency and Keyword options for your emails.</strong> This will give you a choice of what content you receive and how often you will receive emails from us.
+                            </Box>
+                        </TextContent>
                         <Container>
                             <SpaceBetween size="m">
-                                <Input
-                                    type="email"
-                                    placeholder="Email Address"
-                                    value={email}
-                                    onChange={(event) => setEmail(event.detail.value)}
-                                />
-                                <Button variant="primary">SUBSCRIBE</Button>
                                 <Multiselect
                                     placeholder="Choose options"
                                     selectedOptions={selectedOptions}
@@ -82,6 +82,13 @@ function NewsletterPage() {
                                     }
                                     options={dropdownOptions}
                                 />
+                                <Input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    value={email}
+                                    onChange={(event) => setEmail(event.detail.value)}
+                                />
+                                <Button variant="primary">SUBSCRIBE</Button>
                             </SpaceBetween>
                         </Container>
                     </SpaceBetween>
