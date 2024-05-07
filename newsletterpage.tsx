@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-    AppLayout,
     Button,
     Container,
     Header,
@@ -9,9 +8,8 @@ import {
     SelectProps,
     SpaceBetween,
 } from "@cloudscape-design/components";
-import { APP_NAME } from "../../../common/constants";
-import { useOnFollow } from "../../../common/hooks/use-on-follow";
 import BaseAppLayout from "../../../components/base-app-layout";
+import { useOnFollow } from "../../../common/hooks/use-on-follow";
 
 function NewsletterPage() {
     const [selectedOption, setSelectedOption] = useState<SelectProps.Option | null>(null);
@@ -28,9 +26,11 @@ function NewsletterPage() {
         },
     ];
 
+    const onFollow = useOnFollow();
+
     return (
-        <AppLayout
-            navigationHide={true}
+        <BaseAppLayout
+            breadcrumbs={null}
             content={
                 <SpaceBetween size="l">
                     <Header
