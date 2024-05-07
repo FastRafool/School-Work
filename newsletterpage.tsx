@@ -77,7 +77,9 @@ function NewsletterPage() {
                                 <Multiselect
                                     placeholder="Choose options"
                                     selectedOptions={selectedOptions}
-                                    onChange={(event) => setSelectedOptions([...event.detail.selectedOptions])}
+                                    onChange={(event) =>
+                                        setSelectedOptions([...event.detail.selectedOptions] as MultiselectProps.Option[])
+                                    }
                                     options={dropdownOptions}
                                 />
                             </SpaceBetween>
