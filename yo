@@ -1,9 +1,8 @@
-Bundling asset InfrastructureStack/UserInterfaceDeployment/Asset1/Stage...
-src/pages/section2/newsletter/NewsletterPage.tsx:80:77 - error TS2345: Argument of type 'readonly OptionDefinition[]' is not assignable to parameter of type 'SetStateAction<OptionDefinition[]>'.
-  The type 'readonly OptionDefinition[]' is 'readonly' and cannot be assigned to the mutable type 'OptionDefinition[]'.
+src/pages/section2/newsletter/NewsletterPage.tsx:69:75 - error TS2322: Type '{ children: Element[]; padding: { vertical: "s"; horizontal: "m"; }; border: string; }' is not assignable to type 'IntrinsicAttributes & BoxProps'.
+  Property 'border' does not exist on type 'IntrinsicAttributes & BoxProps'.
 
-80                                     onChange={(event) => setSelectedOptions(event.detail.selectedOptions)}
-                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+69                         <Box padding={{ vertical: 's', horizontal: 'm' }} border="default">
+                                                                             ~~~~~~
 
 
-Found 1 error in src/pages/section2/newsletter/NewsletterPage.tsx:80
+Found 1 error in src/pages/section2/newsletter/NewsletterPage.tsx:69
