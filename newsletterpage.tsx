@@ -9,7 +9,6 @@ import {
     SpaceBetween,
     BreadcrumbGroup,
     ContentLayout,
-    TextContent,
     Box,
 } from "@cloudscape-design/components";
 import BaseAppLayout from "../../../components/base-app-layout";
@@ -67,11 +66,10 @@ function NewsletterPage() {
                         >
                             GET OUR NEWSLETTER!
                         </Header>
-                        <TextContent>
-                            <Box margin={{ bottom: 'xs' }}>
-                                <strong>Frequency and Keyword options for your emails.</strong> This will give you a choice of what content you receive and how often you will receive emails from us.
-                            </Box>
-                        </TextContent>
+                        <Box padding={{ vertical: 's', horizontal: 'm' }} border="default">
+                            <p><strong>Frequency and Keyword options for your emails.</strong></p>
+                            <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
+                        </Box>
                         <Container>
                             <SpaceBetween size="m">
                                 <Multiselect
