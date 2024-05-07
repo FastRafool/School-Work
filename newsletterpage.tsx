@@ -9,8 +9,9 @@ import {
     SelectProps,
     SpaceBetween,
 } from "@cloudscape-design/components";
-import GlobalHeader from "../../components/global-header";
-import NavigationPanel from "../../components/navigation-panel";
+import { APP_NAME } from "../../../common/constants";
+import { useOnFollow } from "../../../common/hooks/use-on-follow";
+import BaseAppLayout from "../../../components/base-app-layout";
 
 function NewsletterPage() {
     const [selectedOption, setSelectedOption] = useState<SelectProps.Option | null>(null);
@@ -29,8 +30,7 @@ function NewsletterPage() {
 
     return (
         <AppLayout
-            header={<GlobalHeader />}
-            navigation={<NavigationPanel />}
+            navigationHide={true}
             content={
                 <SpaceBetween size="l">
                     <Header
