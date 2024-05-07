@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-    AppLayout,
     Button,
     Container,
     Header,
@@ -8,9 +7,12 @@ import {
     Select,
     SelectProps,
     SpaceBetween,
+    BreadcrumbGroup,
+    ContentLayout,
 } from "@cloudscape-design/components";
-import { useOnFollow } from "../../../common/hooks/use-on-follow";
 import BaseAppLayout from "../../../components/base-app-layout";
+import { useOnFollow } from "../../../common/hooks/use-on-follow";
+import { APP_NAME } from "../../../common/constants";
 
 function NewsletterPage() {
     const [selectedOption, setSelectedOption] = useState<SelectProps.Option | null>(null);
@@ -27,35 +29,53 @@ function NewsletterPage() {
         },
     ];
 
+    const onFollow = useOnFollow();
+
     return (
         <BaseAppLayout
-            breadcrumbs={null}
+            breadcrumbs={
+                <BreadcrumbGroup
+                    onFollow={onFollow}
+                    items={[
+                        {
+                            text: APP_NAME,
+                            href: "/",
+                        },
+                        {
+                            text: "Newsletter",
+                            href: "/section2/item1",
+                        },
+                    ]}
+                />
+            }
             content={
-                <SpaceBetween size="l">
-                    <Header
-                        variant="h1"
-                        description="Get daily, weekly, or monthly updates on mentions of AWS Braket from Arxiv right in your mailbox."
-                    >
-                        GET OUR NEWSLETTER!
-                    </Header>
-                    <Container>
-                        <SpaceBetween size="m">
-                            <Input
-                                type="email"
-                                placeholder="Email Address"
-                                value={email}
-                                onChange={(event) => setEmail(event.detail.value)}
-                            />
-                            <Button variant="primary">SUBSCRIBE</Button>
-                            <Select
-                                placeholder="Choose options"
-                                selectedOption={selectedOption}
-                                onChange={(event) => setSelectedOption(event.detail.selectedOption)}
-                                options={dropdownOptions}
-                            />
-                        </SpaceBetween>
-                    </Container>
-                </SpaceBetween>
+                <ContentLayout header={<Header>Newsletter</Header>}>
+                    <SpaceBetween size="l">
+                        <Header
+                            variant="h1"
+                            description="Get daily, weekly, or monthly updates on mentions of AWS Braket from Arxiv right in your mailbox."
+                        >
+                            GET OUR NEWSLETTER!
+                        </Header>
+                        <Container>
+                            <SpaceBetween size="m">
+                                <Input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    value={email}
+                                    onChange={(event) => setEmail(event.detail.value)}
+                                />
+                                <Button variant="primary">SUBSCRIBE</Button>
+                                <Select
+                                    placeholder="Choose options"
+                                    selectedOption={selectedOption}
+                                    onChange={(event) => setSelectedOption(event.detail.selectedOption)}
+                                    options={dropdownOptions}
+                                />
+                            </SpaceBetween>
+                        </Container>
+                    </SpaceBetween>
+                </ContentLayout>
             }
         />
     );
