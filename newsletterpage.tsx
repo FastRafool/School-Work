@@ -4,8 +4,8 @@ import {
     Container,
     Header,
     Input,
-    Select,
-    SelectProps,
+    Multiselect,
+    MultiselectProps,
     SpaceBetween,
     BreadcrumbGroup,
     ContentLayout,
@@ -15,24 +15,24 @@ import { useOnFollow } from "../../../common/hooks/use-on-follow";
 import { APP_NAME } from "../../../common/constants";
 
 function NewsletterPage() {
-    const [selectedOption, setSelectedOption] = useState<SelectProps.Option | null>(null);
+    const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
 
-    const dropdownOptions: SelectProps.Options = [
+    const dropdownOptions: MultiselectProps.Options = [
         {
-            label: "Keyword/Topic",
+            label: "Quantum Computing",
             options: [
-                { label: "Amazon Braket", value: "option1" },
-                { label: "Azure Quantum", value: "option2" },
-                { label: "Oxford Quantum Circuits", value: "option3" },
+                { label: "Amazon Braket", value: "braket" },
+                { label: "Azure Quantum", value: "azure-quantum" },
+                { label: "Oxford Quantum Circuits", value: "oxford" },
             ],
         },
         {
-            label: "Keyword/Topic",
+            label: "Machine Learning",
             options: [
-                { label: "Amazon Braket", value: "option1" },
-                { label: "Azure Quantum", value: "option2" },
-                { label: "Oxford Quantum Circuits", value: "option3" },
+                { label: "TensorFlow", value: "tensorflow" },
+                { label: "PyTorch", value: "pytorch" },
+                { label: "Scikit-Learn", value: "scikit-learn" },
             ],
         },
     ];
@@ -74,10 +74,10 @@ function NewsletterPage() {
                                     onChange={(event) => setEmail(event.detail.value)}
                                 />
                                 <Button variant="primary">SUBSCRIBE</Button>
-                                <Select
+                                <Multiselect
                                     placeholder="Choose options"
-                                    selectedOption={selectedOption}
-                                    onChange={(event) => setSelectedOption(event.detail.selectedOption)}
+                                    selectedOptions={selectedOptions}
+                                    onChange={(event) => setSelectedOptions(event.detail.selectedOptions)}
                                     options={dropdownOptions}
                                 />
                             </SpaceBetween>
