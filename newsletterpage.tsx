@@ -1,20 +1,3 @@
-import { useState } from "react";
-import {
-    Button,
-    Container,
-    Header,
-    Input,
-    Multiselect,
-    MultiselectProps,
-    SpaceBetween,
-    BreadcrumbGroup,
-    ContentLayout,
-    Box,
-} from "@cloudscape-design/components";
-import BaseAppLayout from "../../../components/base-app-layout";
-import { useOnFollow } from "../../../common/hooks/use-on-follow";
-import { APP_NAME } from "../../../common/constants";
-
 function NewsletterPage() {
     const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
@@ -66,12 +49,12 @@ function NewsletterPage() {
                         >
                             GET OUR NEWSLETTER!
                         </Header>
-                        <Box padding={{ vertical: 's', horizontal: 'm' }}>
-                            <p><strong>Frequency and Keyword options for your emails.</strong></p>
-                            <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
-                        </Box>
                         <Container>
                             <SpaceBetween size="m">
+                                <Box padding={{ vertical: 's', horizontal: 'm' }}>
+                                    <p><strong>Frequency and Keyword options for your emails.</strong></p>
+                                    <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
+                                </Box>
                                 <Multiselect
                                     placeholder="Choose options"
                                     selectedOptions={selectedOptions}
