@@ -1,3 +1,19 @@
+import { useState } from "react";
+import {
+    Button,
+    Container,
+    Header,
+    Input,
+    Multiselect,
+    MultiselectProps,
+    BreadcrumbGroup,
+    Box,
+    Layout,  // Assuming this is your intended component, replace if it's different
+} from "@cloudscape-design/components";
+import BaseAppLayout from "../../../components/base-app-layout";
+import { useOnFollow } from "../../../common/hooks/use-on-follow";
+import { APP_NAME } from "../../../common/constants";
+
 function NewsletterPage() {
     const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
@@ -41,39 +57,35 @@ function NewsletterPage() {
                 />
             }
             content={
-                <ContentLayout header={<Header>Newsletter</Header>}>
-                    <SpaceBetween size="l">
+                <Layout header={<Header>Newsletter</Header>}>
+                    <Container>
                         <Header
                             variant="h1"
                             description="Get daily, weekly, or monthly updates on mentions of AWS Braket from Arxiv right in your mailbox."
                         >
                             GET OUR NEWSLETTER!
                         </Header>
-                        <Container>
-                            <SpaceBetween size="m">
-                                <Box padding={{ vertical: 's', horizontal: 'm' }}>
-                                    <p><strong>Frequency and Keyword options for your emails.</strong></p>
-                                    <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
-                                </Box>
-                                <Multiselect
-                                    placeholder="Choose options"
-                                    selectedOptions={selectedOptions}
-                                    onChange={(event) =>
-                                        setSelectedOptions([...event.detail.selectedOptions] as MultiselectProps.Option[])
-                                    }
-                                    options={dropdownOptions}
-                                />
-                                <Input
-                                    type="email"
-                                    placeholder="Email Address"
-                                    value={email}
-                                    onChange={(event) => setEmail(event.detail.value)}
-                                />
-                                <Button variant="primary">SUBSCRIBE</Button>
-                            </SpaceBetween>
-                        </Container>
-                    </SpaceBetween>
-                </ContentLayout>
+                        <Box padding={{ vertical: 's', horizontal: 'm' }}>
+                            <p><strong>Frequency and Keyword options for your emails.</strong></p>
+                            <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
+                        </Box>
+                        <Multiselect
+                            placeholder="Choose options"
+                            selectedOptions={selectedOptions}
+                            onChange={(event) =>
+                                setSelectedOptions([...event.detail.selectedOptions] as MultiselectProps.Option[])
+                            }
+                            options={dropdownOptions}
+                        />
+                        <Input
+                            type="email"
+                            placeholder="Email Address"
+                            value={email}
+                            onChange={(event) => setEmail(event.detail.value)}
+                        />
+                        <Button variant="primary">SUBSCRIBE</Button>
+                    </Container>
+                </Layout>
             }
         />
     );
