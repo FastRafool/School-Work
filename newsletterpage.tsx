@@ -21,19 +21,19 @@ function NewsletterPage() {
 
     const dropdownOptions: MultiselectProps.Options = [
         {
-            label: "Quantum Computing",
+            label: "Frequency",
+            options: [
+                { label: "Daily", value: "daily" },
+                { label: "Weekly", value: "weekly" },
+                { label: "Monthly", value: "monthly" },
+            ],
+        },
+        {
+            label: "Keyword/Topic",
             options: [
                 { label: "Amazon Braket", value: "braket" },
                 { label: "Azure Quantum", value: "azure-quantum" },
                 { label: "Oxford Quantum Circuits", value: "oxford" },
-            ],
-        },
-        {
-            label: "Machine Learning",
-            options: [
-                { label: "TensorFlow", value: "tensorflow" },
-                { label: "PyTorch", value: "pytorch" },
-                { label: "Scikit-Learn", value: "scikit-learn" },
             ],
         },
     ];
@@ -66,11 +66,11 @@ function NewsletterPage() {
                         >
                             GET OUR NEWSLETTER!
                         </Header>
-                        <Box padding={{ vertical: 's', horizontal: 'm' }}>
-                            <p><strong>Frequency and Keyword options for your emails.</strong></p>
-                            <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
-                        </Box>
                         <Container>
+                            <Box padding={{ vertical: 's', horizontal: 'm' }}>
+                                <p><strong>Frequency and Keyword options for your emails.</strong></p>
+                                <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
+                            </Box>
                             <SpaceBetween size="m">
                                 <Multiselect
                                     placeholder="Choose options"
