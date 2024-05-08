@@ -66,7 +66,7 @@ function NewsletterPage() {
                         >
                             GET OUR NEWSLETTER!
                         </Header>
-                        <Box padding={{ vertical: 's', horizontal: 'm' }} border="default">
+                        <Box padding={{ vertical: 's', horizontal: 'm' }}>
                             <p><strong>Frequency and Keyword options for your emails.</strong></p>
                             <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
                         </Box>
