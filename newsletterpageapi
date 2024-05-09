@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+import {
+  Button,
+  Container,
+  Header,
+  Input,
+  Multiselect,
+  MultiselectProps,
+  SpaceBetween,
+  BreadcrumbGroup,
+  ContentLayout,
+  Box,
+} from '@cloudscape-design/components';
+import BaseAppLayout from '../../../components/base-app-layout';
+import { useOnFollow } from '../../../common/hooks/use-on-follow';
+import { APP_NAME } from '../../../common/constants';
+
+function NewsletterPage() {
+  const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
+  const [email, setEmail] = useState('');
+
+  const dropdownOptions = {
+    label: 'Subscription Options',
+    options: [
+      { label: 'Frequency', value: 'frequency', options: [
+          { label: 'Daily', value: 'daily' },
+          { label: 'Weekly', value: 'weekly' },
+          { label: 'Monthly', value: 'monthly' }
+      ]},
+      { label: 'Keyword/Topic', value: 'keywords', options: [
+          { label: 'Amazon Braket', value: 'braket' },
+          { label: 'Azure Quantum', value: 'azure-quantum' },
+          { label: 'Oxford Quantum Circuits', value: 'oxford' }
+      ]}
+    ]
+  };
+
+  const handleSubscribe = async () => {
+    const frequencyOption = selectedOptions.find(option => option.value === 'frequency');
+    const frequency = frequencyOption ? frequencyOption.value : '';
+    const keywords = selectedOptions.filter(option => option.value !== 'frequency').map(option => option.value);
+
+    if (!email || !frequency || !keywords.length) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    try {
+      await axios.post('https://your-api-endpoint/subscribe', { email, preferences: { frequency, keywords } });
+      alert('Subscription successful!');
+    } catch (error) {
+      console.error('Subscription error:', error);
+      alert('Failed to subscribe. Please try again.');
+    }
+  };
+
+  return (
+    <BaseAppLayout
+      breadcrumbs={
+        <BreadcrumbGroup
+          onFollow={useOnFollow}
+          items={[
+            { text: APP_NAME, href: '/' },
+            { text: 'Newsletter', href: '/section2/item1' },
+          ]}
+        />
+      }
+      content={
+        <ContentLayout header={<Header>Newsletter</Header>}>
+          <SpaceBetween size="l">
+            <Header variant="h1" description="Get daily, weekly, or monthly updates on mentions of AWS Braket from Arxiv right in your mailbox.">
+              GET OUR NEWSLETTER!
+            </Header>
+            <Container>
+              <Box padding={{ vertical: 's', horizontal: 'm' }}>
+                <p><strong>Frequency and Keyword options for your emails.</strong></p>
+                <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
+              </Box>
+              <SpaceBetween size="m">
+                <Multiselect
+                  placeholder="Choose options"
+                  selectedOptions={selectedOptions}
+                  onChange={event => setSelectedOptions([...event.detail.selectedOptions] as MultiselectProps.Option[])}
+                  options={dropdownOptions}
+                />
+                <Input
+                  type="email"
+                  placeholder="Email Address"
+                  value={email}
+                  onChange={event => setEmail(event.detail.value)}
+                />
+                <Button variant="primary" onClick={handleSubscribe}>SUBSCRIBE</Button>
+              </SpaceBetween>
+            </Container>
+          </SpaceBetween>
+        </ContentLayout>
+      }
+    />
+  );
+}
+
+export default NewsletterPage;
