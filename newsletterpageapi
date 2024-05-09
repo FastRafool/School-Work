@@ -20,7 +20,7 @@ function NewsletterPage() {
     const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
 
-    const dropdownOptions: MultiselectProps.OptionGroup[] = [
+    const dropdownOptions: MultiselectProps.Options = [
         {
             label: "Frequency",
             options: [
@@ -40,6 +40,7 @@ function NewsletterPage() {
     ];
 
     const handleSubscribe = async () => {
+        // Ensure option.value is defined before using it in includes
         const frequency = selectedOptions.find(option => option.value && ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
         const keywords = selectedOptions.filter(option => option.value && ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
 
