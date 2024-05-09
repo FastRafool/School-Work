@@ -20,7 +20,8 @@ function NewsletterPage() {
     const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
 
-    const dropdownOptions: MultiselectProps.OptionGroup[] = [
+    // Define the dropdown options correctly as an array of Option or OptionGroup types
+    const dropdownOptions: MultiselectProps.Option[] = [
         {
             label: "Frequency",
             options: [
@@ -40,7 +41,29 @@ function NewsletterPage() {
     ];
 
     const handleSubscribe = async () => {
-        // Implementation remains the same
+        const frequencyOption = selectedOptions.find(option => option.options?.some(o => o.value === "daily" || o.value === "weekly" || o.value === "monthly"));
+        const frequency = frequencyOption ? frequencyOption.options.find(o => o.value).value : '';
+        const keywords = selectedOptions.find(option => option.label === "Keyword/Topic")?.options.filter(o => selectedOptions.some(so => so.value === o.value)).map(k => k.value) || [];
+
+        if (!email || !frequency || keywords.length === 0) {
+            alert('Please ensure you have entered your email, selected a frequency, and at least one keyword.');
+            return;
+        }
+
+        try {
+            const response = await axios.post('https://your-api-endpoint/subscribe', {
+                email,
+                preferences: {
+                    frequency,
+                    keywords
+                }
+            });
+            console.log(response.data);
+            alert('Subscription successful!');
+        } catch (error) {
+            console.error('Subscription error:', error);
+            alert('Failed to subscribe. Please try again.');
+        }
     };
 
     return (
