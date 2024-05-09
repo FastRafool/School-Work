@@ -47,7 +47,7 @@ function NewsletterPage() {
     }
 
     try {
-      await axios.post('https://your-api-endpoint/subscribe', { email, preferences: { frequency, keywords } });
+      await axios.post('https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev', { email, preferences: { frequency, keywords } });
       alert('Subscription successful!');
     } catch (error) {
       console.error('Subscription error:', error);
