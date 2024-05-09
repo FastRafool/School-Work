@@ -1,3 +1,6 @@
+If you look through the page code, there is already a dynamodb table and associated lambda function setup that allows you to add/delete/view items in function/api-handler/routes/items.py which you can use as reference. Probably best to create a new table named 'arxival-newsletter-subs' or something and create a new function.
+
+
 import os
 import uuid
 import boto3
