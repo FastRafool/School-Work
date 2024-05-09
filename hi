@@ -3,11 +3,6 @@ src/pages/section2/newsletter/NewsletterPage.tsx:1:8 - error TS6133: 'React' is 
 1 import React, { useState } from 'react';
          ~~~~~
 
-src/pages/section2/newsletter/NewsletterPage.tsx:2:19 - error TS2307: Cannot find module 'axios' or its corresponding type declarations.
-
-2 import axios from 'axios';
-                    ~~~~~~~
-
 src/pages/section2/newsletter/NewsletterPage.tsx:85:19 - error TS2740: Type '{ label: string; options: { label: string; value: string; options: { label: string; value: string; }[]; }[]; }' is missing the following properties from type 'readonly (OptionDefinition | OptionGroup)[]': length, concat, join, slice, and 20 more.
 
 85                   options={dropdownOptions}
@@ -19,4 +14,4 @@ src/pages/section2/newsletter/NewsletterPage.tsx:85:19 - error TS2740: Type '{ l
     The expected type comes from property 'options' which is declared here on type 'IntrinsicAttributes & MultiselectProps & RefAttributes<Ref>'
 
 
-Found 3 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:1
+Found 2 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:1
