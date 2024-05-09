@@ -49,7 +49,7 @@ function NewsletterPage() {
         }
 
         try {
-            await axios.post('https://your-api-endpoint/subscribe', {
+            await axios.post('https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev', {
                 email,
                 preferences: { frequency, keywords }
             });
