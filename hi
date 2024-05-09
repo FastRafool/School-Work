@@ -1,17 +1,14 @@
-src/pages/section2/newsletter/NewsletterPage.tsx:1:8 - error TS6133: 'React' is declared but its value is never read.
+src/pages/section2/newsletter/NewsletterPage.tsx:43:98 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
 
-1 import React, { useState } from 'react';
-         ~~~~~
+43         const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
+                                                                                                    ~~~~~~~~~~~~
 
-src/pages/section2/newsletter/NewsletterPage.tsx:85:19 - error TS2740: Type '{ label: string; options: { label: string; value: string; options: { label: string; value: string; }[]; }[]; }' is missing the following properties from type 'readonly (OptionDefinition | OptionGroup)[]': length, concat, join, slice, and 20 more.
+src/pages/section2/newsletter/NewsletterPage.tsx:44:106 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
 
-85                   options={dropdownOptions}
-                     ~~~~~~~
-
-  node_modules/@cloudscape-design/components/select/interfaces.d.ts:40:5
-    40     options?: SelectProps.Options;
-           ~~~~~~~
-    The expected type comes from property 'options' which is declared here on type 'IntrinsicAttributes & MultiselectProps & RefAttributes<Ref>'
+44         const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+                                                                                                            ~~~~~~~~~~~~
 
 
-Found 2 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:1
+Found 2 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:43
