@@ -20,7 +20,7 @@ function NewsletterPage() {
     const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
 
-    const dropdownOptions: MultiselectProps.Options = [
+    const dropdownOptions: MultiselectProps.OptionGroup[] = [
         {
             label: "Frequency",
             options: [
@@ -40,8 +40,8 @@ function NewsletterPage() {
     ];
 
     const handleSubscribe = async () => {
-        const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
-        const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+        const frequency = selectedOptions.find(option => option.value && ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
+        const keywords = selectedOptions.filter(option => option.value && ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
 
         if (!email || !frequency || keywords.length === 0) {
             alert('Please ensure you have entered your email, selected a frequency, and at least one keyword.');
