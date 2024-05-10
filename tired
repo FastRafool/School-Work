@@ -1,9 +1,7 @@
 import os
 import json
 import boto3
-from boto3.dynamodb.conditions import Key
 
-# Initialize DynamoDB
 dynamodb = boto3.resource("dynamodb")
 SUBSCRIBERS_TABLE_NAME = os.environ.get("SUBSCRIBERS_TABLE_NAME", "arxival-newsletter-subs")
 table = dynamodb.Table(SUBSCRIBERS_TABLE_NAME)
@@ -15,23 +13,22 @@ def lambda_handler(event, context):
         email = body['email']
         preferences = body['preferences']
 
-        # Basic validation for the email field
+        # Validate email format
         if "@" not in email:
             return response("Invalid email format", 400)
 
-        # Insert subscription data into DynamoDB
-        response = table.put_item(
+        # Insert data into DynamoDB
+        table.put_item(
             Item={
                 "email": email,
                 "frequency": preferences['frequency'],
-                "keywords": preferences['keywords']
+                "keywords": preferences['keywords'],
             }
         )
         return response("Subscription successful", 200)
+
     except KeyError as e:
         return response(f"Missing key: {str(e)}", 400)
-    except TypeError as e:
-        return response(f"Type error: {str(e)}", 400)
     except Exception as e:
         return response(f"An error occurred: {str(e)}", 500)
 
