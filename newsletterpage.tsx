@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from 'axios';
 import {
     Button,
     Container,
@@ -38,13 +39,37 @@ function NewsletterPage() {
         },
     ];
 
-    const onFollow = useOnFollow();
+    const handleSubscribe = async () => {
+        const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
+        const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+
+        if (!email || !frequency || keywords.length === 0) {
+            alert('Please ensure you have entered your email, selected a frequency, and at least one keyword.');
+            return;
+        }
+
+        const payload = {
+            email: email,
+            preferences: {
+                frequency: frequency,
+                keywords: keywords
+            }
+        };
+
+        try {
+            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', payload);
+            alert('Subscription successful!');
+        } catch (error) {
+            console.error('Subscription error:', error);
+            alert('Failed to subscribe. Please try again.');
+        }
+    };
 
     return (
         <BaseAppLayout
             breadcrumbs={
                 <BreadcrumbGroup
-                    onFollow={onFollow}
+                    onFollow={useOnFollow}
                     items={[
                         {
                             text: APP_NAME,
@@ -86,7 +111,7 @@ function NewsletterPage() {
                                     value={email}
                                     onChange={(event) => setEmail(event.detail.value)}
                                 />
-                                <Button variant="primary">SUBSCRIBE</Button>
+                                <Button variant="primary" onClick={handleSubscribe}>SUBSCRIBE</Button>
                             </SpaceBetween>
                         </Container>
                     </SpaceBetween>
