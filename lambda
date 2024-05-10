@@ -1,6 +1,6 @@
 import os
 import boto3
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel
 from aws_lambda_powertools import Logger, Tracer
 from aws_lambda_powertools.event_handler.api_gateway import Router
 from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
@@ -17,7 +17,7 @@ class Preferences(BaseModel):
     keywords: list
 
 class SubscriptionRequest(BaseModel):
-    email: EmailStr
+    email: str
     preferences: Preferences
 
 @router.post("/subscribe")
@@ -25,6 +25,10 @@ class SubscriptionRequest(BaseModel):
 def subscribe():
     event = APIGatewayProxyEvent(router.current_event)
     subscription_data = SubscriptionRequest(**event.json_body)
+
+    # Basic email format validation
+    if "@" not in subscription_data.email:
+        return {"ok": False, "message": "Invalid email format"}
 
     table = dynamodb.Table(SUBSCRIBERS_TABLE_NAME)
 
