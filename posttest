@@ -40,11 +40,11 @@ function NewsletterPage() {
     ];
 
     const handleSubscribe = async () => {
-        const frequencyOption = selectedOptions.find(option => option.value && ['daily', 'weekly', 'monthly'].includes(option.value || ""));
+        const frequencyOption = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value));
         const frequency = frequencyOption?.value || "";
 
         const keywords = selectedOptions
-            .filter(option => option.value && ['braket', 'azure-quantum', 'oxford'].includes(option.value || ""))
+            .filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value))
             .map(option => option.value)
             .filter(keyword => keyword); // Ensure no undefined values are included
 
@@ -53,14 +53,20 @@ function NewsletterPage() {
             return;
         }
 
+        const postData = {
+            email: email,
+            frequency: frequency,
+            keywords: keywords
+        };
+
         try {
-            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', {
-                email,
-                frequency,
-                keywords
+            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', postData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
             });
             alert('Subscription successful!');
-        } catch (error: any) { // Type assertion to any
+        } catch (error) {
             console.error('Subscription error:', error.response ? error.response.data : error.message);
             alert('Failed to subscribe. Please try again.');
         }
@@ -72,8 +78,14 @@ function NewsletterPage() {
                 <BreadcrumbGroup
                     onFollow={useOnFollow}
                     items={[
-                        { text: APP_NAME, href: "/" },
-                        { text: "Newsletter", href: "/section2/item1" },
+                        {
+                            text: APP_NAME,
+                            href: "/",
+                        },
+                        {
+                            text: "Newsletter",
+                            href: "/section2/item1",
+                        },
                     ]}
                 />
             }
