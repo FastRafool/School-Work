@@ -1,95 +1,42 @@
-If you look through the page code, there is already a dynamodb table and associated lambda function setup that allows you to add/delete/view items in function/api-handler/routes/items.py which you can use as reference. Probably best to create a new table named 'arxival-newsletter-subs' or something and create a new function.
-
-
-import os
-import uuid
-import boto3
-from datetime import datetime
-from pydantic import BaseModel
-from aws_lambda_powertools import Logger, Tracer
-from aws_lambda_powertools.event_handler.api_gateway import Router
-
-tracer = Tracer()
-router = Router()
-logger = Logger()
-
-dynamodb = boto3.resource("dynamodb")
-ITEMS_TABLE_NAME = os.environ.get("ITEMS_TABLE_NAME")
-
-
-class CreateItemRequest(BaseModel):
-    name: str
-    type: str
-    status: str
-    details: int
-
-
-@router.get("/items")
-@tracer.capture_method
-def items():
-    table = dynamodb.Table(ITEMS_TABLE_NAME)
-    response = table.scan()
-    items = response['Items']
-
-    while 'LastEvaluatedKey' in response:
-        response = table.scan(ExclusiveStartKey=response['LastEvaluatedKey'])
-        items.extend(response['Items'])
-
-    return {"ok": True, "data": items}
-
-
-@router.get("/items/<item_id>")
-@tracer.capture_method
-def get_item(item_id: str):
-    table = dynamodb.Table(ITEMS_TABLE_NAME)
-
-    response = table.get_item(
-        Key={
-            "itemId": item_id,
-        }
-    )
-
-    item = response.get('Item', None)
-
-    return {"ok": True, "data": item}
-
-
-@router.put("/items")
-@tracer.capture_method
-def create_item():
-    data: dict = router.current_event.json_body
-    generic_request = CreateItemRequest(**data)
-
-    item_id = str(uuid.uuid4())
-    timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%fZ")
-    table = dynamodb.Table(ITEMS_TABLE_NAME)
-
-    response = table.put_item(Item={
-        "itemId": item_id,
-        "name": generic_request.name,
-        "type": generic_request.type,
-        "status": generic_request.status,
-        "details": generic_request.details,
-        "created_at": timestamp,
-        "updated_at": timestamp
-    })
-
-    logger.info(response)
-
-    return {"ok": True}
-
-
-@router.delete("/items/<item_id>")
-@tracer.capture_method
-def delete_item(item_id: str):
-    table = dynamodb.Table(ITEMS_TABLE_NAME)
-
-    response = table.delete_item(
-        Key={
-            "itemId": item_id
-        }
-    )
-
-    logger.info(response)
-
-    return {"ok": True}
+/subscribe - POST method test results
+Request
+/subscribe
+Latency ms
+401
+Status
+502
+Response body
+{"message": "Internal server error"}
+Response headers
+{
+  "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+  "Access-Control-Allow-Methods": "OPTIONS,POST",
+  "Access-Control-Allow-Origin": "*",
+  "x-amzn-ErrorType": "InternalServerErrorException"
+}
+Logs
+Execution log for request d416d224-151b-494f-bbda-b710660b4f73
+Fri May 10 00:34:41 UTC 2024 : Starting execution for request: d416d224-151b-494f-bbda-b710660b4f73
+Fri May 10 00:34:41 UTC 2024 : HTTP Method: POST, Resource Path: /subscribe
+Fri May 10 00:34:41 UTC 2024 : Method request path: {}
+Fri May 10 00:34:41 UTC 2024 : Method request query string: {}
+Fri May 10 00:34:41 UTC 2024 : Method request headers: {Content-Type= application/json}
+Fri May 10 00:34:41 UTC 2024 : Method request body before transformations: {
+  "email": "test@example.com",
+  "preferences": {
+    "frequency": "weekly",
+    "keywords": ["braket", "azure-quantum"]
+  }
+}
+Fri May 10 00:34:41 UTC 2024 : Endpoint request URI: https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
+Fri May 10 00:34:41 UTC 2024 : Endpoint request headers: {X-Amz-Date=20240510T003441Z, x-amzn-apigateway-api-id=1su0smaybb, Accept=application/json, User-Agent=AmazonAPIGateway_1su0smaybb, Host=lambda.us-east-1.amazonaws.com, X-Amz-Content-Sha256=dd4561387ad31e4c8f7bd00cc0e321a3d18ddc5fcf80f4bb47afdde590cb8220, X-Amzn-Trace-Id=Root=1-663d6ba1-0569bef847fb43297cb56005, x-amzn-lambda-integration-tag=d416d224-151b-494f-bbda-b710660b4f73, Authorization=*********************************************************************************************************************************************************************************************************************************************************************************************************************************************1f1983, X-Amz-Source-Arn=arn:aws:execute-api:us-east-1:907526940370:1su0smaybb/test-invoke-stage/POST/subscribe, X-Amz-Security-Token=IQoJb3JpZ2luX2VjELf//////////wEaCXVzLWVhc3QtMSJHMEUCIQCGekhYi4sLmJ9NdF1o9u0CvH0eccVQ6TawV2YyxS0ftQIgQLcn6Q5RjB6Tmi/RpI0OCMuAv3Q4gatAx07 [TRUNCATED]
+Fri May 10 00:34:41 UTC 2024 : Endpoint request body after transformations: {"resource":"/subscribe","path":"/subscribe","httpMethod":"POST","headers":{"Content-Type":" application/json"},"multiValueHeaders":{"Content-Type":[" application/json"]},"queryStringParameters":null,"multiValueQueryStringParameters":null,"pathParameters":null,"stageVariables":null,"requestContext":{"resourceId":"ljjoei","resourcePath":"/subscribe","httpMethod":"POST","extendedRequestId":"Xh3BUFwuIAMFkpQ=","requestTime":"10/May/2024:00:34:41 +0000","path":"/subscribe","accountId":"907526940370","protocol":"HTTP/1.1","stage":"test-invoke-stage","domainPrefix":"testPrefix","requestTimeEpoch":1715301281764,"requestId":"d416d224-151b-494f-bbda-b710660b4f73","identity":{"cognitoIdentityPoolId":null,"cognitoIdentityId":null,"apiKey":"test-invoke-api-key","principalOrgId":null,"cognitoAuthenticationType":null,"userArn":"arn:aws:sts::907526940370:assumed-role/arxival/odudu-Isengard","apiKeyId":"test-invoke-api-key-id","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_ [TRUNCATED]
+Fri May 10 00:34:41 UTC 2024 : Sending request to https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
+Fri May 10 00:34:42 UTC 2024 : Received response. Status: 200, Integration latency: 395 ms
+Fri May 10 00:34:42 UTC 2024 : Endpoint response headers: {Date=Fri, 10 May 2024 00:34:42 GMT, Content-Type=application/json, Content-Length=149, Connection=keep-alive, x-amzn-RequestId=88c34954-eaa8-40f4-b364-d4ada36b3495, X-Amz-Function-Error=Unhandled, x-amzn-Remapped-Content-Length=0, X-Amz-Executed-Version=$LATEST, X-Amzn-Trace-Id=root=1-663d6ba1-0569bef847fb43297cb56005;parent=4a04798c967987c4;sampled=0;lineage=33363ee6:0}
+Fri May 10 00:34:42 UTC 2024 : Endpoint response body before transformations: {"errorMessage": "Unable to import module 'lambda_function': No module named 'pydantic'", "errorType": "Runtime.ImportModuleError", "stackTrace": []}
+Fri May 10 00:34:42 UTC 2024 : Lambda execution failed with status 200 due to customer function error: Unable to import module 'lambda_function': No module named 'pydantic'. Lambda request id: 88c34954-eaa8-40f4-b364-d4ada36b3495
+Fri May 10 00:34:42 UTC 2024 : Gateway response type: DEFAULT_5XX with status code: 502
+Fri May 10 00:34:42 UTC 2024 : Gateway response body: {"message": "Internal server error"}
+Fri May 10 00:34:42 UTC 2024 : Gateway response headers: {Access-Control-Allow-Headers=Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token, Access-Control-Allow-Origin=*, Access-Control-Allow-Methods=OPTIONS,POST, x-amzn-ErrorType=InternalServerErrorException}
+Fri May 10 00:34:42 UTC 2024 : Method completed with status: 502
