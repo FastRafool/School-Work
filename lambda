@@ -1,46 +1,43 @@
 import os
-import json
 import boto3
-from aws_lambda_powertools import Logger, Tracer
 from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
-from aws_lambda_powertools.event_handler.api_gateway import Router
+from aws_lambda_powertools.utilities.parser import parse, ValidationError
+from aws_lambda_powertools import Logger, Tracer
+from aws_lambda_powertools.event_handler.api_gateway import ApiGatewayResolver
 
 tracer = Tracer()
-router = Router()
 logger = Logger()
+app = ApiGatewayResolver()
 
-# Setup DynamoDB
 dynamodb = boto3.resource("dynamodb")
-table_name = os.getenv("SUBSCRIBERS_TABLE_NAME", "arxival-newsletter-subs")
-table = dynamodb.Table(table_name)
+table = dynamodb.Table(os.environ.get("SUBSCRIBERS_TABLE_NAME", "arxival-newsletter-subs"))
 
-@router.post("/subscribe")
+class Preferences:
+    frequency: str
+    keywords: list
+
+class SubscriptionRequest:
+    email: str
+    preferences: Preferences
+
+@app.post("/subscribe")
 @tracer.capture_method
 def subscribe():
-    event = APIGatewayProxyEvent(router.current_event)
-    request_data = json.loads(event.body)
-
-    # Log the received data
-    logger.info(f"Received subscription data: {request_data}")
-
-    # Extract data directly without using pydantic for simplicity
-    email = request_data.get('email', '')
-    frequency = request_data.get('preferences', {}).get('frequency', '')
-    keywords = request_data.get('preferences', {}).get('keywords', [])
-
-    # Insert data into DynamoDB
     try:
+        parsed_body = parse(event=app.current_event.json_body, model=SubscriptionRequest)
         response = table.put_item(Item={
-            "email": email,
-            "frequency": frequency,
-            "keywords": keywords
+            "email": parsed_body.email,
+            "frequency": parsed_body.preferences.frequency,
+            "keywords": parsed_body.preferences.keywords
         })
-        logger.info(f"Subscription added successfully: {response}")
-        return {"statusCode": 200, "body": json.dumps({"message": "Subscription successful"})}
+        logger.info(f"Subscription added: {response}")
+        return app.make_response({"message": "Subscription successful"}, status_code=200)
+    except ValidationError as e:
+        logger.error(f"Validation error: {e}")
+        return app.make_response({"message": "Invalid request data"}, status_code=400)
     except Exception as e:
-        logger.error(f"Error adding subscription: {str(e)}")
-        return {"statusCode": 500, "body": json.dumps({"message": "Failed to add subscription"})}
+        logger.error(f"Error processing subscription: {e}")
+        return app.make_response({"message": "Internal server error"}, status_code=500)
 
 def lambda_handler(event, context):
-    return router.resolve(event, context)
-
+    return app.resolve(event, context)
