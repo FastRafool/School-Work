@@ -1,6 +1,6 @@
 import os
 import boto3
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 from aws_lambda_powertools import Logger, Tracer
 from aws_lambda_powertools.event_handler.api_gateway import Router
 from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
@@ -17,30 +17,37 @@ class Preferences(BaseModel):
     keywords: list
 
 class SubscriptionRequest(BaseModel):
-    email: str
+    email: str  # Reverted back to plain string type
     preferences: Preferences
 
 @router.post("/subscribe")
 @tracer.capture_method
 def subscribe():
     event = APIGatewayProxyEvent(router.current_event)
-    subscription_data = SubscriptionRequest(**event.json_body)
+    try:
+        subscription_data = SubscriptionRequest(**event.json_body)
+    except ValidationError as e:
+        logger.error(f"Validation error: {str(e)}")
+        return {"statusCode": 400, "body": "Invalid request data"}
 
     # Basic email format validation
     if "@" not in subscription_data.email:
-        return {"ok": False, "message": "Invalid email format"}
+        return {"statusCode": 400, "body": "Invalid email format"}
 
     table = dynamodb.Table(SUBSCRIBERS_TABLE_NAME)
 
     # Store subscription data into DynamoDB
-    response = table.put_item(Item={
-        "email": subscription_data.email,
-        "frequency": subscription_data.preferences.frequency,
-        "keywords": subscription_data.preferences.keywords
-    })
-
-    logger.info(f"Subscription added: {response}")
-    return {"ok": True, "message": "Subscription successful"}
+    try:
+        response = table.put_item(Item={
+            "email": subscription_data.email,
+            "frequency": subscription_data.preferences.frequency,
+            "keywords": subscription_data.preferences.keywords
+        })
+        logger.info(f"Subscription added: {response}")
+        return {"statusCode": 200, "body": "Subscription successful"}
+    except Exception as e:
+        logger.error(f"Error adding subscription: {str(e)}")
+        return {"statusCode": 500, "body": "Failed to add subscription"}
 
 def lambda_handler(event, context):
-    return router(event, context)
+    return router.resolve(event, context)
