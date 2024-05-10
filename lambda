@@ -1,6 +1,6 @@
 import os
 import boto3
-from pydantic import BaseModel, ValidationError
+from pydantic import BaseModel
 from aws_lambda_powertools import Logger, Tracer
 from aws_lambda_powertools.event_handler.api_gateway import Router
 from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
@@ -17,18 +17,14 @@ class Preferences(BaseModel):
     keywords: list
 
 class SubscriptionRequest(BaseModel):
-    email: str  # Reverted back to plain string type
+    email: str  # Using plain string type for email
     preferences: Preferences
 
 @router.post("/subscribe")
 @tracer.capture_method
 def subscribe():
     event = APIGatewayProxyEvent(router.current_event)
-    try:
-        subscription_data = SubscriptionRequest(**event.json_body)
-    except ValidationError as e:
-        logger.error(f"Validation error: {str(e)}")
-        return {"statusCode": 400, "body": "Invalid request data"}
+    subscription_data = SubscriptionRequest(**event.json_body)
 
     # Basic email format validation
     if "@" not in subscription_data.email:
@@ -50,4 +46,4 @@ def subscribe():
         return {"statusCode": 500, "body": "Failed to add subscription"}
 
 def lambda_handler(event, context):
-    return router.resolve(event, context)
+    return router(event, context)
