@@ -2,7 +2,7 @@
 Request
 /subscribe
 Latency ms
-1676
+1499
 Status
 502
 Response body
@@ -15,28 +15,28 @@ Response headers
   "x-amzn-ErrorType": "InternalServerErrorException"
 }
 Logs
-Execution log for request 2468a68c-57e2-4d63-a81d-ef1db9c6eb34
-Fri May 10 03:00:55 UTC 2024 : Starting execution for request: 2468a68c-57e2-4d63-a81d-ef1db9c6eb34
-Fri May 10 03:00:55 UTC 2024 : HTTP Method: POST, Resource Path: /subscribe
-Fri May 10 03:00:55 UTC 2024 : Method request path: {}
-Fri May 10 03:00:55 UTC 2024 : Method request query string: {}
-Fri May 10 03:00:55 UTC 2024 : Method request headers: {Content-Type= application/json}
-Fri May 10 03:00:55 UTC 2024 : Method request body before transformations: {
+Execution log for request d500569d-4596-48ec-b82a-0893f6a3f126
+Fri May 10 03:07:32 UTC 2024 : Starting execution for request: d500569d-4596-48ec-b82a-0893f6a3f126
+Fri May 10 03:07:32 UTC 2024 : HTTP Method: POST, Resource Path: /subscribe
+Fri May 10 03:07:32 UTC 2024 : Method request path: {}
+Fri May 10 03:07:32 UTC 2024 : Method request query string: {}
+Fri May 10 03:07:32 UTC 2024 : Method request headers: {Content-Type= application/json}
+Fri May 10 03:07:32 UTC 2024 : Method request body before transformations: {
   "email": "test@example.com",
   "preferences": {
     "frequency": "weekly",
     "keywords": ["braket", "azure-quantum"]
   }
 }
-Fri May 10 03:00:55 UTC 2024 : Endpoint request URI: https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
-Fri May 10 03:00:55 UTC 2024 : Endpoint request headers: {X-Amz-Date=20240510T030055Z, x-amzn-apigateway-api-id=1su0smaybb, Accept=application/json, User-Agent=AmazonAPIGateway_1su0smaybb, Host=lambda.us-east-1.amazonaws.com, X-Amz-Content-Sha256=08f9bde6ef12e15050649d44965c1097c41f57ca1df174c1ddfd047c75f31365, X-Amzn-Trace-Id=Root=1-663d8de7-ec9d8aa0dfa8b03aff8640a3, x-amzn-lambda-integration-tag=2468a68c-57e2-4d63-a81d-ef1db9c6eb34, Authorization=*********************************************************************************************************************************************************************************************************************************************************************************************************************************************7c5d2f, X-Amz-Source-Arn=arn:aws:execute-api:us-east-1:907526940370:1su0smaybb/test-invoke-stage/POST/subscribe, X-Amz-Security-Token=IQoJb3JpZ2luX2VjELv//////////wEaCXVzLWVhc3QtMSJHMEUCIETDbRUenxYKtIonQVCzZ9Vn6hSb1C1RSZPvF71GjYNKAiEA9VBlBcOwees5GAPg7CfLdN6gUGw7O0FLwek [TRUNCATED]
-Fri May 10 03:00:55 UTC 2024 : Endpoint request body after transformations: {"resource":"/subscribe","path":"/subscribe","httpMethod":"POST","headers":{"Content-Type":" application/json"},"multiValueHeaders":{"Content-Type":[" application/json"]},"queryStringParameters":null,"multiValueQueryStringParameters":null,"pathParameters":null,"stageVariables":null,"requestContext":{"resourceId":"ljjoei","resourcePath":"/subscribe","httpMethod":"POST","extendedRequestId":"XiMcLEwDoAMFUSA=","requestTime":"10/May/2024:03:00:55 +0000","path":"/subscribe","accountId":"907526940370","protocol":"HTTP/1.1","stage":"test-invoke-stage","domainPrefix":"testPrefix","requestTimeEpoch":1715310055278,"requestId":"2468a68c-57e2-4d63-a81d-ef1db9c6eb34","identity":{"cognitoIdentityPoolId":null,"cognitoIdentityId":null,"apiKey":"test-invoke-api-key","principalOrgId":null,"cognitoAuthenticationType":null,"userArn":"arn:aws:sts::907526940370:assumed-role/arxival/odudu-Isengard","apiKeyId":"test-invoke-api-key-id","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_ [TRUNCATED]
-Fri May 10 03:00:55 UTC 2024 : Sending request to https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
-Fri May 10 03:00:56 UTC 2024 : Received response. Status: 200, Integration latency: 1671 ms
-Fri May 10 03:00:56 UTC 2024 : Endpoint response headers: {Date=Fri, 10 May 2024 03:00:56 GMT, Content-Type=application/json, Content-Length=191, Connection=keep-alive, x-amzn-RequestId=e67d41fa-76d4-4f20-b778-eb3dec9da803, X-Amz-Function-Error=Unhandled, x-amzn-Remapped-Content-Length=0, X-Amz-Executed-Version=$LATEST, X-Amzn-Trace-Id=root=1-663d8de7-ec9d8aa0dfa8b03aff8640a3;parent=6c1ce8b55e14dd16;sampled=0;lineage=33363ee6:0}
-Fri May 10 03:00:56 UTC 2024 : Endpoint response body before transformations: {"errorMessage": "Unable to import module 'lambda_function': email-validator", "errorType": "Runtime.ImportModuleError", "requestId": "e67d41fa-76d4-4f20-b778-eb3dec9da803", "stackTrace": []}
-Fri May 10 03:00:56 UTC 2024 : Lambda execution failed with status 200 due to customer function error: Unable to import module 'lambda_function': email-validator. Lambda request id: e67d41fa-76d4-4f20-b778-eb3dec9da803
-Fri May 10 03:00:56 UTC 2024 : Gateway response type: DEFAULT_5XX with status code: 502
-Fri May 10 03:00:56 UTC 2024 : Gateway response body: {"message": "Internal server error"}
-Fri May 10 03:00:56 UTC 2024 : Gateway response headers: {Access-Control-Allow-Headers=Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token, Access-Control-Allow-Origin=*, Access-Control-Allow-Methods=OPTIONS,POST, x-amzn-ErrorType=InternalServerErrorException}
-Fri May 10 03:00:56 UTC 2024 : Method completed with status: 502
+Fri May 10 03:07:32 UTC 2024 : Endpoint request URI: https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
+Fri May 10 03:07:32 UTC 2024 : Endpoint request headers: {X-Amz-Date=20240510T030732Z, x-amzn-apigateway-api-id=1su0smaybb, Accept=application/json, User-Agent=AmazonAPIGateway_1su0smaybb, Host=lambda.us-east-1.amazonaws.com, X-Amz-Content-Sha256=6f35a209724e17b9988eadaf7302740b37d1cbb40edc4135b9c8e724dfbbca46, X-Amzn-Trace-Id=Root=1-663d8f74-99ca882b22e7c37b6442fc74, x-amzn-lambda-integration-tag=d500569d-4596-48ec-b82a-0893f6a3f126, Authorization=*********************************************************************************************************************************************************************************************************************************************************************************************************************************************dce833, X-Amz-Source-Arn=arn:aws:execute-api:us-east-1:907526940370:1su0smaybb/test-invoke-stage/POST/subscribe, X-Amz-Security-Token=IQoJb3JpZ2luX2VjELv//////////wEaCXVzLWVhc3QtMSJHMEUCIQDA9vZCYLbb9PsSREux/N43AujVl2gOFNS7B4vEuHTwoQIgcTCWeZWUU65LUMpvQZjmq1MI1nxUy9zQaca [TRUNCATED]
+Fri May 10 03:07:32 UTC 2024 : Endpoint request body after transformations: {"resource":"/subscribe","path":"/subscribe","httpMethod":"POST","headers":{"Content-Type":" application/json"},"multiValueHeaders":{"Content-Type":[" application/json"]},"queryStringParameters":null,"multiValueQueryStringParameters":null,"pathParameters":null,"stageVariables":null,"requestContext":{"resourceId":"ljjoei","resourcePath":"/subscribe","httpMethod":"POST","extendedRequestId":"XiNaTEKOoAMFZiw=","requestTime":"10/May/2024:03:07:32 +0000","path":"/subscribe","accountId":"907526940370","protocol":"HTTP/1.1","stage":"test-invoke-stage","domainPrefix":"testPrefix","requestTimeEpoch":1715310452839,"requestId":"d500569d-4596-48ec-b82a-0893f6a3f126","identity":{"cognitoIdentityPoolId":null,"cognitoIdentityId":null,"apiKey":"test-invoke-api-key","principalOrgId":null,"cognitoAuthenticationType":null,"userArn":"arn:aws:sts::907526940370:assumed-role/arxival/odudu-Isengard","apiKeyId":"test-invoke-api-key-id","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_ [TRUNCATED]
+Fri May 10 03:07:32 UTC 2024 : Sending request to https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
+Fri May 10 03:07:34 UTC 2024 : Received response. Status: 200, Integration latency: 1496 ms
+Fri May 10 03:07:34 UTC 2024 : Endpoint response headers: {Date=Fri, 10 May 2024 03:07:34 GMT, Content-Type=application/json, Content-Length=191, Connection=keep-alive, x-amzn-RequestId=e0ca432b-f072-4264-8fec-ccb24b4a0683, X-Amz-Function-Error=Unhandled, x-amzn-Remapped-Content-Length=0, X-Amz-Executed-Version=$LATEST, X-Amzn-Trace-Id=root=1-663d8f74-99ca882b22e7c37b6442fc74;parent=6e523831ccce43a8;sampled=0;lineage=33363ee6:0}
+Fri May 10 03:07:34 UTC 2024 : Endpoint response body before transformations: {"errorMessage": "Handler 'lambda_handler' missing on module 'lambda_function'", "errorType": "Runtime.HandlerNotFound", "requestId": "e0ca432b-f072-4264-8fec-ccb24b4a0683", "stackTrace": []}
+Fri May 10 03:07:34 UTC 2024 : Lambda execution failed with status 200 due to customer function error: Handler 'lambda_handler' missing on module 'lambda_function'. Lambda request id: e0ca432b-f072-4264-8fec-ccb24b4a0683
+Fri May 10 03:07:34 UTC 2024 : Gateway response type: DEFAULT_5XX with status code: 502
+Fri May 10 03:07:34 UTC 2024 : Gateway response body: {"message": "Internal server error"}
+Fri May 10 03:07:34 UTC 2024 : Gateway response headers: {Access-Control-Allow-Headers=Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token, Access-Control-Allow-Origin=*, Access-Control-Allow-Methods=OPTIONS,POST, x-amzn-ErrorType=InternalServerErrorException}
+Fri May 10 03:07:34 UTC 2024 : Method completed with status: 502
