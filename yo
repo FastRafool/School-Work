@@ -1,1 +1,13 @@
 https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev
+
+
+curl -X POST https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev \
+-H "Content-Type: application/json" \
+-d '{
+    "email": "example@example.com",
+    "preferences": {
+        "frequency": "weekly",
+        "keywords": ["braket", "azure-quantum"]
+    }
+}'
+
