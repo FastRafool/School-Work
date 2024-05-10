@@ -1,84 +1,122 @@
-import {
-  SideNavigation,
-  SideNavigationProps,
-} from "@cloudscape-design/components";
-import { useNavigationPanelState } from "../common/hooks/use-navigation-panel-state";
 import { useState } from "react";
-import { useOnFollow } from "../common/hooks/use-on-follow";
-import { APP_NAME } from "../common/constants";
-import { useLocation } from "react-router-dom";
+import axios from 'axios';
+import {
+    Button,
+    Container,
+    Header,
+    Input,
+    Multiselect,
+    MultiselectProps,
+    SpaceBetween,
+    BreadcrumbGroup,
+    ContentLayout,
+    Box,
+} from "@cloudscape-design/components";
+import BaseAppLayout from "../../../components/base-app-layout";
+import { useOnFollow } from "../../../common/hooks/use-on-follow";
+import { APP_NAME } from "../../../common/constants";
 
-export default function NavigationPanel() {
-  const location = useLocation();
-  const onFollow = useOnFollow();
-  const [navigationPanelState, setNavigationPanelState] =
-    useNavigationPanelState();
+function NewsletterPage() {
+    const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
+    const [email, setEmail] = useState("");
 
-  const [items] = useState<SideNavigationProps.Item[]>(() => {
-    const items: SideNavigationProps.Item[] = [
-      {
-        type: "link",
-        text: "Dashboard",
-        href: "/",
-      },
-      {
-        type: "section",
-        text: "Section 1",
-        items: [{ type: "link", text: "Items", href: "/section1" }],
-      },
-      {
-        type: "section",
-        text: "Section 2",
-        items: [
-          { type: "link", text: "Item 1", href: "/section2/item1" },
-          { type: "link", text: "Item 2", href: "/section2/item2" },
-          { type: "link", text: "Item 2", href: "/section2/item3" },
-        ],
-      },
+    const dropdownOptions: MultiselectProps.Options = [
+        {
+            label: "Frequency",
+            options: [
+                { label: "Daily", value: "daily" },
+                { label: "Weekly", value: "weekly" },
+                { label: "Monthly", value: "monthly" },
+            ],
+        },
+        {
+            label: "Keyword/Topic",
+            options: [
+                { label: "Amazon Braket", value: "braket" },
+                { label: "Azure Quantum", value: "azure-quantum" },
+                { label: "Oxford Quantum Circuits", value: "oxford" },
+            ],
+        },
     ];
 
-    items.push(
-      { type: "divider" },
-      {
-        type: "link",
-        text: "Documentation",
-        href: "https://gitlab.aws.dev/aws-emea-prototyping/modern-application-development/user-experience-frontend/cloudscape",
-        external: true,
-      }
-    );
+    const handleSubscribe = async () => {
+        const frequencyOption = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value));
+        const frequency = frequencyOption ? frequencyOption.value : "";
 
-    return items;
-  });
+        const keywords = selectedOptions
+            .filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value))
+            .map(option => option.value);
 
-  const onChange = ({
-    detail,
-  }: {
-    detail: SideNavigationProps.ChangeDetail;
-  }) => {
-    const sectionIndex = items.indexOf(detail.item);
-    setNavigationPanelState({
-      collapsedSections: {
-        ...navigationPanelState.collapsedSections,
-        [sectionIndex]: !detail.expanded,
-      },
-    });
-  };
-
-  return (
-    <SideNavigation
-      onFollow={onFollow}
-      onChange={onChange}
-      header={{ href: "/", text: APP_NAME }}
-      activeHref={location.pathname}
-      items={items.map((value, idx) => {
-        if (value.type === "section") {
-          const collapsed =
-            navigationPanelState.collapsedSections?.[idx] === true;
-          value.defaultExpanded = !collapsed;
+        if (!email || !frequency || keywords.length === 0) {
+            console.log("Missing data:", { email, frequency, keywords });
+            alert('Please ensure you have entered your email, selected a frequency, and at least one keyword.');
+            return;
         }
 
-        return value;
-      })}
-    />
-  );
+        console.log("Sending data:", { email, frequency, keywords });
+
+        try {
+            const response = await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', {
+                email,
+                frequency,
+                keywords
+            });
+            console.log("API response:", response);
+            alert('Subscription successful!');
+        } catch (error) {
+            console.error('Subscription error:', error);
+            alert('Failed to subscribe. Please try again.');
+        }
+    };
+
+    return (
+        <BaseAppLayout
+            breadcrumbs={
+                <BreadcrumbGroup
+                    onFollow={useOnFollow}
+                    items={[
+                        { text: APP_NAME, href: "/" },
+                        { text: "Newsletter", href: "/section2/item1" },
+                    ]}
+                />
+            }
+            content={
+                <ContentLayout header={<Header>Newsletter</Header>}>
+                    <SpaceBetween size="l">
+                        <Header
+                            variant="h1"
+                            description="Get daily, weekly, or monthly updates on mentions of AWS Braket from Arxiv right in your mailbox."
+                        >
+                            GET OUR NEWSLETTER!
+                        </Header>
+                        <Container>
+                            <Box padding={{ vertical: 's', horizontal: 'm' }}>
+                                <p><strong>Frequency and Keyword options for your emails.</strong></p>
+                                <p>This will give you a choice of what content you receive and how often you will receive emails from us.</p>
+                            </Box>
+                            <SpaceBetween size="m">
+                                <Multiselect
+                                    placeholder="Choose options"
+                                    selectedOptions={selectedOptions}
+                                    onChange={(event) =>
+                                        setSelectedOptions([...event.detail.selectedOptions] as MultiselectProps.Option[])
+                                    }
+                                    options={dropdownOptions}
+                                />
+                                <Input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    value={email}
+                                    onChange={(event) => setEmail(event.detail.value)}
+                                />
+                                <Button variant="primary" onClick={handleSubscribe}>SUBSCRIBE</Button>
+                            </SpaceBetween>
+                        </Container>
+                    </SpaceBetween>
+                </ContentLayout>
+            }
+        />
+    );
 }
+
+export default NewsletterPage;
