@@ -1,18 +1,17 @@
 import os
 import boto3
-from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEventV2
-from aws_lambda_powertools.utilities.data_classes.common import BaseProxyEvent
-from aws_lambda_powertools.event_handler import APIGatewayRestResolver
+from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
+from aws_lambda_powertools.event_handler.api_gateway import ApiGatewayResolver
 from aws_lambda_powertools import Logger, Tracer
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 
 logger = Logger()
 tracer = Tracer()
 
-app = APIGatewayRestResolver()
+app = ApiGatewayResolver()
 
 dynamodb = boto3.resource("dynamodb")
-table = dynamodb.Table(os.environ["SUBSCRIBERS_TABLE_NAME"])
+table = dynamodb.Table(os.environ.get("SUBSCRIBERS_TABLE_NAME"))
 
 class SubscriptionRequest(BaseModel):
     email: str
@@ -22,7 +21,7 @@ class SubscriptionRequest(BaseModel):
 @app.post("/subscribe")
 @tracer.capture_method
 def subscribe():
-    event = APIGatewayProxyEventV2(app.current_event)
+    event = APIGatewayProxyEvent(app.current_event)
     try:
         request_data = SubscriptionRequest(**event.json_body)
         response = table.put_item(Item={
@@ -32,6 +31,9 @@ def subscribe():
         })
         logger.info("Subscription added successfully.")
         return {"statusCode": 200, "body": "Subscription successful"}
+    except ValidationError as e:
+        logger.error(f"Validation error: {str(e)}")
+        return {"statusCode": 400, "body": str(e)}
     except Exception as e:
         logger.error(f"Error processing subscription: {str(e)}")
         return {"statusCode": 500, "body": "Failed to add subscription"}
