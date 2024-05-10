@@ -1,1 +1,40 @@
-{"errorMessage": "'httpMethod'", "errorType": "KeyError", "requestId": "3e690690-f38d-4f79-871e-18fa65e4f42a", "stackTrace": ["  File \"/var/task/lambda_function.py\", line 43, in lambda_handler\n    return app.resolve(event, context)\n", "  File \"/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/event_handler/api_gateway.py\", line 1918, in resolve\n    response = self._resolve().build(self.current_event, self._cors)\n", "  File \"/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/event_handler/api_gateway.py\", line 2012, in _resolve\n    method = self.current_event.http_method.upper()\n", "  File \"/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/utilities/data_classes/common.py\", line 173, in http_method\n    return self[\"httpMethod\"]\n", "  File \"/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/utilities/data_classes/common.py\", line 32, in __getitem__\n    return self._data[key]\n"]}
+import os
+import boto3
+from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEventV2
+from aws_lambda_powertools.utilities.data_classes.common import BaseProxyEvent
+from aws_lambda_powertools.event_handler import APIGatewayRestResolver
+from aws_lambda_powertools import Logger, Tracer
+from pydantic import BaseModel
+
+logger = Logger()
+tracer = Tracer()
+
+app = APIGatewayRestResolver()
+
+dynamodb = boto3.resource("dynamodb")
+table = dynamodb.Table(os.environ["SUBSCRIBERS_TABLE_NAME"])
+
+class SubscriptionRequest(BaseModel):
+    email: str
+    frequency: str
+    keywords: list
+
+@app.post("/subscribe")
+@tracer.capture_method
+def subscribe():
+    event = APIGatewayProxyEventV2(app.current_event)
+    try:
+        request_data = SubscriptionRequest(**event.json_body)
+        response = table.put_item(Item={
+            "email": request_data.email,
+            "frequency": request_data.frequency,
+            "keywords": request_data.keywords,
+        })
+        logger.info("Subscription added successfully.")
+        return {"statusCode": 200, "body": "Subscription successful"}
+    except Exception as e:
+        logger.error(f"Error processing subscription: {str(e)}")
+        return {"statusCode": 500, "body": "Failed to add subscription"}
+
+def lambda_handler(event: dict, context):
+    return app.resolve(event, context)
