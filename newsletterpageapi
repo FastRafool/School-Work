@@ -50,7 +50,7 @@ function NewsletterPage() {
         }
 
         try {
-            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev', {
+            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', {
                 email,
                 preferences: { frequency, keywords }
             });
