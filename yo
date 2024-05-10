@@ -1,4 +1,7 @@
-https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev
+curl -X POST https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs \
+     -H "Content-Type: application/json" \
+     -d '{"email": "example@example.com", "frequency": "weekly", "keywords": ["braket", "azure-quantum"]}'
+
 
 
 curl -X POST https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs \
