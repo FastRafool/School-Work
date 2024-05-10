@@ -1,42 +1,14 @@
-/subscribe - POST method test results
-Request
-/subscribe
-Latency ms
-37
-Status
-502
-Response body
-{"message": "Internal server error"}
-Response headers
-{
-  "Access-Control-Allow-Headers": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
-  "Access-Control-Allow-Methods": "OPTIONS,POST",
-  "Access-Control-Allow-Origin": "*",
-  "x-amzn-ErrorType": "InternalServerErrorException"
-}
-Logs
-Execution log for request 00e35c58-3197-4443-9876-ba9394e4867c
-Fri May 10 04:07:46 UTC 2024 : Starting execution for request: 00e35c58-3197-4443-9876-ba9394e4867c
-Fri May 10 04:07:46 UTC 2024 : HTTP Method: POST, Resource Path: /subscribe
-Fri May 10 04:07:46 UTC 2024 : Method request path: {}
-Fri May 10 04:07:46 UTC 2024 : Method request query string: {}
-Fri May 10 04:07:46 UTC 2024 : Method request headers: {Content-Type= application/json}
-Fri May 10 04:07:46 UTC 2024 : Method request body before transformations: {
-  "email": "test@example.com",
-  "preferences": {
-    "frequency": "weekly",
-    "keywords": ["braket", "azure-quantum"]
-  }
-}
-Fri May 10 04:07:46 UTC 2024 : Endpoint request URI: https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
-Fri May 10 04:07:46 UTC 2024 : Endpoint request headers: {X-Amz-Date=20240510T040746Z, x-amzn-apigateway-api-id=1su0smaybb, Accept=application/json, User-Agent=AmazonAPIGateway_1su0smaybb, Host=lambda.us-east-1.amazonaws.com, X-Amz-Content-Sha256=63dfc10e4157f80ace589db198007f69927edb79dc27872a1920262846e8e7b2, X-Amzn-Trace-Id=Root=1-663d9d92-971650ed6b98b9b4dab1e4df, x-amzn-lambda-integration-tag=00e35c58-3197-4443-9876-ba9394e4867c, Authorization=*********************************************************************************************************************************************************************************************************************************************************************************************************************************************eb8ef2, X-Amz-Source-Arn=arn:aws:execute-api:us-east-1:907526940370:1su0smaybb/test-invoke-stage/POST/subscribe, X-Amz-Security-Token=IQoJb3JpZ2luX2VjELv//////////wEaCXVzLWVhc3QtMSJIMEYCIQCeKfo+4RCEciKyTVxBaesTaptayyUvv5dqvYYs0ZF/nwIhAN1MqHDNN2jdgVv7OWAp4ovW+jJaFEmIuNV [TRUNCATED]
-Fri May 10 04:07:46 UTC 2024 : Endpoint request body after transformations: {"resource":"/subscribe","path":"/subscribe","httpMethod":"POST","headers":{"Content-Type":" application/json"},"multiValueHeaders":{"Content-Type":[" application/json"]},"queryStringParameters":null,"multiValueQueryStringParameters":null,"pathParameters":null,"stageVariables":null,"requestContext":{"resourceId":"ljjoei","resourcePath":"/subscribe","httpMethod":"POST","extendedRequestId":"XiWPAFAgoAMFfpw=","requestTime":"10/May/2024:04:07:46 +0000","path":"/subscribe","accountId":"907526940370","protocol":"HTTP/1.1","stage":"test-invoke-stage","domainPrefix":"testPrefix","requestTimeEpoch":1715314066985,"requestId":"00e35c58-3197-4443-9876-ba9394e4867c","identity":{"cognitoIdentityPoolId":null,"cognitoIdentityId":null,"apiKey":"test-invoke-api-key","principalOrgId":null,"cognitoAuthenticationType":null,"userArn":"arn:aws:sts::907526940370:assumed-role/arxival/odudu-Isengard","apiKeyId":"test-invoke-api-key-id","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_ [TRUNCATED]
-Fri May 10 04:07:46 UTC 2024 : Sending request to https://lambda.us-east-1.amazonaws.com/2015-03-31/functions/arn:aws:lambda:us-east-1:907526940370:function:arxiv-subscriptions/invocations
-Fri May 10 04:07:47 UTC 2024 : Received response. Status: 200, Integration latency: 32 ms
-Fri May 10 04:07:47 UTC 2024 : Endpoint response headers: {Date=Fri, 10 May 2024 04:07:47 GMT, Content-Type=application/json, Content-Length=270, Connection=keep-alive, x-amzn-RequestId=a05f7c3b-e787-4951-a6ae-6fa04e57338d, X-Amz-Function-Error=Unhandled, x-amzn-Remapped-Content-Length=0, X-Amz-Executed-Version=$LATEST, X-Amzn-Trace-Id=root=1-663d9d92-971650ed6b98b9b4dab1e4df;parent=6d7e056b90368cc7;sampled=0;lineage=33363ee6:0}
-Fri May 10 04:07:47 UTC 2024 : Endpoint response body before transformations: {"errorMessage": "'dict' object is not callable", "errorType": "TypeError", "requestId": "a05f7c3b-e787-4951-a6ae-6fa04e57338d", "stackTrace": ["  File \"/var/task/lambda_function.py\", line 34, in lambda_handler\n    return response(f\"Type error: {str(e)}\", 400)\n"]}
-Fri May 10 04:07:47 UTC 2024 : Lambda execution failed with status 200 due to customer function error: 'dict' object is not callable. Lambda request id: a05f7c3b-e787-4951-a6ae-6fa04e57338d
-Fri May 10 04:07:47 UTC 2024 : Gateway response type: DEFAULT_5XX with status code: 502
-Fri May 10 04:07:47 UTC 2024 : Gateway response body: {"message": "Internal server error"}
-Fri May 10 04:07:47 UTC 2024 : Gateway response headers: {Access-Control-Allow-Headers=Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token, Access-Control-Allow-Origin=*, Access-Control-Allow-Methods=OPTIONS,POST, x-amzn-ErrorType=InternalServerErrorException}
-Fri May 10 04:07:47 UTC 2024 : Method completed with status: 502
+src/pages/section2/newsletter/NewsletterPage.tsx:43:98 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+43         const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
+                                                                                                    ~~~~~~~~~~~~
+
+src/pages/section2/newsletter/NewsletterPage.tsx:44:106 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+44         const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+                                                                                                            ~~~~~~~~~~~~
+
+
+Found 2 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:43
