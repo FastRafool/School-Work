@@ -40,24 +40,23 @@ function NewsletterPage() {
     ];
 
     const handleSubscribe = async () => {
-        const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
-        const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+        const frequencyOption = selectedOptions.find(option => option.value && ['daily', 'weekly', 'monthly'].includes(option.value));
+        const frequency = frequencyOption ? frequencyOption.value : "";
+
+        const keywords = selectedOptions
+            .filter(option => option.value && ['braket', 'azure-quantum', 'oxford'].includes(option.value))
+            .map(option => option.value || "");  // Ensure all values are strings, even though they should already be
 
         if (!email || !frequency || keywords.length === 0) {
             alert('Please ensure you have entered your email, selected a frequency, and at least one keyword.');
             return;
         }
 
-        const payload = {
-            email: email,
-            preferences: {
-                frequency: frequency,
-                keywords: keywords
-            }
-        };
-
         try {
-            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', payload);
+            await axios.post('https://pe7l3c89kl.execute-api.us-east-1.amazonaws.com/dev/subs', {
+                email,
+                preferences: { frequency, keywords }
+            });
             alert('Subscription successful!');
         } catch (error) {
             console.error('Subscription error:', error);
