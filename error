@@ -1,10 +1,31 @@
-mkdir lambda-layer && cd lambda-layer && \
-python3 -m venv venv && \
-source venv/bin/activate && \
-pip install boto3 pydantic aws-lambda-powertools aws-xray-sdk && \
-mkdir -p layer/python/lib/python3.9/site-packages && \
-cp -r venv/lib/python3.9/site-packages/* layer/python/lib/python3.9/site-packages/ && \
-cd layer/python/lib/python3.9/site-packages/ && \
-rm -rf easy_install* pip pip-* setuptools setuptools-* wheel wheel-* *.dist-info && \
-cd ../../../../ && \
-zip -r layer.zip python && \
+# Create a directory for your Lambda layer and navigate into it
+mkdir lambda-layer
+cd lambda-layer
+
+# Create a Python virtual environment and activate it
+python3 -m venv venv
+source venv/bin/activate
+
+# Install the required Python packages
+pip install boto3 pydantic aws-lambda-powertools aws-xray-sdk
+
+# Create the Lambda layer directory structure
+mkdir -p layer/python/lib/python3.9/site-packages
+
+# Copy installed packages to the layer directory
+cp -r venv/lib/python3.9/site-packages/* layer/python/lib/python3.9/site-packages/
+
+# Navigate to the site-packages directory
+cd layer/python/lib/python3.9/site-packages/
+
+# Remove unnecessary files to reduce the size of your layer
+rm -rf easy_install* pip pip-* setuptools setuptools-* wheel wheel-* *.dist-info
+
+# Return to the base directory of the layer
+cd ../../../../
+
+# Package the layer into a zip file
+zip -r layer.zip python
+
+# Output the location of the layer package
+echo "Layer package is ready and located at: $(pwd)/layer.zip"
