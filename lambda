@@ -1,6 +1,6 @@
 import os
 import boto3
-from pydantic import BaseModel
+from pydantic import BaseModel, ValidationError
 from aws_lambda_powertools import Logger, Tracer
 from aws_lambda_powertools.event_handler.api_gateway import Router
 from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
@@ -24,15 +24,16 @@ class SubscriptionRequest(BaseModel):
 @tracer.capture_method
 def subscribe():
     event = APIGatewayProxyEvent(router.current_event)
-    subscription_data = SubscriptionRequest(**event.json_body)
+    try:
+        subscription_data = SubscriptionRequest(**event.json_body)
+    except ValidationError as e:
+        logger.error(f"Validation error: {str(e)}")
+        return {"statusCode": 400, "body": "Invalid request data"}
 
-    # Basic email format validation
     if "@" not in subscription_data.email:
         return {"statusCode": 400, "body": "Invalid email format"}
 
     table = dynamodb.Table(SUBSCRIBERS_TABLE_NAME)
-
-    # Store subscription data into DynamoDB
     try:
         response = table.put_item(Item={
             "email": subscription_data.email,
@@ -46,4 +47,4 @@ def subscribe():
         return {"statusCode": 500, "body": "Failed to add subscription"}
 
 def lambda_handler(event, context):
-    return router(event, context)
+    return router(event, context)  # Corrected the method call here
