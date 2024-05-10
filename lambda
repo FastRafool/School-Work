@@ -31,6 +31,7 @@ def subscribe():
         return {"statusCode": 400, "body": "Invalid request data"}
 
     if "@" not in subscription_data.email:
+        logger.error("Invalid email format")
         return {"statusCode": 400, "body": "Invalid email format"}
 
     table = dynamodb.Table(SUBSCRIBERS_TABLE_NAME)
@@ -47,4 +48,5 @@ def subscribe():
         return {"statusCode": 500, "body": "Failed to add subscription"}
 
 def lambda_handler(event, context):
-    return router(event, context)  # Corrected the method call here
+    return router.resolve(event, context)  # Correct usage of the router to handle the event
+
