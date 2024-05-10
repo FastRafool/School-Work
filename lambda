@@ -1,8 +1,6 @@
 import os
-import uuid
 import boto3
-from datetime import datetime
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 from aws_lambda_powertools import Logger, Tracer
 from aws_lambda_powertools.event_handler.api_gateway import Router
 from aws_lambda_powertools.utilities.data_classes import APIGatewayProxyEvent
@@ -14,11 +12,13 @@ logger = Logger()
 dynamodb = boto3.resource("dynamodb")
 SUBSCRIBERS_TABLE_NAME = os.environ.get("SUBSCRIBERS_TABLE_NAME", "arxival-newsletter-subs")
 
+class Preferences(BaseModel):
+    frequency: str
+    keywords: list
 
 class SubscriptionRequest(BaseModel):
-    email: str
-    preferences: list
-
+    email: EmailStr
+    preferences: Preferences
 
 @router.post("/subscribe")
 @tracer.capture_method
@@ -27,18 +27,16 @@ def subscribe():
     subscription_data = SubscriptionRequest(**event.json_body)
 
     table = dynamodb.Table(SUBSCRIBERS_TABLE_NAME)
-    timestamp = datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%S.%fZ")
 
+    # Store subscription data into DynamoDB
     response = table.put_item(Item={
         "email": subscription_data.email,
-        "preferences": subscription_data.preferences,
-        "subscription_date": timestamp
+        "frequency": subscription_data.preferences.frequency,
+        "keywords": subscription_data.preferences.keywords
     })
 
     logger.info(f"Subscription added: {response}")
     return {"ok": True, "message": "Subscription successful"}
-
-# Additional router methods for updating and deleting subscriptions as needed.
 
 def handler(event, context):
     return router.resolve(event, context)
