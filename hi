@@ -1,7 +1,14 @@
-{
-  "email": "test@example.com",
-  "preferences": {
-    "frequency": "weekly",
-    "keywords": ["braket", "azure-quantum"]
-  }
-}
+src/pages/section2/newsletter/NewsletterPage.tsx:43:98 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+43         const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
+                                                                                                    ~~~~~~~~~~~~
+
+src/pages/section2/newsletter/NewsletterPage.tsx:44:106 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+44         const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+                                                                                                            ~~~~~~~~~~~~
+
+
+Found 2 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:43
