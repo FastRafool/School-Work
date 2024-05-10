@@ -20,7 +20,7 @@ function NewsletterPage() {
     const [selectedOptions, setSelectedOptions] = useState<MultiselectProps.Option[]>([]);
     const [email, setEmail] = useState("");
 
-    const dropdownOptions = [
+    const dropdownOptions: MultiselectProps.Options = [
         {
             label: "Frequency",
             options: [
@@ -40,8 +40,9 @@ function NewsletterPage() {
     ];
 
     const handleSubscribe = async () => {
-        const frequency = selectedOptions.find(option => ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
-        const keywords = selectedOptions.filter(option => ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value);
+        // Safely access the values ensuring that they exist and default to empty strings if not found
+        const frequency = selectedOptions.find(option => option.value && ['daily', 'weekly', 'monthly'].includes(option.value))?.value || "";
+        const keywords = selectedOptions.filter(option => option.value && ['braket', 'azure-quantum', 'oxford'].includes(option.value)).map(option => option.value || "");
 
         if (!email || !frequency || keywords.length === 0) {
             alert('Please ensure you have entered your email, selected a frequency, and at least one keyword.');
@@ -49,12 +50,11 @@ function NewsletterPage() {
         }
 
         try {
-            const response = await axios.post('https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev/subscribe', {
+            const response = await axios.post('https://1su0smaybb.execute-api.us-east-1.amazonaws.com/dev', {
                 email,
                 preferences: { frequency, keywords }
             });
             alert('Subscription successful!');
-            console.log(response.data);
         } catch (error) {
             console.error('Subscription error:', error);
             alert('Failed to subscribe. Please try again.');
