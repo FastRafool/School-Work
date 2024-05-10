@@ -1,86 +1,10 @@
-[+] Building 0.2s (6/6) FINISHED                                                                                                             docker:default
- => [internal] load build definition from Dockerfile                                                                                                   0.0s
- => => transferring dockerfile: 1.38kB                                                                                                                 0.0s
- => [internal] load metadata for public.ecr.aws/sam/build-python3.12:latest                                                                            0.1s
- => [internal] load .dockerignore                                                                                                                      0.0s
- => => transferring context: 2B                                                                                                                        0.0s
- => [1/2] FROM public.ecr.aws/sam/build-python3.12:latest@sha256:f3151f6bf6b2aa49472cb2327118f3c87dc1df84e1fb3479f0fdd59bb0f48ace                      0.0s
- => CACHED [2/2] RUN     python -m venv /usr/app/venv &&     mkdir /tmp/pip-cache &&     chmod -R 777 /tmp/pip-cache &&     pip install --upgrade pip  0.0s
- => exporting to image                                                                                                                                 0.0s
- => => exporting layers                                                                                                                                0.0s
- => => writing image sha256:5a997535de0f02557431778a92c06c4c23bcead1c7ff37be590318d5fb751dfd                                                           0.0s
- => => naming to docker.io/library/cdk-d2f1d10cf38b9d291d1dc0063a6f251d1a7c4369a773145275f5d45f0b87586c                                                0.0s
-Bundling asset InfrastructureStack/UserInterfaceDeployment/Asset1/Stage...
-src/pages/section2/newsletter/NewsletterPage.tsx:50:33 - error TS2322: Type '{ placeholder: string; selectedOptions: OptionDefinition[]; onChange: (event: NonCancelableCustomEvent<ChangeDetail>) => void; options: Options; }' is not assignable to type 'IntrinsicAttributes & SelectProps & RefAttributes<Ref>'.
-  Property 'selectedOptions' does not exist on type 'IntrinsicAttributes & SelectProps & RefAttributes<Ref>'. Did you mean 'selectedOption'?
-
-50                                 selectedOptions={selectedOptions}
-                                   ~~~~~~~~~~~~~~~
-
-src/pages/section2/newsletter/NewsletterPage.tsx:51:86 - error TS2551: Property 'selectedOptions' does not exist on type 'ChangeDetail'. Did you mean 'selectedOption'?
-
-51                                 onChange={(event) => setSelectedOptions(event.detail.selectedOptions)}
-                                                                                        ~~~~~~~~~~~~~~~
-
-  node_modules/@cloudscape-design/components/select/interfaces.d.ts:161:9
-    161         selectedOption: Option;
-                ~~~~~~~~~~~~~~
-    'selectedOption' is declared here.
-
-
-Found 2 errors in the same file, starting at: src/pages/section2/newsletter/NewsletterPage.tsx:50
-
-Error: Command failed: npm --silent --prefix "/home/ec2-user/environment/arxival-project/user-interface" run build
-    at genericNodeError (node:internal/errors:984:15)
-    at wrappedFn (node:internal/errors:538:14)
-    at checkExecSyncError (node:child_process:890:11)
-    at execSync (node:child_process:962:15)
-    at Object.tryBundle (/home/ec2-user/environment/arxival-project/lib/infrastructure-stack.ts:275:23)
-    at AssetStaging.bundle (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:2:33)
-    at AssetStaging.stageByBundling (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:1:5297)
-    at stageThisAsset (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:1:2728)
-    at Cache.obtain (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/private/cache.js:1:242)
-    at new AssetStaging (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:1:3125) {
-  status: 2,
-  signal: null,
-  output: [ null, null, null ],
-  pid: 10948,
-  stdout: null,
-  stderr: null
-}
-
-up to date, audited 569 packages in 1s
-
-66 packages are looking for funding
-  run `npm fund` for details
-
-found 0 vulnerabilities
-npm notice 
-npm notice New minor version of npm available! 10.5.0 -> 10.7.0
-npm notice Changelog: <https://github.com/npm/cli/releases/tag/v10.7.0>
-npm notice Run `npm install -g npm@10.7.0` to update!
-npm notice 
-
-> cloudscape-app@0.0.0 build
-> tsc && vite build
-
-src/pages/section2/newsletter/NewsletterPage.tsx(50,33): error TS2322: Type '{ placeholder: string; selectedOptions: OptionDefinition[]; onChange: (event: NonCancelableCustomEvent<ChangeDetail>) => void; options: Options; }' is not assignable to type 'IntrinsicAttributes & SelectProps & RefAttributes<Ref>'.
-  Property 'selectedOptions' does not exist on type 'IntrinsicAttributes & SelectProps & RefAttributes<Ref>'. Did you mean 'selectedOption'?
-src/pages/section2/newsletter/NewsletterPage.tsx(51,86): error TS2551: Property 'selectedOptions' does not exist on type 'ChangeDetail'. Did you mean 'selectedOption'?
-/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:2
-`),localBundling=options.local?.tryBundle(bundleDir,options),!localBundling){const assetStagingOptions={sourcePath:this.sourcePath,bundleDir,...options};switch(options.bundlingFileAccess){case bundling_1().BundlingFileAccess.VOLUME_COPY:new(asset_staging_1()).AssetBundlingVolumeCopy(assetStagingOptions).run();break;case bundling_1().BundlingFileAccess.BIND_MOUNT:default:new(asset_staging_1()).AssetBundlingBindMount(assetStagingOptions).run();break}}}catch(err){const bundleErrorDir=bundleDir+"-error";throw fs().existsSync(bundleErrorDir)&&fs().removeSync(bundleErrorDir),fs().renameSync(bundleDir,bundleErrorDir),new Error(`Failed to bundle asset ${this.node.path}, bundle output is located at ${bundleErrorDir}: ${err}`)}if(fs_1().FileSystem.isEmpty(bundleDir)){const outputDir=localBundling?bundleDir:AssetStaging.BUNDLING_OUTPUT_DIR;throw new Error(`Bundling did not produce any output. Check that content is written to ${outputDir}.`)}}calculateHash(hashType,bundling,outputDir){if(hashType==assets_1().AssetHashType.CUSTOM||hashType==assets_1().AssetHashType.SOURCE&&bundling){const hash=crypto().createHash("sha256");return hash.update(this.customSourceFingerprint??fs_1().FileSystem.fingerprint(this.sourcePath,this.fingerprintOptions)),bundling&&hash.update(JSON.stringify(bundling,sanitizeHashValue)),hash.digest("hex")}switch(hashType){case assets_1().AssetHashType.SOURCE:return fs_1().FileSystem.fingerprint(this.sourcePath,this.fingerprintOptions);case assets_1().AssetHashType.BUNDLE:case assets_1().AssetHashType.OUTPUT:if(!outputDir)throw new Error(`Cannot use \`${hashType}\` hash type when \`bundling\` is not specified.`);return fs_1().FileSystem.fingerprint(outputDir,this.fingerprintOptions);default:throw new Error("Unknown asset hash type.")}}}exports.AssetStaging=AssetStaging,_a=JSII_RTTI_SYMBOL_1,AssetStaging[_a]={fqn:"aws-cdk-lib.AssetStaging",version:"2.137.0"},AssetStaging.BUNDLING_INPUT_DIR="/asset-input",AssetStaging.BUNDLING_OUTPUT_DIR="/asset-output",AssetStaging.assetCache=new(cache_1()).Cache;function renderAssetFilename(assetHash,extension=""){return`asset.${assetHash}${extension}`}function determineHashType(assetHashType,customSourceFingerprint){const hashType=customSourceFingerprint?assetHashType??assets_1().AssetHashType.CUSTOM:assetHashType??assets_1().AssetHashType.SOURCE;if(customSourceFingerprint&&hashType!==assets_1().AssetHashType.CUSTOM)throw new Error(`Cannot specify \`${assetHashType}\` for \`assetHashType\` when \`assetHash\` is specified. Use \`CUSTOM\` or leave \`undefined\`.`);if(hashType===assets_1().AssetHashType.CUSTOM&&!customSourceFingerprint)throw new Error("`assetHash` must be specified when `assetHashType` is set to `AssetHashType.CUSTOM`.");return hashType}function calculateCacheKey(props){return crypto().createHash("sha256").update(JSON.stringify(sortObject(props),sanitizeHashValue)).digest("hex")}function sortObject(object){if(typeof object!="object"||object instanceof Array)return object;const ret={};for(const key of Object.keys(object).sort())ret[key]=sortObject(object[key]);return ret}function sanitizeHashValue(key,value){if(key==="PIP_INDEX_URL"||key==="PIP_EXTRA_INDEX_URL")try{let url=new URL(value);if(url.password)return url.password="",url.toString()}catch(e){throw e.name==="TypeError"?new Error(`${key} must be a valid URL, got ${value}.`):e}return value}function findSingleFile(directory,archiveOnly){if(!fs().existsSync(directory))throw new Error(`Directory ${directory} does not exist.`);if(!fs().statSync(directory).isDirectory())throw new Error(`${directory} is not a directory.`);const content=fs().readdirSync(directory);if(content.length===1){const file=path().join(directory,content[0]),extension=getExtension(content[0]).toLowerCase();if(fs().statSync(file).isFile()&&(!archiveOnly||ARCHIVE_EXTENSIONS.includes(extension)))return file}}function determineBundledAsset(bundleDir,outputType){const archiveFile=findSingleFile(bundleDir,outputType!==bundling_1().BundlingOutput.SINGLE_FILE);switch(outputType===bundling_1().BundlingOutput.AUTO_DISCOVER&&(outputType=archiveFile?bundling_1().BundlingOutput.ARCHIVED:bundling_1().BundlingOutput.NOT_ARCHIVED),outputType){case bundling_1().BundlingOutput.NOT_ARCHIVED:return{path:bundleDir,packaging:assets_1().FileAssetPackaging.ZIP_DIRECTORY};case bundling_1().BundlingOutput.ARCHIVED:case bundling_1().BundlingOutput.SINGLE_FILE:if(!archiveFile)throw new Error("Bundling output directory is expected to include only a single file when `output` is set to `ARCHIVED` or `SINGLE_FILE`");return{path:archiveFile,packaging:assets_1().FileAssetPackaging.FILE,extension:getExtension(archiveFile)}}}function getExtension(source){for(const ext of ARCHIVE_EXTENSIONS)if(source.toLowerCase().endsWith(ext))return ext;return path().extname(source)}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ^
-Error: Failed to bundle asset InfrastructureStack/UserInterfaceDeployment/Asset1/Stage, bundle output is located at /home/ec2-user/environment/arxival-project/cdk.out/asset.4c706ba73f410ac0e3aab2260fef7fbf5ac67941d7c348c90a7a552298d88dad-error: Error: docker exited with status 2
---> Command: docker run --rm -u "1000:1000" -v "/home/ec2-user/environment/arxival-project/user-interface:/asset-input:z,delegated" -v "/home/ec2-user/environment/arxival-project/cdk.out/asset.4c706ba73f410ac0e3aab2260fef7fbf5ac67941d7c348c90a7a552298d88dad:/asset-output:z,delegated" -w "/asset-input" "public.ecr.aws/sam/build-nodejs18.x:latest" sh -c "npm --cache /tmp/.npm install && npm --cache /tmp/.npm run build && cp -aur /asset-input/dist/* /asset-output/"
-    at AssetStaging.bundle (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:2:619)
-    at AssetStaging.stageByBundling (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:1:5297)
-    at stageThisAsset (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:1:2728)
-    at Cache.obtain (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/private/cache.js:1:242)
-    at new AssetStaging (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/core/lib/asset-staging.js:1:3125)
-    at new Asset (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/aws-s3-assets/lib/asset.js:1:1141)
-    at Object.bind (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/aws-s3-deployment/lib/source.js:1:1460)
-    at /home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/aws-s3-deployment/lib/bucket-deployment.js:1:3768
-    at Array.map (<anonymous>)
-    at new BucketDeployment (/home/ec2-user/environment/arxival-project/node_modules/aws-cdk-lib/aws-s3-deployment/lib/bucket-deployment.js:1:3749)
-
-Subprocess exited with error 1
+mkdir lambda-layer && cd lambda-layer && \
+python3 -m venv venv && \
+source venv/bin/activate && \
+pip install boto3 pydantic aws-lambda-powertools aws-xray-sdk && \
+mkdir -p layer/python/lib/python3.9/site-packages && \
+cp -r venv/lib/python3.9/site-packages/* layer/python/lib/python3.9/site-packages/ && \
+cd layer/python/lib/python3.9/site-packages/ && \
+rm -rf easy_install* pip pip-* setuptools setuptools-* wheel wheel-* *.dist-info && \
+cd ../../../../ && \
+zip -r layer.zip python && \
