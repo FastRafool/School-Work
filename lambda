@@ -42,5 +42,5 @@ def subscribe():
     logger.info(f"Subscription added: {response}")
     return {"ok": True, "message": "Subscription successful"}
 
-def handler(event, context):
-    return router.resolve(event, context)
+def lambda_handler(event, context):
+    return router(event, context)
