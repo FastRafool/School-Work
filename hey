@@ -1,13 +1,14 @@
-[ERROR] KeyError: 'SUBSCRIBERS_TABLE_NAME'
+LAMBDA_WARNING: Unhandled exception. The most likely cause is an issue in the function code. However, in rare cases, a Lambda runtime update can cause unexpected function behavior. For functions using managed runtimes, runtime updates can be triggered by a function change, or can be applied automatically. To determine if the runtime has been updated, check the runtime version in the INIT_START log entry. If this error correlates with a change in the runtime version, you may be able to mitigate this error by temporarily rolling back to the previous runtime version. For more information, see https://docs.aws.amazon.com/lambda/latest/dg/runtimes-update.html
+
+[ERROR] KeyError: 'httpMethod'
 Traceback (most recent call last):
-  File "/var/lang/lib/python3.9/importlib/__init__.py", line 127, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File "<frozen importlib._bootstrap>", line 1030, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1007, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 986, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 680, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 850, in exec_module
-  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
-  File "/var/task/lambda_function.py", line 15, in <module>
-    table = dynamodb.Table(os.environ["SUBSCRIBERS_TABLE_NAME"])
-  File "/var/lang/lib/python3.9/os.py", line 679, in __getitem__
+  File "/var/task/lambda_function.py", line 40, in lambda_handler
+    return app.resolve(event, context)
+  File "/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/event_handler/api_gateway.py", line 1918, in resolve
+    response = self._resolve().build(self.current_event, self._cors)
+  File "/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/event_handler/api_gateway.py", line 2012, in _resolve
+    method = self.current_event.http_method.upper()
+  File "/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/utilities/data_classes/common.py", line 173, in http_method
+    return self["httpMethod"]
+  File "/opt/python/lib/python3.9/site-packages/aws_lambda_powertools/utilities/data_classes/common.py", line 32, in __getitem__
+    return self._data[key]
