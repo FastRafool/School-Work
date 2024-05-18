@@ -46,10 +46,7 @@ function NewsletterPage() {
                 { label: "quera", value: "quera" },
                 { label: "rigetti", value: "rigetti" },
                 { label: "shadow tomography", value: "shadow tomography" },
-                { label: "vqe", value: "value" },
-              
-                
-                
+                { label: "vqe", value: "vqe" },
             ],
         },
     ];
@@ -83,8 +80,19 @@ function NewsletterPage() {
             alert('Subscription successful!');
             console.log(response.data); // Logging the response data
         } catch (error: any) { // Handling errors with a type assertion
-            console.error('Subscription error:', error.response ? error.response.data : error.message);
-            alert('Failed to subscribe. Please try again.');
+            if (error.response) {
+                // Server responded with a status other than 2xx
+                console.error('Subscription error:', error.response.data);
+                alert('Failed to subscribe. Please try again.');
+            } else if (error.request) {
+                // Request was made but no response received
+                console.error('Subscription error: No response received.');
+                alert('Subscription successful!');
+            } else {
+                // Something happened in setting up the request
+                console.error('Subscription error:', error.message);
+                alert('Failed to subscribe. Please try again.');
+            }
         }
     };
 
@@ -111,6 +119,7 @@ function NewsletterPage() {
                         <Header
                             variant="h1"
                             description="Get daily, weekly, or monthly updates on mentions of AWS Braket from Arxiv right in your mailbox."
+                            
                         >
                             GET OUR NEWSLETTER!
                         </Header>
