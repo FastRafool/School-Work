@@ -32,9 +32,24 @@ function NewsletterPage() {
         {
             label: "Keyword/Topic",
             options: [
-                { label: "Amazon Braket", value: "braket" },
-                { label: "Azure Quantum", value: "azure-quantum" },
-                { label: "Oxford Quantum Circuits", value: "oxford" },
+                { label: "braket", value: "braket" },
+                { label: "amazon", value: "amazon" },
+                { label: "compilation", value: "compilation" },
+                { label: "d-wave", value: "d-wave" },
+                { label: "google", value: "google" },
+                { label: "ibm q", value: "ibm q" },
+                { label: "ibm", value: "ibm" },
+                { label: "ionq", value: "ionq" },
+                { label: "microsoft", value: "microsoft" },
+                { label: "qaoa", value: "qaoa" },
+                { label: "quantinuum", value: "quantinuum" },
+                { label: "quera", value: "quera" },
+                { label: "rigetti", value: "rigetti" },
+                { label: "shadow tomography", value: "shadow tomography" },
+                { label: "vqe", value: "value" },
+              
+                
+                
             ],
         },
     ];
@@ -45,7 +60,7 @@ function NewsletterPage() {
         const frequency = frequencyOption ? frequencyOption.value : ""; // Handle undefined value
 
         const keywords = selectedOptions
-            .filter(option => option.value && ['braket', 'azure-quantum', 'oxford'].includes(option.value))
+            .filter(option => option.value && ['braket', 'amazon', 'compilation', 'd-wave', 'google', 'ibm q', 'ibm', 'ionq', 'microsoft', 'qaoa', 'quantinuum', 'quera', 'rigetti', 'shadow tomography', 'vqe'].includes(option.value))
             .map(option => option.value || ""); // Handle undefined value and ensure no undefined values are included
 
         if (!email || !frequency || keywords.length === 0) {
