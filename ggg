@@ -1,0 +1,8 @@
+src/pages/section2/newsletter/NewsletterPage.tsx:122:29 - error TS2322: Type '{ children: string; variant: "h1"; description: string; style: { color: string; }; }' is not assignable to type 'IntrinsicAttributes & HeaderProps'.
+  Property 'style' does not exist on type 'IntrinsicAttributes & HeaderProps'.
+
+122                             style={{ color: 'white' }}
+                                ~~~~~
+
+
+Found 1 error in src/pages/section2/newsletter/NewsletterPage.tsx:122
