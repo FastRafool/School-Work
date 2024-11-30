@@ -1,0 +1,12 @@
+SELECT * FROM HR.Departments;
+SELECT * FROM HR.Employees;
+SELECT * FROM Sales.Customers;
+SELECT * FROM Sales.Products;
+SELECT * FROM Sales.Orders;
+SELECT * FROM Sales.OrderDetails;
+
+SELECT * FROM HR.vw_EmployeeDetails;
+SELECT * FROM Sales.vw_CustomerOrders;
+
+SELECT HR.ufn_GetEmployeeFullName(1);
+SELECT Sales.ufn_CalculateOrderTotal(1);
