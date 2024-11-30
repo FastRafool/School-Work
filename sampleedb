@@ -1,12 +1,20 @@
-1> -- Create the database
+> -- Create the database
 2> CREATE DATABASE EnterpriseDB;
 3> GO
-Msg 1801, Level 16, State 3, Server EC2AMAZ-H6G0850, Line 2
-Database 'EnterpriseDB' already exists. Choose a different database name.
 1>
 2> USE EnterpriseDB;
 3> GO
 Changed database context to 'EnterpriseDB'.
+1>
+2> -- Set required SET options
+3> SET ANSI_NULLS ON;
+4> SET ANSI_PADDING ON;
+5> SET ANSI_WARNINGS ON;
+6> SET ARITHABORT ON;
+7> SET CONCAT_NULL_YIELDS_NULL ON;
+8> SET QUOTED_IDENTIFIER ON;
+9> SET NUMERIC_ROUNDABORT OFF;
+10> GO
 1>
 2> -- Create schemas
 3> CREATE SCHEMA HR;
@@ -68,32 +76,31 @@ Changed database context to 'EnterpriseDB'.
 12> );
 13> GO
 1>
-2> CREATE TABLE Sales.Orders (
-3>     OrderID INT IDENTITY(1,1) PRIMARY KEY,
-4>     CustomerID INT NOT NULL,
-5>     OrderDate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
-6>     ShipDate DATETIME2,
-7>     Status NVARCHAR(20) NOT NULL DEFAULT 'Pending',
-8>     Comments NVARCHAR(MAX),
-9>     CONSTRAINT FK_Orders_Customers FOREIGN KEY (CustomerID) REFERENCES Sales.Customers(CustomerID)
-10> );
-11> GO
+2> -- Create Sales.Orders table
+3> CREATE TABLE Sales.Orders (
+4>     OrderID INT IDENTITY(1,1) PRIMARY KEY,
+5>     CustomerID INT NOT NULL,
+6>     OrderDate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+7>     ShipDate DATETIME2,
+8>     Status NVARCHAR(20) NOT NULL DEFAULT 'Pending',
+9>     Comments NVARCHAR(MAX),
+10>     CONSTRAINT FK_Orders_Customers FOREIGN KEY (CustomerID) REFERENCES Sales.Customers(CustomerID)
+11> );
+12> GO
 1>
-2> CREATE TABLE Sales.OrderDetails (
-3>     OrderDetailID INT IDENTITY(1,1) PRIMARY KEY,
-4>     OrderID INT NOT NULL,
-5>     ProductID INT NOT NULL,
-6>     Quantity INT NOT NULL CHECK (Quantity > 0),
-7>     UnitPrice DECIMAL(15, 2) NOT NULL CHECK (UnitPrice >= 0),
-8>     Discount DECIMAL(5, 2) NOT NULL DEFAULT 0 CHECK (Discount >= 0 AND Discount <= 1),
-9>     LineTotal AS (Quantity * UnitPrice * (1 - Discount)) PERSISTED,
-10>     CONSTRAINT FK_OrderDetails_Orders FOREIGN KEY (OrderID) REFERENCES Sales.Orders(OrderID),
-11>     CONSTRAINT FK_OrderDetails_Products FOREIGN KEY (ProductID) REFERENCES Sales.Products(ProductID)
-12> );
-13> GO
-Msg 1934, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-CREATE TABLE failed because the following SET options have incorrect settings: 'QUOTED_IDENTIFIER'. Verify that SET options are correct for use with indexed
-views and/or indexes on computed columns and/or filtered indexes and/or query notifications and/or XML data type methods and/or spatial index operations.
+2> -- Create Sales.OrderDetails table
+3> CREATE TABLE Sales.OrderDetails (
+4>     OrderDetailID INT IDENTITY(1,1) PRIMARY KEY,
+5>     OrderID INT NOT NULL,
+6>     ProductID INT NOT NULL,
+7>     Quantity INT NOT NULL CHECK (Quantity > 0),
+8>     UnitPrice DECIMAL(15, 2) NOT NULL CHECK (UnitPrice >= 0),
+9>     Discount DECIMAL(5, 2) NOT NULL DEFAULT 0 CHECK (Discount >= 0 AND Discount <= 1),
+10>     LineTotal AS (Quantity * UnitPrice * (1 - Discount)) PERSISTED,
+11>     CONSTRAINT FK_OrderDetails_Orders FOREIGN KEY (OrderID) REFERENCES Sales.Orders(OrderID),
+12>     CONSTRAINT FK_OrderDetails_Products FOREIGN KEY (ProductID) REFERENCES Sales.Products(ProductID)
+13> );
+14> GO
 1>
 2> -- Create indexes
 3> CREATE INDEX IX_Employees_LastName ON HR.Employees(LastName);
@@ -145,7 +152,7 @@ views and/or indexes on computed columns and/or filtered indexes and/or query no
 9> );
 10> GO
 1>
-2> -- Create stored procedures with transactions and error handling
+2> -- Create stored procedure with transactions and error handling
 3> CREATE PROCEDURE Sales.sp_ProcessOrder
 4>     @CustomerID INT,
 5>     @OrderDetailsTable SalesOrderDetailsTableType READONLY
@@ -176,11 +183,12 @@ views and/or indexes on computed columns and/or filtered indexes and/or query no
 30>         COMMIT TRANSACTION;
 31>     END TRY
 32>     BEGIN CATCH
-33>         ROLLBACK TRANSACTION;
-34>         THROW;
-35>     END CATCH
-36> END;
-37> GO
+33>         IF @@TRANCOUNT > 0
+34>             ROLLBACK TRANSACTION;
+35>         THROW;
+36>     END CATCH
+37> END;
+38> GO
 1>
 2> -- Create user-defined functions
 3> CREATE FUNCTION HR.ufn_GetEmployeeFullName (@EmployeeID INT)
@@ -283,7 +291,3 @@ views and/or indexes on computed columns and/or filtered indexes and/or query no
 12> GO
 
 (2 rows affected)
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure Sales.sp_ProcessOrder, Line 21
-Invalid object name 'Sales.OrderDetails'.
-Msg 266, Level 16, State 2, Server EC2AMAZ-H6G0850, Procedure Sales.sp_ProcessOrder, Line 21
-Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
