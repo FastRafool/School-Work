@@ -5,6 +5,16 @@ GO
 USE EnterpriseDB;
 GO
 
+-- Set required SET options
+SET ANSI_NULLS ON;
+SET ANSI_PADDING ON;
+SET ANSI_WARNINGS ON;
+SET ARITHABORT ON;
+SET CONCAT_NULL_YIELDS_NULL ON;
+SET QUOTED_IDENTIFIER ON;
+SET NUMERIC_ROUNDABORT OFF;
+GO
+
 -- Create schemas
 CREATE SCHEMA HR;
 GO
@@ -65,6 +75,7 @@ CREATE TABLE Sales.Products (
 );
 GO
 
+-- Create Sales.Orders table
 CREATE TABLE Sales.Orders (
     OrderID INT IDENTITY(1,1) PRIMARY KEY,
     CustomerID INT NOT NULL,
@@ -76,6 +87,7 @@ CREATE TABLE Sales.Orders (
 );
 GO
 
+-- Create Sales.OrderDetails table
 CREATE TABLE Sales.OrderDetails (
     OrderDetailID INT IDENTITY(1,1) PRIMARY KEY,
     OrderID INT NOT NULL,
@@ -139,7 +151,7 @@ CREATE TYPE dbo.SalesOrderDetailsTableType AS TABLE
 );
 GO
 
--- Create stored procedures with transactions and error handling
+-- Create stored procedure with transactions and error handling
 CREATE PROCEDURE Sales.sp_ProcessOrder
     @CustomerID INT,
     @OrderDetailsTable SalesOrderDetailsTableType READONLY
@@ -170,7 +182,8 @@ BEGIN
         COMMIT TRANSACTION;
     END TRY
     BEGIN CATCH
-        ROLLBACK TRANSACTION;
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
         THROW;
     END CATCH
 END;
