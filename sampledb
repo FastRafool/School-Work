@@ -6,8 +6,10 @@ USE EnterpriseDB;
 GO
 
 -- Create schemas
-CREATE SCHEMA HR AUTHORIZATION dbo;
-CREATE SCHEMA Sales AUTHORIZATION dbo;
+CREATE SCHEMA HR;
+GO
+
+CREATE SCHEMA Sales;
 GO
 
 -- Create tables in HR schema
@@ -89,7 +91,11 @@ GO
 
 -- Create indexes
 CREATE INDEX IX_Employees_LastName ON HR.Employees(LastName);
+GO
+
 CREATE INDEX IX_Customers_City ON Sales.Customers(City);
+GO
+
 CREATE INDEX IX_Products_ProductName ON Sales.Products(ProductName);
 GO
 
@@ -124,7 +130,7 @@ JOIN Sales.Orders o ON c.CustomerID = o.CustomerID;
 GO
 
 -- Create user-defined table type
-CREATE TYPE SalesType.OrderDetailsTableType AS TABLE
+CREATE TYPE dbo.SalesOrderDetailsTableType AS TABLE
 (
     ProductID INT NOT NULL,
     Quantity INT NOT NULL,
@@ -136,7 +142,7 @@ GO
 -- Create stored procedures with transactions and error handling
 CREATE PROCEDURE Sales.sp_ProcessOrder
     @CustomerID INT,
-    @OrderDetailsTable SalesType.OrderDetailsTableType READONLY
+    @OrderDetailsTable SalesOrderDetailsTableType READONLY
 AS
 BEGIN
     SET NOCOUNT ON;
@@ -222,11 +228,12 @@ BEGIN
 END;
 GO
 
--- Insert sample data
+-- Insert sample data into HR.Departments
 INSERT INTO HR.Departments (DepartmentName, Budget)
 VALUES ('Human Resources', 500000), ('Sales', 1000000), ('IT', 750000), ('Finance', 600000);
 GO
 
+-- Insert sample data into HR.Employees
 INSERT INTO HR.Employees (FirstName, LastName, Email, PhoneNumber, Salary, DepartmentID, ManagerID)
 VALUES 
 ('John', 'Doe', 'john.doe@example.com', '555-1234', 60000, 2, NULL),
@@ -235,12 +242,14 @@ VALUES
 ('Alice', 'Williams', 'alice.williams@example.com', '555-4321', 70000, 4, NULL);
 GO
 
+-- Insert sample data into Sales.Customers
 INSERT INTO Sales.Customers (CompanyName, ContactName, ContactEmail, Phone, Address, City, StateProvince, Country, PostalCode)
 VALUES 
 ('Acme Corp', 'Tom Brown', 'tom.brown@acmecorp.com', '555-1111', '123 Elm St', 'Metropolis', 'NY', 'USA', '12345'),
 ('Globex Inc', 'Sara Davis', 'sara.davis@globex.com', '555-2222', '456 Oak Ave', 'Gotham', 'NJ', 'USA', '54321');
 GO
 
+-- Insert sample data into Sales.Products
 INSERT INTO Sales.Products (ProductName, Description, StandardCost, ListPrice, Size, Weight)
 VALUES 
 ('Widget A', 'An excellent widget.', 10.00, 15.00, 'Small', 0.5),
@@ -248,7 +257,7 @@ VALUES
 GO
 
 -- Sample order details for stored procedure
-DECLARE @OrderDetails SalesType.OrderDetailsTableType;
+DECLARE @OrderDetails SalesOrderDetailsTableType;
 
 INSERT INTO @OrderDetails (ProductID, Quantity, UnitPrice, Discount)
 VALUES
