@@ -1,0 +1,260 @@
+-- Create the database
+CREATE DATABASE EnterpriseDB;
+GO
+
+USE EnterpriseDB;
+GO
+
+-- Create schemas
+CREATE SCHEMA HR AUTHORIZATION dbo;
+CREATE SCHEMA Sales AUTHORIZATION dbo;
+GO
+
+-- Create tables in HR schema
+CREATE TABLE HR.Departments (
+    DepartmentID INT IDENTITY(1,1) PRIMARY KEY,
+    DepartmentName NVARCHAR(100) NOT NULL UNIQUE,
+    Budget DECIMAL(15, 2) NOT NULL CHECK (Budget >= 0)
+);
+GO
+
+CREATE TABLE HR.Employees (
+    EmployeeID INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR(50) NOT NULL,
+    Email NVARCHAR(100) NOT NULL UNIQUE,
+    PhoneNumber NVARCHAR(20),
+    HireDate DATE NOT NULL DEFAULT GETDATE(),
+    Salary DECIMAL(15, 2) CHECK (Salary >= 0),
+    DepartmentID INT NOT NULL,
+    ManagerID INT NULL,
+    Photo VARBINARY(MAX),
+    Resume NVARCHAR(MAX),
+    CONSTRAINT FK_Employees_Departments FOREIGN KEY (DepartmentID) REFERENCES HR.Departments(DepartmentID),
+    CONSTRAINT FK_Employees_Manager FOREIGN KEY (ManagerID) REFERENCES HR.Employees(EmployeeID)
+);
+GO
+
+-- Create tables in Sales schema
+CREATE TABLE Sales.Customers (
+    CustomerID INT IDENTITY(1,1) PRIMARY KEY,
+    CompanyName NVARCHAR(100) NOT NULL,
+    ContactName NVARCHAR(100),
+    ContactEmail NVARCHAR(100) UNIQUE,
+    Phone NVARCHAR(20),
+    Address NVARCHAR(200),
+    City NVARCHAR(100),
+    StateProvince NVARCHAR(100),
+    Country NVARCHAR(100),
+    PostalCode NVARCHAR(20)
+);
+GO
+
+CREATE TABLE Sales.Products (
+    ProductID INT IDENTITY(1,1) PRIMARY KEY,
+    ProductName NVARCHAR(100) NOT NULL,
+    Description NVARCHAR(MAX),
+    StandardCost DECIMAL(15, 2) CHECK (StandardCost >= 0),
+    ListPrice DECIMAL(15, 2) CHECK (ListPrice >= 0),
+    Size NVARCHAR(50),
+    Weight FLOAT,
+    ProductImage VARBINARY(MAX),
+    Discontinued BIT NOT NULL DEFAULT 0
+);
+GO
+
+CREATE TABLE Sales.Orders (
+    OrderID INT IDENTITY(1,1) PRIMARY KEY,
+    CustomerID INT NOT NULL,
+    OrderDate DATETIME2 NOT NULL DEFAULT SYSUTCDATETIME(),
+    ShipDate DATETIME2,
+    Status NVARCHAR(20) NOT NULL DEFAULT 'Pending',
+    Comments NVARCHAR(MAX),
+    CONSTRAINT FK_Orders_Customers FOREIGN KEY (CustomerID) REFERENCES Sales.Customers(CustomerID)
+);
+GO
+
+CREATE TABLE Sales.OrderDetails (
+    OrderDetailID INT IDENTITY(1,1) PRIMARY KEY,
+    OrderID INT NOT NULL,
+    ProductID INT NOT NULL,
+    Quantity INT NOT NULL CHECK (Quantity > 0),
+    UnitPrice DECIMAL(15, 2) NOT NULL CHECK (UnitPrice >= 0),
+    Discount DECIMAL(5, 2) NOT NULL DEFAULT 0 CHECK (Discount >= 0 AND Discount <= 1),
+    LineTotal AS (Quantity * UnitPrice * (1 - Discount)) PERSISTED,
+    CONSTRAINT FK_OrderDetails_Orders FOREIGN KEY (OrderID) REFERENCES Sales.Orders(OrderID),
+    CONSTRAINT FK_OrderDetails_Products FOREIGN KEY (ProductID) REFERENCES Sales.Products(ProductID)
+);
+GO
+
+-- Create indexes
+CREATE INDEX IX_Employees_LastName ON HR.Employees(LastName);
+CREATE INDEX IX_Customers_City ON Sales.Customers(City);
+CREATE INDEX IX_Products_ProductName ON Sales.Products(ProductName);
+GO
+
+-- Create views
+CREATE VIEW HR.vw_EmployeeDetails
+AS
+SELECT 
+    e.EmployeeID,
+    e.FirstName,
+    e.LastName,
+    e.Email,
+    e.PhoneNumber,
+    e.HireDate,
+    e.Salary,
+    d.DepartmentName,
+    m.FirstName + ' ' + m.LastName AS ManagerName
+FROM HR.Employees e
+JOIN HR.Departments d ON e.DepartmentID = d.DepartmentID
+LEFT JOIN HR.Employees m ON e.ManagerID = m.EmployeeID;
+GO
+
+CREATE VIEW Sales.vw_CustomerOrders
+AS
+SELECT 
+    c.CustomerID,
+    c.CompanyName,
+    o.OrderID,
+    o.OrderDate,
+    o.Status
+FROM Sales.Customers c
+JOIN Sales.Orders o ON c.CustomerID = o.CustomerID;
+GO
+
+-- Create user-defined table type
+CREATE TYPE SalesType.OrderDetailsTableType AS TABLE
+(
+    ProductID INT NOT NULL,
+    Quantity INT NOT NULL,
+    UnitPrice DECIMAL(15, 2) NOT NULL,
+    Discount DECIMAL(5, 2) NOT NULL
+);
+GO
+
+-- Create stored procedures with transactions and error handling
+CREATE PROCEDURE Sales.sp_ProcessOrder
+    @CustomerID INT,
+    @OrderDetailsTable SalesType.OrderDetailsTableType READONLY
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @OrderID INT;
+
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- Insert Order
+        INSERT INTO Sales.Orders (CustomerID)
+        VALUES (@CustomerID);
+
+        SET @OrderID = SCOPE_IDENTITY();
+
+        -- Insert Order Details
+        INSERT INTO Sales.OrderDetails (OrderID, ProductID, Quantity, UnitPrice, Discount)
+        SELECT 
+            @OrderID,
+            ProductID,
+            Quantity,
+            UnitPrice,
+            Discount
+        FROM @OrderDetailsTable;
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION;
+        THROW;
+    END CATCH
+END;
+GO
+
+-- Create user-defined functions
+CREATE FUNCTION HR.ufn_GetEmployeeFullName (@EmployeeID INT)
+RETURNS NVARCHAR(101)
+AS
+BEGIN
+    DECLARE @FullName NVARCHAR(101);
+    SELECT @FullName = FirstName + ' ' + LastName FROM HR.Employees WHERE EmployeeID = @EmployeeID;
+    RETURN @FullName;
+END;
+GO
+
+CREATE FUNCTION Sales.ufn_CalculateOrderTotal (@OrderID INT)
+RETURNS DECIMAL(19, 4)
+AS
+BEGIN
+    DECLARE @Total DECIMAL(19, 4);
+    SELECT @Total = SUM(LineTotal) FROM Sales.OrderDetails WHERE OrderID = @OrderID;
+    RETURN @Total;
+END;
+GO
+
+-- Create triggers
+CREATE TABLE HR.EmployeeAudit (
+    AuditID INT IDENTITY(1,1) PRIMARY KEY,
+    EmployeeID INT NOT NULL,
+    AuditAction NVARCHAR(10) NOT NULL,
+    AuditDate DATETIME2 NOT NULL
+);
+GO
+
+CREATE TRIGGER HR.trg_Employees_Audit
+ON HR.Employees
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- Insert audit records
+    INSERT INTO HR.EmployeeAudit (EmployeeID, AuditAction, AuditDate)
+    SELECT 
+        COALESCE(d.EmployeeID, i.EmployeeID),
+        CASE 
+            WHEN i.EmployeeID IS NOT NULL AND d.EmployeeID IS NULL THEN 'INSERT'
+            WHEN i.EmployeeID IS NOT NULL AND d.EmployeeID IS NOT NULL THEN 'UPDATE'
+            WHEN i.EmployeeID IS NULL AND d.EmployeeID IS NOT NULL THEN 'DELETE'
+        END,
+        GETDATE()
+    FROM inserted i
+    FULL OUTER JOIN deleted d ON i.EmployeeID = d.EmployeeID;
+END;
+GO
+
+-- Insert sample data
+INSERT INTO HR.Departments (DepartmentName, Budget)
+VALUES ('Human Resources', 500000), ('Sales', 1000000), ('IT', 750000), ('Finance', 600000);
+GO
+
+INSERT INTO HR.Employees (FirstName, LastName, Email, PhoneNumber, Salary, DepartmentID, ManagerID)
+VALUES 
+('John', 'Doe', 'john.doe@example.com', '555-1234', 60000, 2, NULL),
+('Jane', 'Smith', 'jane.smith@example.com', '555-5678', 65000, 2, 1),
+('Bob', 'Johnson', 'bob.johnson@example.com', '555-8765', 55000, 3, NULL),
+('Alice', 'Williams', 'alice.williams@example.com', '555-4321', 70000, 4, NULL);
+GO
+
+INSERT INTO Sales.Customers (CompanyName, ContactName, ContactEmail, Phone, Address, City, StateProvince, Country, PostalCode)
+VALUES 
+('Acme Corp', 'Tom Brown', 'tom.brown@acmecorp.com', '555-1111', '123 Elm St', 'Metropolis', 'NY', 'USA', '12345'),
+('Globex Inc', 'Sara Davis', 'sara.davis@globex.com', '555-2222', '456 Oak Ave', 'Gotham', 'NJ', 'USA', '54321');
+GO
+
+INSERT INTO Sales.Products (ProductName, Description, StandardCost, ListPrice, Size, Weight)
+VALUES 
+('Widget A', 'An excellent widget.', 10.00, 15.00, 'Small', 0.5),
+('Widget B', 'A superior widget.', 12.00, 18.00, 'Medium', 0.75);
+GO
+
+-- Sample order details for stored procedure
+DECLARE @OrderDetails SalesType.OrderDetailsTableType;
+
+INSERT INTO @OrderDetails (ProductID, Quantity, UnitPrice, Discount)
+VALUES
+(1, 2, 15.00, 0),
+(2, 1, 18.00, 0);
+
+-- Process order using stored procedure
+EXEC Sales.sp_ProcessOrder @CustomerID = 1, @OrderDetailsTable = @OrderDetails;
+GO
