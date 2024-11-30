@@ -1,17 +1,19 @@
-> -- Create the database
+1> -- Create the database
 2> CREATE DATABASE EnterpriseDB;
 3> GO
+Msg 1801, Level 16, State 3, Server EC2AMAZ-H6G0850, Line 2
+Database 'EnterpriseDB' already exists. Choose a different database name.
 1>
 2> USE EnterpriseDB;
 3> GO
 Changed database context to 'EnterpriseDB'.
 1>
 2> -- Create schemas
-3> CREATE SCHEMA HR AUTHORIZATION dbo;
-4> CREATE SCHEMA Sales AUTHORIZATION dbo;
-5> GO
-Msg 156, Level 15, State 1, Server EC2AMAZ-H6G0850, Line 4
-Incorrect syntax near the keyword 'CREATE'.
+3> CREATE SCHEMA HR;
+4> GO
+1>
+2> CREATE SCHEMA Sales;
+3> GO
 1>
 2> -- Create tables in HR schema
 3> CREATE TABLE HR.Departments (
@@ -20,8 +22,6 @@ Incorrect syntax near the keyword 'CREATE'.
 6>     Budget DECIMAL(15, 2) NOT NULL CHECK (Budget >= 0)
 7> );
 8> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 3
-The specified schema name "HR" either does not exist or you do not have permission to use it.
 1>
 2> CREATE TABLE HR.Employees (
 3>     EmployeeID INT IDENTITY(1,1) PRIMARY KEY,
@@ -39,8 +39,6 @@ The specified schema name "HR" either does not exist or you do not have permissi
 15>     CONSTRAINT FK_Employees_Manager FOREIGN KEY (ManagerID) REFERENCES HR.Employees(EmployeeID)
 16> );
 17> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-The specified schema name "HR" either does not exist or you do not have permission to use it.
 1>
 2> -- Create tables in Sales schema
 3> CREATE TABLE Sales.Customers (
@@ -56,8 +54,6 @@ The specified schema name "HR" either does not exist or you do not have permissi
 13>     PostalCode NVARCHAR(20)
 14> );
 15> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 3
-The specified schema name "Sales" either does not exist or you do not have permission to use it.
 1>
 2> CREATE TABLE Sales.Products (
 3>     ProductID INT IDENTITY(1,1) PRIMARY KEY,
@@ -71,8 +67,6 @@ The specified schema name "Sales" either does not exist or you do not have permi
 11>     Discontinued BIT NOT NULL DEFAULT 0
 12> );
 13> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-The specified schema name "Sales" either does not exist or you do not have permission to use it.
 1>
 2> CREATE TABLE Sales.Orders (
 3>     OrderID INT IDENTITY(1,1) PRIMARY KEY,
@@ -84,8 +78,6 @@ The specified schema name "Sales" either does not exist or you do not have permi
 9>     CONSTRAINT FK_Orders_Customers FOREIGN KEY (CustomerID) REFERENCES Sales.Customers(CustomerID)
 10> );
 11> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-The specified schema name "Sales" either does not exist or you do not have permission to use it.
 1>
 2> CREATE TABLE Sales.OrderDetails (
 3>     OrderDetailID INT IDENTITY(1,1) PRIMARY KEY,
@@ -99,16 +91,19 @@ The specified schema name "Sales" either does not exist or you do not have permi
 11>     CONSTRAINT FK_OrderDetails_Products FOREIGN KEY (ProductID) REFERENCES Sales.Products(ProductID)
 12> );
 13> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-The specified schema name "Sales" either does not exist or you do not have permission to use it.
+Msg 1934, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
+CREATE TABLE failed because the following SET options have incorrect settings: 'QUOTED_IDENTIFIER'. Verify that SET options are correct for use with indexed
+views and/or indexes on computed columns and/or filtered indexes and/or query notifications and/or XML data type methods and/or spatial index operations.
 1>
 2> -- Create indexes
 3> CREATE INDEX IX_Employees_LastName ON HR.Employees(LastName);
-4> CREATE INDEX IX_Customers_City ON Sales.Customers(City);
-5> CREATE INDEX IX_Products_ProductName ON Sales.Products(ProductName);
-6> GO
-Msg 1088, Level 16, State 12, Server EC2AMAZ-H6G0850, Line 3
-Cannot find the object "HR.Employees" because it does not exist or you do not have permissions.
+4> GO
+1>
+2> CREATE INDEX IX_Customers_City ON Sales.Customers(City);
+3> GO
+1>
+2> CREATE INDEX IX_Products_ProductName ON Sales.Products(ProductName);
+3> GO
 1>
 2> -- Create views
 3> CREATE VIEW HR.vw_EmployeeDetails
@@ -127,8 +122,6 @@ Cannot find the object "HR.Employees" because it does not exist or you do not ha
 16> JOIN HR.Departments d ON e.DepartmentID = d.DepartmentID
 17> LEFT JOIN HR.Employees m ON e.ManagerID = m.EmployeeID;
 18> GO
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure vw_EmployeeDetails, Line 15
-Invalid object name 'HR.Employees'.
 1>
 2> CREATE VIEW Sales.vw_CustomerOrders
 3> AS
@@ -141,11 +134,9 @@ Invalid object name 'HR.Employees'.
 10> FROM Sales.Customers c
 11> JOIN Sales.Orders o ON c.CustomerID = o.CustomerID;
 12> GO
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure vw_CustomerOrders, Line 10
-Invalid object name 'Sales.Customers'.
 1>
 2> -- Create user-defined table type
-3> CREATE TYPE SalesType.OrderDetailsTableType AS TABLE
+3> CREATE TYPE dbo.SalesOrderDetailsTableType AS TABLE
 4> (
 5>     ProductID INT NOT NULL,
 6>     Quantity INT NOT NULL,
@@ -153,13 +144,11 @@ Invalid object name 'Sales.Customers'.
 8>     Discount DECIMAL(5, 2) NOT NULL
 9> );
 10> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 3
-The specified schema name "SalesType" either does not exist or you do not have permission to use it.
 1>
 2> -- Create stored procedures with transactions and error handling
 3> CREATE PROCEDURE Sales.sp_ProcessOrder
 4>     @CustomerID INT,
-5>     @OrderDetailsTable SalesType.OrderDetailsTableType READONLY
+5>     @OrderDetailsTable SalesOrderDetailsTableType READONLY
 6> AS
 7> BEGIN
 8>     SET NOCOUNT ON;
@@ -192,11 +181,6 @@ The specified schema name "SalesType" either does not exist or you do not have p
 35>     END CATCH
 36> END;
 37> GO
-Msg 2715, Level 16, State 3, Server EC2AMAZ-H6G0850, Procedure sp_ProcessOrder, Line 5
-Column, parameter, or variable #2: Cannot find data type SalesType.OrderDetailsTableType.
-Msg 1087, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure sp_ProcessOrder, Line 28
-Must declare the table variable "@OrderDetailsTable".
-Parameter or variable '@OrderDetailsTable' has an invalid data type.
 1>
 2> -- Create user-defined functions
 3> CREATE FUNCTION HR.ufn_GetEmployeeFullName (@EmployeeID INT)
@@ -208,8 +192,6 @@ Parameter or variable '@OrderDetailsTable' has an invalid data type.
 9>     RETURN @FullName;
 10> END;
 11> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure ufn_GetEmployeeFullName, Line 3
-The specified schema name "HR" either does not exist or you do not have permission to use it.
 1>
 2> CREATE FUNCTION Sales.ufn_CalculateOrderTotal (@OrderID INT)
 3> RETURNS DECIMAL(19, 4)
@@ -220,8 +202,6 @@ The specified schema name "HR" either does not exist or you do not have permissi
 8>     RETURN @Total;
 9> END;
 10> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure ufn_CalculateOrderTotal, Line 2
-The specified schema name "Sales" either does not exist or you do not have permission to use it.
 1>
 2> -- Create triggers
 3> CREATE TABLE HR.EmployeeAudit (
@@ -231,8 +211,6 @@ The specified schema name "Sales" either does not exist or you do not have permi
 7>     AuditDate DATETIME2 NOT NULL
 8> );
 9> GO
-Msg 2760, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 3
-The specified schema name "HR" either does not exist or you do not have permission to use it.
 1>
 2> CREATE TRIGGER HR.trg_Employees_Audit
 3> ON HR.Employees
@@ -255,44 +233,45 @@ The specified schema name "HR" either does not exist or you do not have permissi
 20>     FULL OUTER JOIN deleted d ON i.EmployeeID = d.EmployeeID;
 21> END;
 22> GO
-Msg 8197, Level 16, State 4, Server EC2AMAZ-H6G0850, Procedure trg_Employees_Audit, Line 2
-The object 'HR.Employees' does not exist or is invalid for this operation.
 1>
-2> -- Insert sample data
+2> -- Insert sample data into HR.Departments
 3> INSERT INTO HR.Departments (DepartmentName, Budget)
 4> VALUES ('Human Resources', 500000), ('Sales', 1000000), ('IT', 750000), ('Finance', 600000);
 5> GO
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 3
-Invalid object name 'HR.Departments'.
+
+(4 rows affected)
 1>
-2> INSERT INTO HR.Employees (FirstName, LastName, Email, PhoneNumber, Salary, DepartmentID, ManagerID)
-3> VALUES
-4> ('John', 'Doe', 'john.doe@example.com', '555-1234', 60000, 2, NULL),
-5> ('Jane', 'Smith', 'jane.smith@example.com', '555-5678', 65000, 2, 1),
-6> ('Bob', 'Johnson', 'bob.johnson@example.com', '555-8765', 55000, 3, NULL),
-7> ('Alice', 'Williams', 'alice.williams@example.com', '555-4321', 70000, 4, NULL);
-8> GO
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-Invalid object name 'HR.Employees'.
+2> -- Insert sample data into HR.Employees
+3> INSERT INTO HR.Employees (FirstName, LastName, Email, PhoneNumber, Salary, DepartmentID, ManagerID)
+4> VALUES
+5> ('John', 'Doe', 'john.doe@example.com', '555-1234', 60000, 2, NULL),
+6> ('Jane', 'Smith', 'jane.smith@example.com', '555-5678', 65000, 2, 1),
+7> ('Bob', 'Johnson', 'bob.johnson@example.com', '555-8765', 55000, 3, NULL),
+8> ('Alice', 'Williams', 'alice.williams@example.com', '555-4321', 70000, 4, NULL);
+9> GO
+
+(4 rows affected)
 1>
-2> INSERT INTO Sales.Customers (CompanyName, ContactName, ContactEmail, Phone, Address, City, StateProvince, Country, PostalCode)
-3> VALUES
-4> ('Acme Corp', 'Tom Brown', 'tom.brown@acmecorp.com', '555-1111', '123 Elm St', 'Metropolis', 'NY', 'USA', '12345'),
-5> ('Globex Inc', 'Sara Davis', 'sara.davis@globex.com', '555-2222', '456 Oak Ave', 'Gotham', 'NJ', 'USA', '54321');
-6> GO
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-Invalid object name 'Sales.Customers'.
+2> -- Insert sample data into Sales.Customers
+3> INSERT INTO Sales.Customers (CompanyName, ContactName, ContactEmail, Phone, Address, City, StateProvince, Country, PostalCode)
+4> VALUES
+5> ('Acme Corp', 'Tom Brown', 'tom.brown@acmecorp.com', '555-1111', '123 Elm St', 'Metropolis', 'NY', 'USA', '12345'),
+6> ('Globex Inc', 'Sara Davis', 'sara.davis@globex.com', '555-2222', '456 Oak Ave', 'Gotham', 'NJ', 'USA', '54321');
+7> GO
+
+(2 rows affected)
 1>
-2> INSERT INTO Sales.Products (ProductName, Description, StandardCost, ListPrice, Size, Weight)
-3> VALUES
-4> ('Widget A', 'An excellent widget.', 10.00, 15.00, 'Small', 0.5),
-5> ('Widget B', 'A superior widget.', 12.00, 18.00, 'Medium', 0.75);
-6> GO
-Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 2
-Invalid object name 'Sales.Products'.
+2> -- Insert sample data into Sales.Products
+3> INSERT INTO Sales.Products (ProductName, Description, StandardCost, ListPrice, Size, Weight)
+4> VALUES
+5> ('Widget A', 'An excellent widget.', 10.00, 15.00, 'Small', 0.5),
+6> ('Widget B', 'A superior widget.', 12.00, 18.00, 'Medium', 0.75);
+7> GO
+
+(2 rows affected)
 1>
 2> -- Sample order details for stored procedure
-3> DECLARE @OrderDetails SalesType.OrderDetailsTableType;
+3> DECLARE @OrderDetails SalesOrderDetailsTableType;
 4>
 5> INSERT INTO @OrderDetails (ProductID, Quantity, UnitPrice, Discount)
 6> VALUES
@@ -302,8 +281,9 @@ Invalid object name 'Sales.Products'.
 10> -- Process order using stored procedure
 11> EXEC Sales.sp_ProcessOrder @CustomerID = 1, @OrderDetailsTable = @OrderDetails;
 12> GO
-Msg 2715, Level 16, State 3, Server EC2AMAZ-H6G0850, Line 3
-Column, parameter, or variable #1: Cannot find data type SalesType.OrderDetailsTableType.
-Msg 1087, Level 16, State 1, Server EC2AMAZ-H6G0850, Line 5
-Must declare the table variable "@OrderDetails".
-Parameter or variable '@OrderDetails' has an invalid data type.
+
+(2 rows affected)
+Msg 208, Level 16, State 1, Server EC2AMAZ-H6G0850, Procedure Sales.sp_ProcessOrder, Line 21
+Invalid object name 'Sales.OrderDetails'.
+Msg 266, Level 16, State 2, Server EC2AMAZ-H6G0850, Procedure Sales.sp_ProcessOrder, Line 21
+Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.
